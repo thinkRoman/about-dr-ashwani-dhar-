@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowRight, Users, Microscope, FileCheck, Cpu, CheckCircle2, Globe, Building2, FlaskConical } from "lucide-react"
+import { ArrowRight, Users, Microscope, FileCheck, Cpu, CheckCircle2, Globe, FlaskConical } from "lucide-react"
 
 export function KairosSection() {
   const services = [
@@ -45,52 +45,84 @@ export function KairosSection() {
   return (
     <section id="kairos" className="py-20 md:py-32 bg-gradient-to-b from-accent/5 to-background" aria-labelledby="kairos-heading">
       <div className="container mx-auto px-4">
-        {/* SEO-rich Header */}
-        <header className="max-w-4xl mx-auto text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
-            <Building2 className="h-4 w-4" />
-            Featured Organization - Clinical Research Organization (CRO)
-          </div>
-          <h2 id="kairos-heading" className="text-3xl md:text-4xl font-bold mb-6">
-            <span className="text-accent">Kairos</span> R&D Solutions
-          </h2>
-          <p className="text-xl font-medium text-foreground mb-4">
-            Kairos R&D Solutions Pvt. Ltd. | kairosrds.com
-          </p>
-          <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-            <strong>Kairos R&D Solutions</strong> is a specialized <strong>Clinical Research Organization (CRO)</strong> founded and led by <strong>Dr. Ashwani Dhar, MD, DMI</strong>. As <strong>Founder & CEO of Kairos</strong>, Dr. Dhar leads a dedicated team committed to connecting and empowering sites, sponsors, and patients through innovative solutions that accelerate clinical research.
-          </p>
-          <p className="text-muted-foreground leading-relaxed mb-6">
-            Kairos delivers end-to-end clinical research services with a focus on quality, innovation, and patient-centric trials. The company integrates expertise in clinical medicine, medical informatics, and AI to drive ethical, technology-forward clinical research that accelerates drug development and improves global healthcare access.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground gap-2">
-              <Link href="https://kairosrds.com" target="_blank" rel="noopener noreferrer" title="Visit Kairos R&D Solutions Official Website">
-                Visit kairosrds.com <ArrowRight className="h-4 w-4" />
-              </Link>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <Link href="https://kairosrds.com/contact" target="_blank" rel="noopener noreferrer" title="Contact Kairos R&D Solutions">
-                Contact Kairos
-              </Link>
-            </Button>
-          </div>
-        </header>
+        {/* Two-Column Header Layout */}
+        <div className="max-w-5xl mx-auto mb-16">
+          <div className="flex flex-col md:flex-row items-start gap-8 md:gap-12">
+            {/* Left: Logo + Title */}
+            <div className="md:w-1/3">
+              <div className="mb-6 bg-accent rounded-2xl p-6 flex items-center justify-center">
+                <div className="text-center">
+                  <span className="text-4xl font-bold text-accent-foreground">K</span>
+                  <span className="text-4xl font-bold text-accent-foreground/80">airos</span>
+                  <p className="text-xs text-accent-foreground/70 mt-1">R&D Solutions</p>
+                </div>
+              </div>
+              
+              <h2 id="kairos-heading" className="text-3xl font-bold text-foreground mb-3">
+                <span className="text-accent">Kairos</span> R&D Solutions
+              </h2>
+              
+              <p className="text-lg font-semibold text-accent mb-4">
+                Founder & CEO: Dr. Ashwani Dhar, MD, DMI
+              </p>
 
-        {/* Key Focus Areas - SEO Rich */}
-        <div className="max-w-3xl mx-auto mb-16 bg-card border border-accent/20 rounded-2xl p-8">
-          <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
-            <FlaskConical className="h-5 w-5 text-accent" />
-            Kairos Key Focus Areas
-          </h3>
-          <ul className="grid md:grid-cols-2 gap-4">
-            {focusAreas.map((area, index) => (
-              <li key={index} className="flex items-start gap-3">
-                <CheckCircle2 className="h-5 w-5 text-accent shrink-0 mt-0.5" />
-                <span className="text-foreground">{area}</span>
-              </li>
-            ))}
-          </ul>
+              <Button asChild className="w-full bg-accent hover:bg-accent/90 text-accent-foreground gap-2">
+                <Link href="https://www.kairosrds.com" target="_blank" rel="noopener noreferrer" title="Visit Kairos R&D Solutions Official Website">
+                  Visit Kairos R&D Solutions <ArrowRight className="h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+
+            {/* Right: Content */}
+            <div className="md:w-2/3">
+              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                <Link 
+                  href="https://www.kairosrds.com" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-foreground hover:text-accent transition-colors"
+                >
+                  Kairos R&D Solutions Pvt. Ltd.
+                </Link>{" "}
+                is a specialized <strong className="text-foreground">Clinical Research Organization (CRO)</strong> founded and led by Dr. Ashwani Dhar. 
+                The company delivers end-to-end clinical research services with a focus on quality, innovation, and patient-centric trials.
+              </p>
+
+              <h3 className="text-xl font-semibold mb-4 text-foreground flex items-center gap-2">
+                <FlaskConical className="h-5 w-5 text-accent" />
+                Key Focus Areas
+              </h3>
+              
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-muted-foreground mb-8">
+                {focusAreas.map((area, index) => (
+                  <li key={index} className="flex items-start gap-2">
+                    <span className="text-accent mt-1">
+                      <CheckCircle2 className="h-4 w-4" />
+                    </span>
+                    <span className="text-foreground">{area}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <p className="text-muted-foreground mb-8 leading-relaxed">
+                As Founder and CEO, Dr. Dhar integrates his expertise in clinical medicine, medical informatics, and AI to drive ethical, 
+                technology-forward clinical research that accelerates drug development and improves global healthcare access.
+              </p>
+
+              <div className="flex flex-wrap gap-4">
+                <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground gap-2">
+                  <Link href="https://www.kairosrds.com" target="_blank" rel="noopener noreferrer">
+                    Visit kairosrds.com <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="lg">
+                  <Link href="https://www.kairosrds.com/contact" target="_blank" rel="noopener noreferrer">
+                    Contact Kairos
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Stats */}
@@ -134,7 +166,7 @@ export function KairosSection() {
             <div>
               <h3 className="text-2xl md:text-3xl font-bold mb-6">Why Choose Kairos R&D Solutions</h3>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                <strong>Kairos</strong> is transforming clinical research by connecting sponsors directly with healthcare-first sites and diverse patient populations, all powered by innovative technology. As a leading <strong>Clinical Research Organization (CRO)</strong>, Kairos provides comprehensive services from patient recruitment to data management.
+                <strong className="text-foreground">Kairos</strong> is transforming clinical research by connecting sponsors directly with healthcare-first sites and diverse patient populations, all powered by innovative technology. As a leading <strong className="text-foreground">Clinical Research Organization (CRO)</strong>, Kairos provides comprehensive services from patient recruitment to data management.
               </p>
               <ul className="space-y-4">
                 {[
@@ -163,7 +195,7 @@ export function KairosSection() {
                   Your partner in Clinical Research - Making It Seamless
                 </p>
                 <Button asChild className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
-                  <Link href="https://kairosrds.com" target="_blank" rel="noopener noreferrer" title="Explore Kairos R&D Solutions">
+                  <Link href="https://www.kairosrds.com" target="_blank" rel="noopener noreferrer" title="Explore Kairos R&D Solutions">
                     Explore Kairos
                   </Link>
                 </Button>
