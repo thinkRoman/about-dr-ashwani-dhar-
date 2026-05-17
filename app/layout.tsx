@@ -36,7 +36,10 @@ export const metadata: Metadata = {
     'KashCAL TrPharma', 'KashCAL bone health',
     // TrPharma variations
     'TrPharma', 'TrPharma India', 'trpharma187', 'TrPharma pharmaceutical', 'TrPharma KashMOX',
-    'pharma.thinkroman.com', 'pharmacy.thinkroman.com',
+    'TrPharma products', 'TrPharma medicine', 'TrPharma antibiotic', 'TrPharma tablets',
+    'TrPharma Dr Ashwani Dhar', 'TrPharma ThinkRoman', 'TrPharma One87', 'TrPharma 880',
+    'TrPharma KashCAL', 'TrPharma GMP', 'TrPharma India pharmaceutical', 'TrPharma healthcare',
+    'pharma.thinkroman.com', 'pharmacy.thinkroman.com', 'ThinkRoman pharma', 'ThinkRoman pharmacy',
     // General
     'ThinkRoman CEO', 'Healthcare Innovation', 'AI Healthcare', 'Clinical Research Organization'
   ],
@@ -214,25 +217,59 @@ const entityGraph = {
 
     // ==================== TRPHARMA - ORGANIZATION ====================
     {
-      "@type": "Organization",
+      "@type": ["Organization", "Pharmacy", "MedicalBusiness"],
       "@id": `${BASE_URL}/#org-trpharma`,
       "name": "TrPharma",
       "legalName": "TrPharma - A Division of ThinkRoman Ventures LLP",
-      "alternateName": ["TrPharma India", "trpharma187", "ThinkRoman Pharma", "TrPharma Pharmaceutical"],
+      "alternateName": ["TrPharma India", "trpharma187", "ThinkRoman Pharma", "TrPharma Pharmaceutical", "TrPharma Healthcare", "TrPharma Medicine", "ThinkRoman Pharmacy"],
       "url": "https://pharma.thinkroman.com",
-      "description": "TrPharma is a doctor-led pharmaceutical division founded by Dr. Ashwani Dhar MD DMI. Manufacturer of KashMOX 625 antibiotic and One87 Plus pain relief. GMP-certified, affordable healthcare solutions.",
+      "logo": "https://pharma.thinkroman.com/logo.png",
+      "image": "https://pharma.thinkroman.com/logo.png",
+      "description": "TrPharma is a doctor-led pharmaceutical division founded by Dr. Ashwani Dhar MD DMI. Manufacturer of KashMOX 625 antibiotic, One87 Plus (880 PLUS) pain relief, and KashCAL PLUS supplements. WHO-GMP certified, affordable healthcare solutions. Visit pharma.thinkroman.com or pharmacy.thinkroman.com.",
+      "slogan": "Your Health and Wellness Partner",
       "founder": { "@id": `${BASE_URL}/#person-dr-ashwani-dhar` },
       "parentOrganization": { "@id": `${BASE_URL}/#org-thinkroman` },
+      "foundingDate": "2021",
+      "areaServed": ["India", "Worldwide"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IN"
+      },
       "sameAs": [
         "https://pharma.thinkroman.com",
         "https://pharmacy.thinkroman.com",
-        "https://www.instagram.com/trpharma187"
+        "https://www.instagram.com/trpharma187",
+        "https://thinkroman.com"
       ],
       "makesOffer": [
         { "@id": `${BASE_URL}/#product-kashmox-625` },
         { "@id": `${BASE_URL}/#product-one87-plus` },
         { "@id": `${BASE_URL}/#product-kashcal-plus` }
-      ]
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "TrPharma Product Catalog",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": { "@id": `${BASE_URL}/#product-kashmox-625` },
+            "name": "KashMOX 625 Antibiotic",
+            "description": "Amoxicillin Clavulanate broad-spectrum antibiotic"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@id": `${BASE_URL}/#product-one87-plus` },
+            "name": "One87 Plus / 880 PLUS Pain Relief",
+            "description": "Aceclofenac Paracetamol pain relief tablet"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@id": `${BASE_URL}/#product-kashcal-plus` },
+            "name": "KashCAL PLUS Bone Health",
+            "description": "Calcium Vitamin D3 bone health supplement"
+          }
+        ]
+      }
     },
 
     // ==================== THINKROMAN VENTURES - PARENT ORG ====================
@@ -441,6 +478,46 @@ const faqSchema = {
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "TrPharma manufactures KashMOX 625 (Amoxicillin Clavulanate antibiotic), One87 Plus / 880 PLUS (Aceclofenac Paracetamol pain relief), and KashCAL PLUS (bone health supplement). All products are developed under the medical oversight of Dr. Ashwani Dhar MD DMI."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I buy TrPharma products?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TrPharma products including KashMOX 625, One87 Plus (880 PLUS), and KashCAL PLUS are available at pharma.thinkroman.com and pharmacy.thinkroman.com. Follow @trpharma187 on Instagram for updates. TrPharma is a doctor-led pharmaceutical company founded by Dr. Ashwani Dhar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is TrPharma GMP certified?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, TrPharma products are WHO-GMP certified. TrPharma, founded by Dr. Ashwani Dhar MD DMI, follows strict quality control and manufacturing standards for all medications including KashMOX 625 and One87 Plus (880 PLUS)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who founded TrPharma?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TrPharma was founded by Dr. Ashwani Dhar MD DMI as a division of ThinkRoman Ventures LLP. Dr. Dhar is a physician and healthcare entrepreneur who also founded Kairos R&D Solutions. TrPharma is a doctor-led pharmaceutical company focused on affordable, quality medications."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is pharma.thinkroman.com?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "pharma.thinkroman.com is the official website of TrPharma, the pharmaceutical division of ThinkRoman Ventures founded by Dr. Ashwani Dhar. The site offers TrPharma products including KashMOX 625 antibiotic, One87 Plus (880 PLUS) pain relief, and KashCAL PLUS supplements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is KashCAL PLUS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "KashCAL PLUS is a bone health supplement manufactured by TrPharma, founded by Dr. Ashwani Dhar MD DMI. It contains Calcium and Vitamin D3 for bone strength, osteoporosis prevention, and overall bone health. Available at pharma.thinkroman.com."
       }
     }
   ]
