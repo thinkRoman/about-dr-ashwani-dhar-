@@ -11,7 +11,7 @@ const socialLinks = [
 
 export function CNNFooter() {
   return (
-    <footer className="bg-[#0c1829] text-white">
+    <footer id="contact" className="bg-[#0c1829] text-white">
       {/* CTA Banner */}
       <div className="border-b border-white/10">
         <div className="container mx-auto px-4 py-12">

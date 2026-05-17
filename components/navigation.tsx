@@ -7,11 +7,9 @@ import { Button } from "@/components/ui/button"
 
 const navLinks = [
   { href: "#about", label: "About" },
-  { href: "#kairos", label: "Kairos R&D" },
-  { href: "#expertise", label: "Expertise" },
-  { href: "#thinkroman", label: "ThinkRoman" },
-  { href: "#media", label: "Media" },
-  { href: "#publications", label: "Publications" },
+  { href: "#kairos", label: "Kairos" },
+  { href: "#trpharma", label: "TrPharma" },
+  { href: "#featured-video", label: "Videos" },
   { href: "#contact", label: "Contact" },
 ]
 

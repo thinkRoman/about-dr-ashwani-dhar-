@@ -80,7 +80,7 @@ export function VenturesGrid() {
 
 export function QuickBio() {
   return (
-    <section className="bg-[#f8f9fa] py-16">
+    <section id="about" className="bg-[#f8f9fa] py-16">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Large Photo */}
