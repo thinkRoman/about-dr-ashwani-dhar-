@@ -6,27 +6,39 @@ import { Button } from "@/components/ui/button"
 const featuredVideos = [
   {
     id: "main",
-    title: "Dr. Ashwani Dhar on AI in Healthcare",
-    subtitle: "ThinkRoman Ventures CEO discusses the future of personalized medicine",
-    youtubeId: "8jPQjjsBbIc", // Replace with actual video ID
-    duration: "12:34",
-    category: "INTERVIEW"
+    title: "Dr. Ashwani Dhar: Pharmacogenomics and Personalized Medicine",
+    subtitle: "Genomics Gupshup Episode #24 - The future of genomics and personalized healthcare",
+    youtubeId: "8sZDapqP03I",
+    duration: "38:00",
+    category: "INTERVIEW",
+    views: "4.3K views"
   },
   {
-    id: "kairos",
-    title: "Kairos R&D Solutions: Clinical Research Revolution",
-    subtitle: "How Dr. Dhar is transforming clinical trials",
-    youtubeId: "8jPQjjsBbIc", // Replace with actual video ID
-    duration: "8:45",
-    category: "FEATURE"
+    id: "vitamin-d",
+    title: "Vitamin D: The Sunshine Campaign",
+    subtitle: "Dr. Ashwani Dhar discusses Vitamin D importance for health",
+    youtubeId: "9-GJB5dlyz4",
+    duration: "45:00",
+    category: "HEALTH",
+    views: "27 views"
   },
   {
-    id: "pharma",
-    title: "TrPharma: Doctor-Led Pharmaceutical Innovation",
-    subtitle: "KashMOX 625 and the future of accessible medicine",
-    youtubeId: "8jPQjjsBbIc", // Replace with actual video ID  
-    duration: "6:22",
-    category: "PRODUCT"
+    id: "ceo-statement",
+    title: "CEO Statement: ThinkRoman Ventures",
+    subtitle: "Dr. Ashwani Dhar on the startup of his companies in India",
+    youtubeId: "VFHsUNEfkYQ",
+    duration: "22:00",
+    category: "BUSINESS",
+    views: "415 views"
+  },
+  {
+    id: "sakshi-tv",
+    title: "NRI Health Show: New Age Health Care",
+    subtitle: "Ask Your Doctor with Dr. Ashwani Dhar on Sakshi TV",
+    youtubeId: "9p8GiZ6UEyM",
+    duration: "27:00",
+    category: "TV INTERVIEW",
+    views: "1.7K views"
   }
 ]
 
@@ -62,9 +74,12 @@ export function VideoSpotlight() {
               />
             </div>
             <div className="mt-4">
-              <span className="bg-red-600 text-white text-xs font-bold uppercase px-2 py-1">
-                {mainVideo.category}
-              </span>
+              <div className="flex items-center gap-3">
+                <span className="bg-red-600 text-white text-xs font-bold uppercase px-2 py-1">
+                  {mainVideo.category}
+                </span>
+                <span className="text-gray-500 text-sm">{mainVideo.views}</span>
+              </div>
               <h3 className="text-xl md:text-2xl font-bold text-white mt-3 leading-tight">
                 {mainVideo.title}
               </h3>
@@ -86,9 +101,12 @@ export function VideoSpotlight() {
                   />
                 </div>
                 <div className="mt-2">
-                  <span className="text-red-500 text-xs font-bold uppercase">
-                    {video.category}
-                  </span>
+                  <div className="flex items-center gap-2">
+                    <span className="text-red-500 text-xs font-bold uppercase">
+                      {video.category}
+                    </span>
+                    <span className="text-gray-600 text-xs">{video.views}</span>
+                  </div>
                   <h4 className="text-white font-semibold mt-1 group-hover:text-[#f9a825] transition-colors line-clamp-2">
                     {video.title}
                   </h4>
@@ -98,7 +116,7 @@ export function VideoSpotlight() {
 
             {/* More Videos CTA */}
             <Button asChild variant="outline" className="w-full border-white/20 text-white hover:bg-white/10 mt-4">
-              <Link href="https://www.youtube.com/@drashwanidhar" target="_blank" rel="noopener noreferrer">
+              <Link href="https://www.youtube.com/@ThinkRomanTV" target="_blank" rel="noopener noreferrer">
                 <Play className="h-4 w-4 mr-2" /> View All Videos
               </Link>
             </Button>
