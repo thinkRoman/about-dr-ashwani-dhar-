@@ -94,6 +94,7 @@ const trpharmaOrgSchema = {
   },
   "sameAs": [
     "https://pharma.thinkroman.com",
+    "https://pharmacy.thinkroman.com",
     "https://www.instagram.com/trpharma187",
     "https://thinkroman.com"
   ]

@@ -111,6 +111,11 @@ const personSchema = {
       "@type": "Organization",
       "name": "Kairos R&D Solutions",
       "url": "https://kairosrds.com"
+    },
+    {
+      "@type": "Organization",
+      "name": "TrPharma",
+      "url": "https://pharma.thinkroman.com"
     }
   ],
   "description": "Physician (MD, DMI), healthcare innovator, and CEO of ThinkRoman Ventures. Former Senior Physician Executive and CMIO at Cerner/Oracle Health. Chairman of Kairos R&D Solutions. AI healthcare innovator based in Fremont, California.",
@@ -122,6 +127,10 @@ const personSchema = {
     "https://drashwanidhar.thinkroman.com",
     "https://www.durandhar.com",
     "https://kairosrds.com",
+    "https://www.kairosrds.com",
+    "https://pharma.thinkroman.com",
+    "https://pharmacy.thinkroman.com",
+    "https://www.instagram.com/trpharma187",
     "https://medium.com/@ashdhar"
   ],
   "alumniOf": {
@@ -214,6 +223,7 @@ const organizationSchema = {
   },
   "sameAs": [
     "https://kairosrds.com",
+    "https://www.kairosrds.com",
     "https://www.linkedin.com/company/kairos-rds",
     "https://drashwanidhar.thinkroman.com"
   ]
@@ -250,6 +260,33 @@ const kairosServiceSchema = {
   ]
 }
 
+const trpharmaSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "TrPharma",
+  "legalName": "TrPharma - A Division of ThinkRoman Ventures LLP",
+  "alternateName": ["TrPharma India", "trpharma187", "ThinkRoman Pharma", "TrPharma Pharmaceutical"],
+  "url": "https://pharma.thinkroman.com",
+  "description": "TrPharma is a doctor-led pharmaceutical division of ThinkRoman Ventures, founded by Dr. Ashwani Dhar MD DMI. Specializing in affordable, GMP-certified medications including the flagship KashMOX 625 antibiotic.",
+  "founder": {
+    "@type": "Person",
+    "name": "Dr. Ashwani Dhar",
+    "jobTitle": "Founder & CEO",
+    "url": "https://drashwanidhar.thinkroman.com"
+  },
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "ThinkRoman Ventures LLP",
+    "url": "https://thinkroman.com"
+  },
+  "sameAs": [
+    "https://pharma.thinkroman.com",
+    "https://pharmacy.thinkroman.com",
+    "https://www.instagram.com/trpharma187",
+    "https://thinkroman.com"
+  ]
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -273,6 +310,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(kairosServiceSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(trpharmaSchema) }}
         />
       </head>
       <body className="font-sans antialiased">

@@ -106,6 +106,10 @@ const kairosPageSchema = {
     "alternateName": ["Kairos", "Kairos RDS", "Kairos CRO", "Kairos Healthcare", "Kairos Clinical Research"],
     "url": "https://kairosrds.com",
     "description": "Kairos R&D Solutions is a specialized Clinical Research Organization (CRO) providing AI-enabled clinical trials, patient recruitment, real-world evidence studies, and pharmaceutical partnerships.",
+    "sameAs": [
+      "https://kairosrds.com",
+      "https://www.kairosrds.com"
+    ],
     "founder": {
       "@type": "Person",
       "name": "Dr. Ashwani Dhar",
