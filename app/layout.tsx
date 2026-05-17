@@ -6,404 +6,403 @@ import './globals.css'
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
+// Base URL for canonical references
+const BASE_URL = "https://about-dr-ashwani-dhar.vercel.app"
+
 export const metadata: Metadata = {
-  title: 'Dr. Ashwani Dhar MD DMI | Healthcare Innovation Leader | ThinkRoman CEO',
-  description: 'Dr. Ashwani Dhar MD DMI is a physician, healthcare innovator, and CEO of ThinkRoman Ventures. Former Senior Physician Executive and CMIO at Cerner/Oracle Health, AI healthcare innovator based in Fremont, California. Chairman of Kairos R&D Solutions.',
+  metadataBase: new URL(BASE_URL),
+  title: {
+    default: 'Dr. Ashwani Dhar MD DMI | Kairos R&D Solutions | KashMOX 625 | TrPharma',
+    template: '%s | Dr. Ashwani Dhar'
+  },
+  description: 'Dr. Ashwani Dhar MD DMI - Founder & CEO of Kairos R&D Solutions (Clinical Research CRO) and TrPharma (KashMOX 625, One87 Plus). Healthcare innovator, ThinkRoman Ventures CEO. Fremont CA.',
   keywords: [
-    'Dr. Ashwani Dhar',
-    'Dr Ashwani Dhar MD',
-    'Dr Ashwani Dhar DMI',
-    'Ashwani Dhar ThinkRoman',
-    'ThinkRoman CEO',
-    'Kairos',
-    'Kairos R&D',
-    'Kairos R&D Solutions',
-    'Kairos RDS',
-    'Kairos Healthcare',
-    'Kairos Clinical Research',
-    'Kairos CRO',
-    'Kairos India',
-    'Kairos Kairodox',
-    'Kairos patient recruitment',
-    'Kairos clinical trials',
-    'Kairos Hyderabad',
-    'Kairos pharmaceutical',
-    'kairosrds',
-    'kairosrds.com',
-    'www.kairosrds.com',
-    'Kairos Patient Recruitment',
-    'Kairos Clinical Trials',
-    'KashMOX',
-    'KashMOX 625',
-    'KashMOX antibiotic',
-    'KashMOX Amoxicillin',
-    'KashMOX Clavulanate',
-    'KashMOX TrPharma',
-    'KashMOX tablet',
-    'KashMOX medicine',
-    'KashMOX India',
-    'Amoxicillin Potassium Clavulanate',
-    'TrPharma',
-    'TrPharma India',
-    'trpharma187',
-    'TrPharma KashMOX',
-    'TrPharma antibiotic',
-    'TrPharma ThinkRoman',
-    'pharma.thinkroman.com',
-    'pharmacy.thinkroman.com',
-    'Healthcare Innovation',
-    'AI Healthcare',
-    'Digital Health',
-    'Medical Informatics',
-    'Fremont California Physician',
-    'Oracle Health',
-    'Cerner CMIO',
-    'Healthcare Technology',
-    'Clinical Research Organization',
-    'CRO India',
-    'Clinical Trial Management'
+    // Dr. Ashwani Dhar variations
+    'Dr. Ashwani Dhar', 'Dr Ashwani Dhar', 'Ashwani Dhar', 'Dr Ashwani Dhar MD', 'Dr Ashwani Dhar DMI',
+    'Ashwani Dhar MD DMI', 'Ashwani Dhar ThinkRoman', 'Ashwani Dhar Kairos', 'Ashwani Dhar TrPharma',
+    // Kairos variations
+    'Kairos', 'Kairos R&D', 'Kairos R&D Solutions', 'Kairos RDS', 'Kairos CRO', 'Kairos Healthcare',
+    'Kairos Clinical Research', 'Kairos India', 'Kairos Hyderabad', 'Kairos patient recruitment',
+    'Kairos clinical trials', 'Kairos Kairodox', 'kairosrds', 'kairosrds.com', 'www.kairosrds.com',
+    // KashMOX variations
+    'KashMOX', 'KashMOX 625', 'KashMOX tablet', 'KashMOX antibiotic', 'KashMOX Amoxicillin',
+    'KashMOX Clavulanate', 'KashMOX TrPharma', 'KashMOX medicine', 'KashMOX India', 'KashMOX price',
+    // One87 Plus variations
+    'One87 Plus', 'One87 Plus tablet', 'One87 Plus pain relief', 'One87 Plus TrPharma',
+    'Aceclofenac Paracetamol', 'One87 Plus medicine',
+    // TrPharma variations
+    'TrPharma', 'TrPharma India', 'trpharma187', 'TrPharma pharmaceutical', 'TrPharma KashMOX',
+    'pharma.thinkroman.com', 'pharmacy.thinkroman.com',
+    // General
+    'ThinkRoman CEO', 'Healthcare Innovation', 'AI Healthcare', 'Clinical Research Organization'
   ],
   authors: [{ name: 'Dr. Ashwani Dhar', url: 'https://drashwanidhar.thinkroman.com' }],
   creator: 'Dr. Ashwani Dhar',
+  publisher: 'ThinkRoman Ventures',
   openGraph: {
     type: 'profile',
     firstName: 'Ashwani',
     lastName: 'Dhar',
-    title: 'Dr. Ashwani Dhar MD DMI | Healthcare Innovation Leader',
-    description: 'Physician, entrepreneur, and healthcare technology visionary. CEO of ThinkRoman Ventures and Chairman of Kairos R&D Solutions.',
+    title: 'Dr. Ashwani Dhar MD DMI | Kairos R&D Solutions | KashMOX | TrPharma',
+    description: 'Founder & CEO of Kairos R&D Solutions (CRO) and TrPharma (KashMOX 625). Healthcare innovator and ThinkRoman Ventures CEO.',
     siteName: 'Dr. Ashwani Dhar - Official Profile',
     locale: 'en_US',
+    images: [
+      {
+        url: '/images/kashmox-625.webp',
+        width: 1200,
+        height: 1015,
+        alt: 'KashMOX 625 - TrPharma Antibiotic by Dr. Ashwani Dhar'
+      }
+    ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dr. Ashwani Dhar MD DMI | Healthcare Innovation Leader',
-    description: 'CEO of ThinkRoman Ventures, Chairman of Kairos R&D Solutions. Pioneering AI-driven healthcare solutions.',
+    title: 'Dr. Ashwani Dhar | Kairos R&D | KashMOX 625 | TrPharma',
+    description: 'Founder of Kairos R&D Solutions & TrPharma. Creator of KashMOX 625 antibiotic.',
     creator: '@ash_dhar',
+    images: ['/images/kashmox-625.webp']
   },
   robots: {
     index: true,
     follow: true,
+    nocache: false,
     googleBot: {
       index: true,
       follow: true,
+      noimageindex: false,
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
   },
   alternates: {
-    canonical: 'https://about-dr-ashwani-dhar.vercel.app',
+    canonical: BASE_URL,
+  },
+  verification: {
+    google: 'verification-code-here',
   },
   icons: {
     icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
+      { url: '/icon-light-32x32.png', media: '(prefers-color-scheme: light)' },
+      { url: '/icon-dark-32x32.png', media: '(prefers-color-scheme: dark)' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
     ],
     apple: '/apple-icon.png',
   },
 }
 
-// JSON-LD Schema for Google Knowledge Panel
-const personSchema = {
+// ============================================================================
+// AI-ENHANCED ENTITY GRAPH SEO - 2026 Best Practices
+// Uses @id for Knowledge Graph entity recognition and cross-referencing
+// ============================================================================
+
+// Master Entity Graph - Links all entities together for AI understanding
+const entityGraph = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Dr. Ashwani Dhar",
-  "honorificPrefix": "Dr.",
-  "givenName": "Ashwani",
-  "familyName": "Dhar",
-  "alternateName": ["Dr. Ashwani Dhar MD", "Dr. Ashwani Dhar MD DMI", "Ashwani Dhar MD", "Dr Ashwani Dhar ThinkRoman"],
-  "jobTitle": "Chairman & CEO",
-  "worksFor": [
+  "@graph": [
+    // ==================== DR. ASHWANI DHAR - PRIMARY ENTITY ====================
     {
-      "@type": "Organization",
-      "name": "ThinkRoman Ventures",
-      "url": "https://thinkroman.com"
+      "@type": "Person",
+      "@id": `${BASE_URL}/#person-dr-ashwani-dhar`,
+      "name": "Dr. Ashwani Dhar",
+      "alternateName": ["Ashwani Dhar", "Dr Ashwani Dhar", "Dr. Ashwani Dhar MD", "Dr. Ashwani Dhar MD DMI", "Ashwani Dhar MD DMI", "Dr Ashwani Dhar ThinkRoman", "Ashwani Dhar Kairos"],
+      "honorificPrefix": "Dr.",
+      "givenName": "Ashwani",
+      "familyName": "Dhar",
+      "jobTitle": ["Founder & CEO", "Chairman", "Physician"],
+      "description": "Dr. Ashwani Dhar MD DMI is a physician, healthcare innovator, and entrepreneur. Founder & CEO of ThinkRoman Ventures, Kairos R&D Solutions (Clinical Research CRO), and TrPharma (KashMOX 625, One87 Plus). Former Senior Physician Executive and CMIO at Cerner/Oracle Health.",
+      "image": `${BASE_URL}/images/dr-ashwani-dhar.jpg`,
+      "url": "https://drashwanidhar.thinkroman.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/ashdhar",
+        "https://twitter.com/ash_dhar",
+        "https://www.instagram.com/trpharma187",
+        "https://medium.com/@ashdhar",
+        "https://thinkroman.com",
+        "https://drashwanidhar.thinkroman.com",
+        "https://www.durandhar.com",
+        "https://kairosrds.com",
+        "https://www.kairosrds.com",
+        "https://pharma.thinkroman.com",
+        "https://pharmacy.thinkroman.com"
+      ],
+      "worksFor": [
+        { "@id": `${BASE_URL}/#org-thinkroman` },
+        { "@id": `${BASE_URL}/#org-kairos` },
+        { "@id": `${BASE_URL}/#org-trpharma` }
+      ],
+      "founder": [
+        { "@id": `${BASE_URL}/#org-kairos` },
+        { "@id": `${BASE_URL}/#org-trpharma` }
+      ],
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Harvard T.H. Chan School of Public Health"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Fremont",
+        "addressRegion": "CA",
+        "addressCountry": "US"
+      },
+      "knowsAbout": [
+        "AI in Healthcare", "Clinical Research", "Pharmacogenomics", "Digital Health",
+        "Medical Informatics", "Healthcare Technology", "Personalized Medicine",
+        "Drug Development", "Telemedicine", "EHR Systems"
+      ]
     },
+
+    // ==================== KAIROS R&D SOLUTIONS - ORGANIZATION ====================
     {
-      "@type": "Organization",
+      "@type": ["Organization", "MedicalBusiness"],
+      "@id": `${BASE_URL}/#org-kairos`,
       "name": "Kairos R&D Solutions",
-      "url": "https://kairosrds.com"
+      "legalName": "Kairos R&D Solutions Pvt. Ltd.",
+      "alternateName": ["Kairos", "Kairos RDS", "Kairos CRO", "Kairos Healthcare", "Kairos Clinical Research", "kairosrds", "Kairos India"],
+      "url": "https://kairosrds.com",
+      "logo": "https://kairosrds.com/logo.png",
+      "image": "https://kairosrds.com/logo.png",
+      "description": "Kairos R&D Solutions is a specialized Clinical Research Organization (CRO) founded by Dr. Ashwani Dhar. Providing patient recruitment, clinical trial management, Kairodox document management, AI-enabled research, and pharmacovigilance services.",
+      "slogan": "Your partner in Clinical Research - Making It Seamless",
+      "founder": { "@id": `${BASE_URL}/#person-dr-ashwani-dhar` },
+      "foundingDate": "2020",
+      "areaServed": ["Worldwide", "India", "United States", "Europe"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Hyderabad",
+        "addressCountry": "IN"
+      },
+      "sameAs": [
+        "https://kairosrds.com",
+        "https://www.kairosrds.com",
+        "https://www.linkedin.com/company/kairos-rds"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Kairos Clinical Research Services",
+        "itemListElement": [
+          {
+            "@type": "Service",
+            "@id": `${BASE_URL}/#service-patient-recruitment`,
+            "name": "Patient Recruitment",
+            "description": "Access to millions of diverse patients through healthcare networks with AI-powered matching"
+          },
+          {
+            "@type": "Service",
+            "@id": `${BASE_URL}/#service-kairodox`,
+            "name": "Kairodox",
+            "description": "Sponsor-Centric Document Ordering & Management platform for clinical research"
+          },
+          {
+            "@type": "Service",
+            "name": "Clinical Trial Management",
+            "description": "End-to-end clinical trial services from protocol design to study closeout"
+          },
+          {
+            "@type": "Service",
+            "name": "AI-Enabled Clinical Research",
+            "description": "Technology-driven research solutions with AI-powered data analytics"
+          }
+        ]
+      }
     },
+
+    // ==================== TRPHARMA - ORGANIZATION ====================
     {
       "@type": "Organization",
+      "@id": `${BASE_URL}/#org-trpharma`,
       "name": "TrPharma",
-      "url": "https://pharma.thinkroman.com"
-    }
-  ],
-  "description": "Physician (MD, DMI), healthcare innovator, and CEO of ThinkRoman Ventures. Former Senior Physician Executive and CMIO at Cerner/Oracle Health. Chairman of Kairos R&D Solutions. AI healthcare innovator based in Fremont, California.",
-  "url": "https://drashwanidhar.thinkroman.com",
-  "sameAs": [
-    "https://www.linkedin.com/in/ashdhar",
-    "https://twitter.com/ash_dhar",
-    "https://thinkroman.com",
-    "https://drashwanidhar.thinkroman.com",
-    "https://www.durandhar.com",
-    "https://kairosrds.com",
-    "https://www.kairosrds.com",
-    "https://pharma.thinkroman.com",
-    "https://pharmacy.thinkroman.com",
-    "https://www.instagram.com/trpharma187",
-    "https://medium.com/@ashdhar"
-  ],
-  "alumniOf": {
-    "@type": "EducationalOrganization",
-    "name": "Harvard T.H. Chan School of Public Health"
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Fremont",
-    "addressRegion": "CA",
-    "addressCountry": "US"
-  },
-  "knowsAbout": ["AI in healthcare", "Digital health", "Medical informatics", "Telemedicine", "Cerner EHR", "Clinical Research", "Healthcare Technology", "Pharmacogenomics", "Personalized Medicine"]
-}
+      "legalName": "TrPharma - A Division of ThinkRoman Ventures LLP",
+      "alternateName": ["TrPharma India", "trpharma187", "ThinkRoman Pharma", "TrPharma Pharmaceutical"],
+      "url": "https://pharma.thinkroman.com",
+      "description": "TrPharma is a doctor-led pharmaceutical division founded by Dr. Ashwani Dhar MD DMI. Manufacturer of KashMOX 625 antibiotic and One87 Plus pain relief. GMP-certified, affordable healthcare solutions.",
+      "founder": { "@id": `${BASE_URL}/#person-dr-ashwani-dhar` },
+      "parentOrganization": { "@id": `${BASE_URL}/#org-thinkroman` },
+      "sameAs": [
+        "https://pharma.thinkroman.com",
+        "https://pharmacy.thinkroman.com",
+        "https://www.instagram.com/trpharma187"
+      ],
+      "makesOffer": [
+        { "@id": `${BASE_URL}/#product-kashmox-625` },
+        { "@id": `${BASE_URL}/#product-one87-plus` }
+      ]
+    },
 
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Kairos R&D Solutions",
-  "legalName": "Kairos R&D Solutions Pvt. Ltd.",
-  "alternateName": ["Kairos", "Kairos RDS", "Kairos Healthcare", "Kairos CRO", "Kairos Clinical Research", "kairosrds"],
-  "url": "https://kairosrds.com",
-  "logo": "https://kairosrds.com/logo.png",
-  "description": "Kairos R&D Solutions is a specialized Clinical Research Organization (CRO) providing end-to-end clinical trial management, patient recruitment, AI-enabled clinical research, regulatory compliance, and pharmacovigilance services. Founded by Dr. Ashwani Dhar MD DMI.",
-  "slogan": "Connecting and empowering sites, sponsors, and patients through innovative solutions that accelerate clinical research",
-  "founder": {
-    "@type": "Person",
-    "name": "Dr. Ashwani Dhar",
-    "jobTitle": "Founder & CEO",
-    "url": "https://drashwanidhar.thinkroman.com"
-  },
-  "foundingDate": "2020",
-  "foundingLocation": {
-    "@type": "Place",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "India"
-    }
-  },
-  "areaServed": ["Worldwide", "India", "United States", "Europe"],
-  "knowsAbout": [
-    "Clinical Research",
-    "Clinical Trials",
-    "Patient Recruitment",
-    "CRO Services",
-    "Pharmacovigilance",
-    "Regulatory Compliance",
-    "AI Clinical Research",
-    "Real-world Evidence",
-    "Drug Development",
-    "Medical Device Trials"
-  ],
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Kairos Clinical Research Services",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Patient Recruitment",
-          "description": "Access to millions of diverse patients through healthcare organization networks with advanced matching technology"
-        }
+    // ==================== THINKROMAN VENTURES - PARENT ORG ====================
+    {
+      "@type": "Organization",
+      "@id": `${BASE_URL}/#org-thinkroman`,
+      "name": "ThinkRoman Ventures",
+      "legalName": "ThinkRoman Ventures LLP",
+      "url": "https://thinkroman.com",
+      "founder": { "@id": `${BASE_URL}/#person-dr-ashwani-dhar` },
+      "subOrganization": [
+        { "@id": `${BASE_URL}/#org-kairos` },
+        { "@id": `${BASE_URL}/#org-trpharma` }
+      ]
+    },
+
+    // ==================== KASHMOX 625 - PRODUCT/DRUG ====================
+    {
+      "@type": "Drug",
+      "@id": `${BASE_URL}/#product-kashmox-625`,
+      "name": "KashMOX 625",
+      "alternateName": ["KashMOX", "KashMOX 625 Tablet", "KashMOX Antibiotic", "Amoxicillin Clavulanate TrPharma"],
+      "description": "KashMOX 625 is a broad-spectrum antibiotic tablet containing Amoxicillin 500mg and Potassium Clavulanate 125mg. Manufactured by TrPharma, founded by Dr. Ashwani Dhar. WHO-GMP certified. Used for respiratory tract infections, UTI, skin infections, dental infections.",
+      "drugClass": "Antibiotic",
+      "activeIngredient": "Amoxicillin Trihydrate 500mg, Potassium Clavulanate 125mg",
+      "dosageForm": "Tablet",
+      "administrationRoute": "Oral",
+      "isProprietary": true,
+      "proprietaryName": "KashMOX 625",
+      "nonProprietaryName": "Amoxicillin and Potassium Clavulanate Tablets I.P.",
+      "manufacturer": { "@id": `${BASE_URL}/#org-trpharma` },
+      "image": {
+        "@type": "ImageObject",
+        "@id": `${BASE_URL}/#image-kashmox`,
+        "url": `${BASE_URL}/images/kashmox-625.webp`,
+        "contentUrl": `${BASE_URL}/images/kashmox-625.webp`,
+        "name": "KashMOX 625 Antibiotic Tablet - TrPharma",
+        "description": "KashMOX 625 Amoxicillin Potassium Clavulanate Tablets packaging by TrPharma, Dr. Ashwani Dhar",
+        "width": 1200,
+        "height": 1015,
+        "encodingFormat": "image/webp"
       },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Kairodox",
-          "description": "Sponsor-Centric Document Ordering & Management platform for seamless document management in clinical research"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Clinical Trial Management",
-          "description": "End-to-end clinical trial management services from protocol design to study closeout"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "AI-Enabled Clinical Research",
-          "description": "Technology-driven clinical research solutions with AI-powered data analytics"
-        }
+      "url": "https://pharma.thinkroman.com/products#kashmox"
+    },
+
+    // ==================== ONE87 PLUS - PRODUCT/DRUG ====================
+    {
+      "@type": "Drug",
+      "@id": `${BASE_URL}/#product-one87-plus`,
+      "name": "One87 Plus",
+      "alternateName": ["One87 Plus Tablet", "One87 Plus Pain Relief", "Aceclofenac Paracetamol TrPharma"],
+      "description": "One87 Plus is a pain relief tablet containing Aceclofenac 100mg and Paracetamol 325mg. Manufactured by TrPharma, founded by Dr. Ashwani Dhar. Used for arthritis, musculoskeletal pain, dental pain, post-operative pain.",
+      "drugClass": "NSAID / Analgesic",
+      "activeIngredient": "Aceclofenac 100mg, Paracetamol 325mg",
+      "dosageForm": "Tablet",
+      "administrationRoute": "Oral",
+      "isProprietary": true,
+      "proprietaryName": "One87 Plus",
+      "manufacturer": { "@id": `${BASE_URL}/#org-trpharma` },
+      "url": "https://pharma.thinkroman.com/products#one87plus"
+    },
+
+    // ==================== WEBSITE ====================
+    {
+      "@type": "WebSite",
+      "@id": `${BASE_URL}/#website`,
+      "url": BASE_URL,
+      "name": "Dr. Ashwani Dhar - Official Profile",
+      "description": "Official profile of Dr. Ashwani Dhar MD DMI - Founder of Kairos R&D Solutions and TrPharma",
+      "publisher": { "@id": `${BASE_URL}/#person-dr-ashwani-dhar` },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": `${BASE_URL}/search?q={search_term_string}`
+        },
+        "query-input": "required name=search_term_string"
       }
-    ]
-  },
-  "sameAs": [
-    "https://kairosrds.com",
-    "https://www.kairosrds.com",
-    "https://www.linkedin.com/company/kairos-rds",
-    "https://drashwanidhar.thinkroman.com"
-  ]
-}
+    },
 
-const kairosWebsiteSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Kairos R&D Solutions",
-  "alternateName": ["Kairos", "Kairos RDS", "Kairos Healthcare"],
-  "url": "https://kairosrds.com",
-  "description": "Kairos R&D Solutions - Clinical Research Organization specializing in patient recruitment, clinical trial management, and AI-enabled research solutions.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Kairos R&D Solutions"
-  }
-}
-
-const kairosServiceSchema = {
-  "@context": "https://schema.org",
-  "@type": "MedicalBusiness",
-  "name": "Kairos R&D Solutions",
-  "alternateName": ["Kairos", "Kairos CRO", "Kairos Clinical Research"],
-  "description": "Specialized Clinical Research Organization (CRO) offering patient recruitment, clinical trial management, Kairodox document management, and AI-enabled research services.",
-  "url": "https://kairosrds.com",
-  "priceRange": "$$",
-  "medicalSpecialty": "Clinical Research",
-  "availableService": [
+    // ==================== BREADCRUMB ====================
     {
-      "@type": "MedicalProcedure",
-      "name": "Clinical Trial Management",
-      "description": "End-to-end management of clinical trials including patient recruitment, site management, and data collection"
+      "@type": "BreadcrumbList",
+      "@id": `${BASE_URL}/#breadcrumb`,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Dr. Ashwani Dhar",
+          "item": BASE_URL
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Kairos R&D Solutions",
+          "item": `${BASE_URL}/kairos`
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "TrPharma & KashMOX",
+          "item": `${BASE_URL}/trpharma`
+        }
+      ]
     }
   ]
 }
 
-const trpharmaSchema = {
+// ==================== FAQ SCHEMA - Featured Snippets ====================
+const faqSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "TrPharma",
-  "legalName": "TrPharma - A Division of ThinkRoman Ventures LLP",
-  "alternateName": ["TrPharma India", "trpharma187", "ThinkRoman Pharma", "TrPharma Pharmaceutical"],
-  "url": "https://pharma.thinkroman.com",
-  "description": "TrPharma is a doctor-led pharmaceutical division of ThinkRoman Ventures, founded by Dr. Ashwani Dhar MD DMI. Specializing in affordable, GMP-certified medications including the flagship KashMOX 625 antibiotic.",
-  "founder": {
-    "@type": "Person",
-    "name": "Dr. Ashwani Dhar",
-    "jobTitle": "Founder & CEO",
-    "url": "https://drashwanidhar.thinkroman.com"
-  },
-  "parentOrganization": {
-    "@type": "Organization",
-    "name": "ThinkRoman Ventures LLP",
-    "url": "https://thinkroman.com"
-  },
-  "sameAs": [
-    "https://pharma.thinkroman.com",
-    "https://pharmacy.thinkroman.com",
-    "https://www.instagram.com/trpharma187",
-    "https://thinkroman.com"
-  ]
-}
-
-// Deep SEO Schema for KashMOX 625 Product
-const kashmoxProductSchema = {
-  "@context": "https://schema.org",
-  "@type": "Drug",
-  "name": "KashMOX 625",
-  "alternateName": ["KashMOX", "KashMOX 625 Tablet", "KashMOX Antibiotic", "Amoxicillin Clavulanate TrPharma"],
-  "description": "KashMOX 625 is a broad-spectrum antibiotic containing Amoxicillin 500mg and Potassium Clavulanate 125mg. Manufactured by TrPharma, a division of ThinkRoman Ventures founded by Dr. Ashwani Dhar. Used for respiratory tract infections, urinary tract infections, skin infections, and dental infections.",
-  "activeIngredient": [
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@type": "DrugStrength",
-      "activeIngredient": "Amoxicillin Trihydrate",
-      "strengthValue": "500",
-      "strengthUnit": "mg"
+      "@type": "Question",
+      "name": "Who is Dr. Ashwani Dhar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dr. Ashwani Dhar MD DMI is a physician, healthcare innovator, and entrepreneur based in Fremont, California. He is the Founder & CEO of ThinkRoman Ventures, Kairos R&D Solutions (a Clinical Research Organization), and TrPharma (manufacturer of KashMOX 625 and One87 Plus). He previously served as Senior Physician Executive and CMIO at Cerner/Oracle Health."
+      }
     },
     {
-      "@type": "DrugStrength", 
-      "activeIngredient": "Potassium Clavulanate",
-      "strengthValue": "125",
-      "strengthUnit": "mg"
+      "@type": "Question",
+      "name": "What is Kairos R&D Solutions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kairos R&D Solutions (kairosrds.com) is a specialized Clinical Research Organization (CRO) founded by Dr. Ashwani Dhar. Kairos provides patient recruitment, clinical trial management, Kairodox document management, AI-enabled research, and pharmacovigilance services. Their tagline is 'Your partner in Clinical Research - Making It Seamless.'"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is KashMOX 625?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "KashMOX 625 is a broad-spectrum antibiotic manufactured by TrPharma, a division of ThinkRoman Ventures founded by Dr. Ashwani Dhar. It contains Amoxicillin 500mg and Potassium Clavulanate 125mg. KashMOX 625 is used to treat respiratory tract infections, urinary tract infections, skin infections, and dental infections. It is WHO-GMP certified."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is One87 Plus?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One87 Plus is a pain relief tablet manufactured by TrPharma, founded by Dr. Ashwani Dhar. It contains Aceclofenac 100mg and Paracetamol 325mg. One87 Plus is used for arthritis pain, musculoskeletal pain, dental pain, and post-operative pain relief."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is TrPharma?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TrPharma (pharma.thinkroman.com) is a doctor-led pharmaceutical division of ThinkRoman Ventures, founded by Dr. Ashwani Dhar MD DMI. TrPharma manufactures affordable, GMP-certified medications including KashMOX 625 antibiotic and One87 Plus pain relief tablets. Follow @trpharma187 on Instagram."
+      }
     }
-  ],
-  "drugClass": "Antibiotic",
-  "dosageForm": "Tablet",
-  "isProprietary": true,
-  "proprietaryName": "KashMOX 625",
-  "nonProprietaryName": "Amoxicillin and Potassium Clavulanate Tablets I.P.",
-  "manufacturer": {
-    "@type": "Organization",
-    "name": "TrPharma",
-    "url": "https://pharma.thinkroman.com"
-  },
-  "image": {
-    "@type": "ImageObject",
-    "url": "https://about-dr-ashwani-dhar.vercel.app/images/kashmox-625.webp",
-    "name": "KashMOX 625 Antibiotic Tablet Box - TrPharma",
-    "description": "KashMOX 625 Amoxicillin Potassium Clavulanate Tablets packaging by TrPharma, a division of ThinkRoman Ventures",
-    "width": 1200,
-    "height": 1015
-  },
-  "url": "https://pharma.thinkroman.com/products#kashmox",
-  "sameAs": [
-    "https://pharma.thinkroman.com/products",
-    "https://pharmacy.thinkroman.com"
   ]
 }
 
-// Deep SEO Schema for KashMOX Image
-const kashmoxImageSchema = {
+// ==================== SPEAKABLE SCHEMA - Voice Search ====================
+const speakableSchema = {
   "@context": "https://schema.org",
-  "@type": "ImageObject",
-  "contentUrl": "https://about-dr-ashwani-dhar.vercel.app/images/kashmox-625.webp",
-  "url": "https://about-dr-ashwani-dhar.vercel.app/images/kashmox-625.webp",
-  "name": "KashMOX 625 - Amoxicillin Potassium Clavulanate Antibiotic Tablet",
-  "description": "KashMOX 625 tablet box packaging showing Amoxicillin 500mg and Potassium Clavulanate 125mg. Manufactured by TrPharma, a doctor-led pharmaceutical division of ThinkRoman Ventures founded by Dr. Ashwani Dhar MD DMI. WHO-GMP certified antibiotic for respiratory infections, UTI, skin infections.",
-  "caption": "KashMOX 625 - TrPharma's flagship antibiotic product",
-  "creditText": "TrPharma - A Division of ThinkRoman Ventures LLP",
-  "creator": {
-    "@type": "Organization",
-    "name": "TrPharma",
-    "url": "https://pharma.thinkroman.com"
+  "@type": "WebPage",
+  "name": "Dr. Ashwani Dhar - Founder of Kairos R&D Solutions and TrPharma",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": ["#about", "#kairos", "#trpharma", "h1", "h2"]
   },
-  "copyrightHolder": {
-    "@type": "Organization",
-    "name": "ThinkRoman Ventures LLP"
-  },
-  "acquireLicensePage": "https://pharma.thinkroman.com",
-  "width": 1200,
-  "height": 1015,
-  "encodingFormat": "image/webp"
+  "url": BASE_URL
 }
 
-// Deep SEO Schema for Kairos Logo/Brand Image
-const kairosImageSchema = {
-  "@context": "https://schema.org",
-  "@type": "ImageObject",
-  "contentUrl": "https://kairosrds.com/logo.png",
-  "url": "https://kairosrds.com/logo.png",
-  "name": "Kairos R&D Solutions Logo - Clinical Research Organization",
-  "description": "Official logo of Kairos R&D Solutions Pvt. Ltd., a specialized Clinical Research Organization (CRO) founded by Dr. Ashwani Dhar MD DMI. Kairos provides patient recruitment, clinical trial management, Kairodox document management, and AI-enabled research solutions.",
-  "caption": "Kairos R&D Solutions - Your partner in Clinical Research",
-  "creditText": "Kairos R&D Solutions Pvt. Ltd.",
-  "creator": {
-    "@type": "Organization",
-    "name": "Kairos R&D Solutions",
-    "url": "https://kairosrds.com"
-  }
-}
-
-// Video Schema for Dr. Ashwani Dhar YouTube Videos
+// ==================== VIDEO SCHEMAS - YouTube Indexing ====================
 const videoSchemas = [
   {
     "@context": "https://schema.org",
     "@type": "VideoObject",
-    "name": "Dr. Ashwani Dhar: Pharmacogenomics and Personalized Medicine - Genomics Gupshup Episode 24",
-    "description": "Dr. Ashwani Dhar MD DMI, CEO of ThinkRoman Ventures and Founder of Kairos R&D Solutions, discusses the future of pharmacogenomics and personalized medicine with MapMyGenome. Topics include AI in healthcare, precision medicine, and the future of genomics.",
+    "name": "Dr. Ashwani Dhar: Pharmacogenomics and Personalized Medicine",
+    "description": "Dr. Ashwani Dhar MD DMI, CEO of ThinkRoman Ventures and Founder of Kairos R&D Solutions, discusses pharmacogenomics and personalized medicine on Genomics Gupshup Episode 24.",
     "thumbnailUrl": "https://i.ytimg.com/vi/8sZDapqP03I/maxresdefault.jpg",
     "uploadDate": "2023-01-01",
     "duration": "PT38M",
@@ -413,90 +412,31 @@ const videoSchemas = [
       "@type": "InteractionCounter",
       "interactionType": "https://schema.org/WatchAction",
       "userInteractionCount": 4300
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "MapMyGenome",
-      "url": "https://mapmygenome.in"
     }
   },
   {
     "@context": "https://schema.org",
     "@type": "VideoObject",
-    "name": "Dr. Ashwani Dhar - Vitamin D: The Sunshine Campaign - ThinkRoman TV",
-    "description": "Dr. Ashwani Dhar MD DMI discusses the importance of Vitamin D for health and wellness. As CEO of ThinkRoman Ventures and Founder of TrPharma, Dr. Dhar explains the benefits of Vitamin D supplementation.",
+    "name": "Dr. Ashwani Dhar - Vitamin D: The Sunshine Campaign",
+    "description": "Dr. Ashwani Dhar discusses Vitamin D importance. Founder of TrPharma (KashMOX 625) and Kairos R&D Solutions.",
     "thumbnailUrl": "https://i.ytimg.com/vi/9-GJB5dlyz4/maxresdefault.jpg",
     "uploadDate": "2022-01-01",
     "duration": "PT45M",
     "contentUrl": "https://www.youtube.com/watch?v=9-GJB5dlyz4",
-    "embedUrl": "https://www.youtube.com/embed/9-GJB5dlyz4",
-    "publisher": {
-      "@type": "Organization",
-      "name": "ThinkRoman TV"
-    }
+    "embedUrl": "https://www.youtube.com/embed/9-GJB5dlyz4"
   },
   {
     "@context": "https://schema.org",
     "@type": "VideoObject",
     "name": "Statement by CEO of ThinkRoman Ventures - Dr. Ashwani Dhar",
-    "description": "Dr. Ashwani Dhar MD DMI, CEO of ThinkRoman Ventures, discusses the startup journey of his companies in India including Kairos R&D Solutions and TrPharma pharmaceutical division.",
+    "description": "Dr. Ashwani Dhar MD DMI, CEO of ThinkRoman Ventures, discusses Kairos R&D Solutions and TrPharma startups in India.",
     "thumbnailUrl": "https://i.ytimg.com/vi/VFHsUNEfkYQ/maxresdefault.jpg",
     "uploadDate": "2022-01-01",
     "duration": "PT22M",
     "contentUrl": "https://www.youtube.com/watch?v=VFHsUNEfkYQ",
-    "embedUrl": "https://www.youtube.com/embed/VFHsUNEfkYQ",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Karnataka Current News"
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "NRI Health Show: New Age Health Care - Dr. Ashwani Dhar on Sakshi TV",
-    "description": "Ask Your Doctor with Dr. Ashwani Dhar MD DMI on Sakshi TV. Dr. Dhar discusses new age healthcare, AI in medicine, and personalized healthcare solutions.",
-    "thumbnailUrl": "https://i.ytimg.com/vi/9p8GiZ6UEyM/maxresdefault.jpg",
-    "uploadDate": "2022-01-01",
-    "duration": "PT27M",
-    "contentUrl": "https://www.youtube.com/watch?v=9p8GiZ6UEyM",
-    "embedUrl": "https://www.youtube.com/embed/9p8GiZ6UEyM",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": "https://schema.org/WatchAction",
-      "userInteractionCount": 1700
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Sakshi TV"
-    }
+    "embedUrl": "https://www.youtube.com/embed/VFHsUNEfkYQ"
   }
 ]
-
-// Breadcrumb Schema for better navigation indexing
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Dr. Ashwani Dhar",
-      "item": "https://about-dr-ashwani-dhar.vercel.app"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Kairos R&D Solutions",
-      "item": "https://about-dr-ashwani-dhar.vercel.app/kairos"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "TrPharma",
-      "item": "https://about-dr-ashwani-dhar.vercel.app/trpharma"
-    }
-  ]
-}
 
 export default function RootLayout({
   children,
@@ -506,38 +446,22 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-background">
       <head>
+        {/* AI-Enhanced Entity Graph - Primary SEO */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(entityGraph) }}
         />
+        {/* FAQ Schema - Featured Snippets */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
+        {/* Speakable Schema - Voice Search */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(kairosWebsiteSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(kairosServiceSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(trpharmaSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(kashmoxProductSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(kashmoxImageSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(kairosImageSchema) }}
-        />
+        {/* Video Schemas - YouTube Indexing */}
         {videoSchemas.map((video, index) => (
           <script
             key={index}
@@ -545,10 +469,6 @@ export default function RootLayout({
             dangerouslySetInnerHTML={{ __html: JSON.stringify(video) }}
           />
         ))}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-        />
       </head>
       <body className="font-sans antialiased">
         {children}
