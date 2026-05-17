@@ -17,6 +17,7 @@ const navLinks = [
 
 // Link to dedicated Kairos page for SEO
 const kairosPageLink = "/kairos"
+const trpharmaPageLink = "/trpharma"
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -83,6 +84,11 @@ export function Navigation() {
                 Kairos R&D
               </Link>
             </Button>
+            <Button asChild size="sm" variant="outline">
+              <Link href={trpharmaPageLink} title="TrPharma - Doctor-Led Pharmaceutical Division by Dr. Ashwani Dhar">
+                TrPharma
+              </Link>
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -116,6 +122,11 @@ export function Navigation() {
               <Button asChild size="sm" className="mt-2">
                 <Link href={kairosPageLink} title="Learn more about Kairos R&D Solutions">
                   Kairos R&D
+                </Link>
+              </Button>
+              <Button asChild size="sm" variant="outline" className="mt-2">
+                <Link href={trpharmaPageLink} title="TrPharma - Doctor-Led Pharmaceutical">
+                  TrPharma
                 </Link>
               </Button>
             </div>
