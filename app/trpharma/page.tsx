@@ -314,7 +314,7 @@ export default function TrPharmaPage() {
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 rounded-3xl blur-3xl" />
                   <Image
-                    src="https://cdn.sanity.io/images/twif9jmg/production/af4a16f88c3a8995752e0cf2dfc49bf82260b07c-1600x1352.jpg"
+                    src="/images/kashmox-625.webp"
                     alt="KashMOX 625 - Amoxicillin Potassium Clavulanate Tablets I.P. by TrPharma - Antibiotic for respiratory infections, UTI, skin infections"
                     width={500}
                     height={423}
