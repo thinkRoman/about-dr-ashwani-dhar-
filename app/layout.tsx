@@ -15,7 +15,19 @@ export const metadata: Metadata = {
     'Dr Ashwani Dhar DMI',
     'Ashwani Dhar ThinkRoman',
     'ThinkRoman CEO',
+    'Kairos',
+    'Kairos R&D',
     'Kairos R&D Solutions',
+    'Kairos RDS',
+    'Kairos Healthcare',
+    'Kairos Clinical Research',
+    'Kairos CRO',
+    'Kairos India',
+    'Kairos Kairodox',
+    'kairosrds',
+    'kairosrds.com',
+    'Kairos Patient Recruitment',
+    'Kairos Clinical Trials',
     'Healthcare Innovation',
     'AI Healthcare',
     'Digital Health',
@@ -24,7 +36,10 @@ export const metadata: Metadata = {
     'Oracle Health',
     'Cerner CMIO',
     'TrPharma',
-    'Healthcare Technology'
+    'Healthcare Technology',
+    'Clinical Research Organization',
+    'CRO India',
+    'Clinical Trial Management'
   ],
   authors: [{ name: 'Dr. Ashwani Dhar', url: 'https://drashwanidhar.thinkroman.com' }],
   creator: 'Dr. Ashwani Dhar',
@@ -126,19 +141,113 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Kairos R&D Solutions",
+  "legalName": "Kairos R&D Solutions Pvt. Ltd.",
+  "alternateName": ["Kairos", "Kairos RDS", "Kairos Healthcare", "Kairos CRO", "Kairos Clinical Research", "kairosrds"],
   "url": "https://kairosrds.com",
-  "description": "Clinical research organization connecting and empowering sites, sponsors, and patients through innovative solutions that accelerate clinical research.",
+  "logo": "https://kairosrds.com/logo.png",
+  "description": "Kairos R&D Solutions is a specialized Clinical Research Organization (CRO) providing end-to-end clinical trial management, patient recruitment, AI-enabled clinical research, regulatory compliance, and pharmacovigilance services. Founded by Dr. Ashwani Dhar MD DMI.",
+  "slogan": "Connecting and empowering sites, sponsors, and patients through innovative solutions that accelerate clinical research",
   "founder": {
     "@type": "Person",
-    "name": "Dr. Ashwani Dhar"
+    "name": "Dr. Ashwani Dhar",
+    "jobTitle": "Founder & CEO",
+    "url": "https://drashwanidhar.thinkroman.com"
   },
+  "foundingDate": "2020",
   "foundingLocation": {
     "@type": "Place",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "India"
     }
+  },
+  "areaServed": ["Worldwide", "India", "United States", "Europe"],
+  "knowsAbout": [
+    "Clinical Research",
+    "Clinical Trials",
+    "Patient Recruitment",
+    "CRO Services",
+    "Pharmacovigilance",
+    "Regulatory Compliance",
+    "AI Clinical Research",
+    "Real-world Evidence",
+    "Drug Development",
+    "Medical Device Trials"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Kairos Clinical Research Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Patient Recruitment",
+          "description": "Access to millions of diverse patients through healthcare organization networks with advanced matching technology"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Kairodox",
+          "description": "Sponsor-Centric Document Ordering & Management platform for seamless document management in clinical research"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Clinical Trial Management",
+          "description": "End-to-end clinical trial management services from protocol design to study closeout"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "AI-Enabled Clinical Research",
+          "description": "Technology-driven clinical research solutions with AI-powered data analytics"
+        }
+      }
+    ]
+  },
+  "sameAs": [
+    "https://kairosrds.com",
+    "https://www.linkedin.com/company/kairos-rds",
+    "https://drashwanidhar.thinkroman.com"
+  ]
+}
+
+const kairosWebsiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Kairos R&D Solutions",
+  "alternateName": ["Kairos", "Kairos RDS", "Kairos Healthcare"],
+  "url": "https://kairosrds.com",
+  "description": "Kairos R&D Solutions - Clinical Research Organization specializing in patient recruitment, clinical trial management, and AI-enabled research solutions.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Kairos R&D Solutions"
   }
+}
+
+const kairosServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "Kairos R&D Solutions",
+  "alternateName": ["Kairos", "Kairos CRO", "Kairos Clinical Research"],
+  "description": "Specialized Clinical Research Organization (CRO) offering patient recruitment, clinical trial management, Kairodox document management, and AI-enabled research services.",
+  "url": "https://kairosrds.com",
+  "priceRange": "$$",
+  "medicalSpecialty": "Clinical Research",
+  "availableService": [
+    {
+      "@type": "MedicalProcedure",
+      "name": "Clinical Trial Management",
+      "description": "End-to-end management of clinical trials including patient recruitment, site management, and data collection"
+    }
+  ]
 }
 
 export default function RootLayout({
@@ -156,6 +265,14 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(kairosWebsiteSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(kairosServiceSchema) }}
         />
       </head>
       <body className="font-sans antialiased">
