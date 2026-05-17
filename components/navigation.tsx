@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -27,6 +27,23 @@ export function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  const handleSmoothScroll = useCallback((e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault()
+    const targetId = href.replace("#", "")
+    const element = document.getElementById(targetId)
+    if (element) {
+      const headerOffset = 80 // Account for fixed nav height
+      const elementPosition = element.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      })
+    }
+    setIsMobileMenuOpen(false)
+  }, [])
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -49,13 +66,14 @@ export function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
-              <Link
+              <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                onClick={(e) => handleSmoothScroll(e, link.href)}
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors cursor-pointer"
               >
                 {link.label}
-              </Link>
+              </a>
             ))}
             <Button asChild size="sm">
               <Link href="https://kairosrds.com" target="_blank" rel="noopener noreferrer">
@@ -83,14 +101,14 @@ export function Navigation() {
           <div className="lg:hidden py-4 border-t border-border bg-background">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
-                <Link
+                <a
                   key={link.href}
                   href={link.href}
-                  className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors px-2 py-1"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={(e) => handleSmoothScroll(e, link.href)}
+                  className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors px-2 py-1 cursor-pointer"
                 >
                   {link.label}
-                </Link>
+                </a>
               ))}
               <Button asChild size="sm" className="mt-2">
                 <Link href="https://kairosrds.com" target="_blank" rel="noopener noreferrer">

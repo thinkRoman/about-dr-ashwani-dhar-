@@ -130,6 +130,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Scroll offset for fixed navigation */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
 /* Custom animations */
 @keyframes fadeInUp {
   from {
