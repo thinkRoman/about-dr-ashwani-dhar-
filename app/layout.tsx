@@ -6,8 +6,9 @@ import './globals.css'
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
-// Base URL for canonical references
-const BASE_URL = "https://about-dr-ashwani-dhar.vercel.app"
+// Base URL for canonical references - Primary domain
+const BASE_URL = "https://www.about-dr-ashwani-dhar.com"
+const ALT_URL = "https://about-dr-ashwani-dhar.thinkroman.com"
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -41,7 +42,10 @@ export const metadata: Metadata = {
     'TrPharma KashCAL', 'TrPharma GMP', 'TrPharma India pharmaceutical', 'TrPharma healthcare',
     'pharma.thinkroman.com', 'pharmacy.thinkroman.com', 'ThinkRoman pharma', 'ThinkRoman pharmacy',
     // General
-    'ThinkRoman CEO', 'Healthcare Innovation', 'AI Healthcare', 'Clinical Research Organization'
+    'ThinkRoman CEO', 'Healthcare Innovation', 'AI Healthcare', 'Clinical Research Organization',
+    // Domain variations
+    'about-dr-ashwani-dhar', 'www.about-dr-ashwani-dhar.com', 'about-dr-ashwani-dhar.com',
+    'about-dr-ashwani-dhar.thinkroman.com', 'about Dr Ashwani Dhar', 'about Ashwani Dhar'
   ],
   authors: [{ name: 'Dr. Ashwani Dhar', url: 'https://drashwanidhar.thinkroman.com' }],
   creator: 'Dr. Ashwani Dhar',
@@ -85,6 +89,12 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: BASE_URL,
+    languages: {
+      'en-US': BASE_URL,
+    },
+  },
+  other: {
+    'alternate-domain': ALT_URL,
   },
   verification: {
     google: 'verification-code-here',
@@ -132,7 +142,9 @@ const entityGraph = {
         "https://kairosrds.com",
         "https://www.kairosrds.com",
         "https://pharma.thinkroman.com",
-        "https://pharmacy.thinkroman.com"
+        "https://pharmacy.thinkroman.com",
+        ALT_URL,
+        "https://about-dr-ashwani-dhar.com"
       ],
       "worksFor": [
         { "@id": `${BASE_URL}/#org-thinkroman` },
@@ -349,14 +361,16 @@ const entityGraph = {
       "url": "https://pharma.thinkroman.com/products#kashcalplus"
     },
 
-    // ==================== WEBSITE ====================
+    // ==================== WEBSITE - PRIMARY ====================
     {
       "@type": "WebSite",
       "@id": `${BASE_URL}/#website`,
       "url": BASE_URL,
-      "name": "Dr. Ashwani Dhar - Official Profile",
-      "description": "Official profile of Dr. Ashwani Dhar MD DMI - Founder of Kairos R&D Solutions and TrPharma",
+      "name": "About Dr. Ashwani Dhar - Official Profile",
+      "alternateName": ["www.about-dr-ashwani-dhar.com", "about-dr-ashwani-dhar.com", "About Dr Ashwani Dhar", "About Ashwani Dhar"],
+      "description": "Official profile of Dr. Ashwani Dhar MD DMI - Founder of Kairos R&D Solutions (Clinical Research CRO), TrPharma (KashMOX 625, One87 Plus), and ThinkRoman Ventures. Healthcare innovator.",
       "publisher": { "@id": `${BASE_URL}/#person-dr-ashwani-dhar` },
+      "inLanguage": "en-US",
       "potentialAction": {
         "@type": "SearchAction",
         "target": {
@@ -365,6 +379,19 @@ const entityGraph = {
         },
         "query-input": "required name=search_term_string"
       }
+    },
+
+    // ==================== WEBSITE - ALTERNATE ====================
+    {
+      "@type": "WebSite",
+      "@id": `${ALT_URL}/#website-alt`,
+      "url": ALT_URL,
+      "name": "About Dr. Ashwani Dhar - ThinkRoman",
+      "alternateName": ["about-dr-ashwani-dhar.thinkroman.com"],
+      "description": "Dr. Ashwani Dhar MD DMI profile on ThinkRoman - Kairos R&D Solutions founder, TrPharma KashMOX 625 creator",
+      "publisher": { "@id": `${BASE_URL}/#person-dr-ashwani-dhar` },
+      "sameAs": [BASE_URL],
+      "inLanguage": "en-US"
     },
 
     // ==================== BREADCRUMB ====================
