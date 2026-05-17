@@ -24,10 +24,33 @@ export const metadata: Metadata = {
     'Kairos CRO',
     'Kairos India',
     'Kairos Kairodox',
+    'Kairos patient recruitment',
+    'Kairos clinical trials',
+    'Kairos Hyderabad',
+    'Kairos pharmaceutical',
     'kairosrds',
     'kairosrds.com',
+    'www.kairosrds.com',
     'Kairos Patient Recruitment',
     'Kairos Clinical Trials',
+    'KashMOX',
+    'KashMOX 625',
+    'KashMOX antibiotic',
+    'KashMOX Amoxicillin',
+    'KashMOX Clavulanate',
+    'KashMOX TrPharma',
+    'KashMOX tablet',
+    'KashMOX medicine',
+    'KashMOX India',
+    'Amoxicillin Potassium Clavulanate',
+    'TrPharma',
+    'TrPharma India',
+    'trpharma187',
+    'TrPharma KashMOX',
+    'TrPharma antibiotic',
+    'TrPharma ThinkRoman',
+    'pharma.thinkroman.com',
+    'pharmacy.thinkroman.com',
     'Healthcare Innovation',
     'AI Healthcare',
     'Digital Health',
@@ -35,7 +58,6 @@ export const metadata: Metadata = {
     'Fremont California Physician',
     'Oracle Health',
     'Cerner CMIO',
-    'TrPharma',
     'Healthcare Technology',
     'Clinical Research Organization',
     'CRO India',
@@ -287,6 +309,195 @@ const trpharmaSchema = {
   ]
 }
 
+// Deep SEO Schema for KashMOX 625 Product
+const kashmoxProductSchema = {
+  "@context": "https://schema.org",
+  "@type": "Drug",
+  "name": "KashMOX 625",
+  "alternateName": ["KashMOX", "KashMOX 625 Tablet", "KashMOX Antibiotic", "Amoxicillin Clavulanate TrPharma"],
+  "description": "KashMOX 625 is a broad-spectrum antibiotic containing Amoxicillin 500mg and Potassium Clavulanate 125mg. Manufactured by TrPharma, a division of ThinkRoman Ventures founded by Dr. Ashwani Dhar. Used for respiratory tract infections, urinary tract infections, skin infections, and dental infections.",
+  "activeIngredient": [
+    {
+      "@type": "DrugStrength",
+      "activeIngredient": "Amoxicillin Trihydrate",
+      "strengthValue": "500",
+      "strengthUnit": "mg"
+    },
+    {
+      "@type": "DrugStrength", 
+      "activeIngredient": "Potassium Clavulanate",
+      "strengthValue": "125",
+      "strengthUnit": "mg"
+    }
+  ],
+  "drugClass": "Antibiotic",
+  "dosageForm": "Tablet",
+  "isProprietary": true,
+  "proprietaryName": "KashMOX 625",
+  "nonProprietaryName": "Amoxicillin and Potassium Clavulanate Tablets I.P.",
+  "manufacturer": {
+    "@type": "Organization",
+    "name": "TrPharma",
+    "url": "https://pharma.thinkroman.com"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://about-dr-ashwani-dhar.vercel.app/images/kashmox-625.webp",
+    "name": "KashMOX 625 Antibiotic Tablet Box - TrPharma",
+    "description": "KashMOX 625 Amoxicillin Potassium Clavulanate Tablets packaging by TrPharma, a division of ThinkRoman Ventures",
+    "width": 1200,
+    "height": 1015
+  },
+  "url": "https://pharma.thinkroman.com/products#kashmox",
+  "sameAs": [
+    "https://pharma.thinkroman.com/products",
+    "https://pharmacy.thinkroman.com"
+  ]
+}
+
+// Deep SEO Schema for KashMOX Image
+const kashmoxImageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ImageObject",
+  "contentUrl": "https://about-dr-ashwani-dhar.vercel.app/images/kashmox-625.webp",
+  "url": "https://about-dr-ashwani-dhar.vercel.app/images/kashmox-625.webp",
+  "name": "KashMOX 625 - Amoxicillin Potassium Clavulanate Antibiotic Tablet",
+  "description": "KashMOX 625 tablet box packaging showing Amoxicillin 500mg and Potassium Clavulanate 125mg. Manufactured by TrPharma, a doctor-led pharmaceutical division of ThinkRoman Ventures founded by Dr. Ashwani Dhar MD DMI. WHO-GMP certified antibiotic for respiratory infections, UTI, skin infections.",
+  "caption": "KashMOX 625 - TrPharma's flagship antibiotic product",
+  "creditText": "TrPharma - A Division of ThinkRoman Ventures LLP",
+  "creator": {
+    "@type": "Organization",
+    "name": "TrPharma",
+    "url": "https://pharma.thinkroman.com"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "ThinkRoman Ventures LLP"
+  },
+  "acquireLicensePage": "https://pharma.thinkroman.com",
+  "width": 1200,
+  "height": 1015,
+  "encodingFormat": "image/webp"
+}
+
+// Deep SEO Schema for Kairos Logo/Brand Image
+const kairosImageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ImageObject",
+  "contentUrl": "https://kairosrds.com/logo.png",
+  "url": "https://kairosrds.com/logo.png",
+  "name": "Kairos R&D Solutions Logo - Clinical Research Organization",
+  "description": "Official logo of Kairos R&D Solutions Pvt. Ltd., a specialized Clinical Research Organization (CRO) founded by Dr. Ashwani Dhar MD DMI. Kairos provides patient recruitment, clinical trial management, Kairodox document management, and AI-enabled research solutions.",
+  "caption": "Kairos R&D Solutions - Your partner in Clinical Research",
+  "creditText": "Kairos R&D Solutions Pvt. Ltd.",
+  "creator": {
+    "@type": "Organization",
+    "name": "Kairos R&D Solutions",
+    "url": "https://kairosrds.com"
+  }
+}
+
+// Video Schema for Dr. Ashwani Dhar YouTube Videos
+const videoSchemas = [
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Dr. Ashwani Dhar: Pharmacogenomics and Personalized Medicine - Genomics Gupshup Episode 24",
+    "description": "Dr. Ashwani Dhar MD DMI, CEO of ThinkRoman Ventures and Founder of Kairos R&D Solutions, discusses the future of pharmacogenomics and personalized medicine with MapMyGenome. Topics include AI in healthcare, precision medicine, and the future of genomics.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/8sZDapqP03I/maxresdefault.jpg",
+    "uploadDate": "2023-01-01",
+    "duration": "PT38M",
+    "contentUrl": "https://www.youtube.com/watch?v=8sZDapqP03I",
+    "embedUrl": "https://www.youtube.com/embed/8sZDapqP03I",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": "https://schema.org/WatchAction",
+      "userInteractionCount": 4300
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "MapMyGenome",
+      "url": "https://mapmygenome.in"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Dr. Ashwani Dhar - Vitamin D: The Sunshine Campaign - ThinkRoman TV",
+    "description": "Dr. Ashwani Dhar MD DMI discusses the importance of Vitamin D for health and wellness. As CEO of ThinkRoman Ventures and Founder of TrPharma, Dr. Dhar explains the benefits of Vitamin D supplementation.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/9-GJB5dlyz4/maxresdefault.jpg",
+    "uploadDate": "2022-01-01",
+    "duration": "PT45M",
+    "contentUrl": "https://www.youtube.com/watch?v=9-GJB5dlyz4",
+    "embedUrl": "https://www.youtube.com/embed/9-GJB5dlyz4",
+    "publisher": {
+      "@type": "Organization",
+      "name": "ThinkRoman TV"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Statement by CEO of ThinkRoman Ventures - Dr. Ashwani Dhar",
+    "description": "Dr. Ashwani Dhar MD DMI, CEO of ThinkRoman Ventures, discusses the startup journey of his companies in India including Kairos R&D Solutions and TrPharma pharmaceutical division.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/VFHsUNEfkYQ/maxresdefault.jpg",
+    "uploadDate": "2022-01-01",
+    "duration": "PT22M",
+    "contentUrl": "https://www.youtube.com/watch?v=VFHsUNEfkYQ",
+    "embedUrl": "https://www.youtube.com/embed/VFHsUNEfkYQ",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Karnataka Current News"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "NRI Health Show: New Age Health Care - Dr. Ashwani Dhar on Sakshi TV",
+    "description": "Ask Your Doctor with Dr. Ashwani Dhar MD DMI on Sakshi TV. Dr. Dhar discusses new age healthcare, AI in medicine, and personalized healthcare solutions.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/9p8GiZ6UEyM/maxresdefault.jpg",
+    "uploadDate": "2022-01-01",
+    "duration": "PT27M",
+    "contentUrl": "https://www.youtube.com/watch?v=9p8GiZ6UEyM",
+    "embedUrl": "https://www.youtube.com/embed/9p8GiZ6UEyM",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": "https://schema.org/WatchAction",
+      "userInteractionCount": 1700
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Sakshi TV"
+    }
+  }
+]
+
+// Breadcrumb Schema for better navigation indexing
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Dr. Ashwani Dhar",
+      "item": "https://about-dr-ashwani-dhar.vercel.app"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Kairos R&D Solutions",
+      "item": "https://about-dr-ashwani-dhar.vercel.app/kairos"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "TrPharma",
+      "item": "https://about-dr-ashwani-dhar.vercel.app/trpharma"
+    }
+  ]
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -314,6 +525,29 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(trpharmaSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(kashmoxProductSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(kashmoxImageSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(kairosImageSchema) }}
+        />
+        {videoSchemas.map((video, index) => (
+          <script
+            key={index}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(video) }}
+          />
+        ))}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
         />
       </head>
       <body className="font-sans antialiased">
