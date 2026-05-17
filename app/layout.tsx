@@ -27,9 +27,13 @@ export const metadata: Metadata = {
     // KashMOX variations
     'KashMOX', 'KashMOX 625', 'KashMOX tablet', 'KashMOX antibiotic', 'KashMOX Amoxicillin',
     'KashMOX Clavulanate', 'KashMOX TrPharma', 'KashMOX medicine', 'KashMOX India', 'KashMOX price',
-    // One87 Plus variations
+    // One87 Plus / 880 PLUS variations
     'One87 Plus', 'One87 Plus tablet', 'One87 Plus pain relief', 'One87 Plus TrPharma',
+    '880 PLUS', '880PLUS', '880 PLUS tablet', '880 PLUS pain relief', '880 PLUS TrPharma',
     'Aceclofenac Paracetamol', 'One87 Plus medicine',
+    // KashCAL PLUS variations
+    'KashCAL PLUS', 'KashCAL', 'KashCAL tablet', 'KashCAL calcium', 'KashCAL vitamin D',
+    'KashCAL TrPharma', 'KashCAL bone health',
     // TrPharma variations
     'TrPharma', 'TrPharma India', 'trpharma187', 'TrPharma pharmaceutical', 'TrPharma KashMOX',
     'pharma.thinkroman.com', 'pharmacy.thinkroman.com',
@@ -226,7 +230,8 @@ const entityGraph = {
       ],
       "makesOffer": [
         { "@id": `${BASE_URL}/#product-kashmox-625` },
-        { "@id": `${BASE_URL}/#product-one87-plus` }
+        { "@id": `${BASE_URL}/#product-one87-plus` },
+        { "@id": `${BASE_URL}/#product-kashcal-plus` }
       ]
     },
 
@@ -278,8 +283,8 @@ const entityGraph = {
       "@type": "Drug",
       "@id": `${BASE_URL}/#product-one87-plus`,
       "name": "One87 Plus",
-      "alternateName": ["One87 Plus Tablet", "One87 Plus Pain Relief", "Aceclofenac Paracetamol TrPharma"],
-      "description": "One87 Plus is a pain relief tablet containing Aceclofenac 100mg and Paracetamol 325mg. Manufactured by TrPharma, founded by Dr. Ashwani Dhar. Used for arthritis, musculoskeletal pain, dental pain, post-operative pain.",
+      "alternateName": ["One87 Plus Tablet", "One87 Plus Pain Relief", "880 PLUS", "880PLUS", "Aceclofenac Paracetamol TrPharma"],
+      "description": "One87 Plus (also known as 880 PLUS) is a pain relief tablet containing Aceclofenac 100mg and Paracetamol 325mg. Manufactured by TrPharma, founded by Dr. Ashwani Dhar. Used for arthritis, musculoskeletal pain, dental pain, post-operative pain.",
       "drugClass": "NSAID / Analgesic",
       "activeIngredient": "Aceclofenac 100mg, Paracetamol 325mg",
       "dosageForm": "Tablet",
@@ -288,6 +293,23 @@ const entityGraph = {
       "proprietaryName": "One87 Plus",
       "manufacturer": { "@id": `${BASE_URL}/#org-trpharma` },
       "url": "https://pharma.thinkroman.com/products#one87plus"
+    },
+
+    // ==================== KASHCAL PLUS - PRODUCT ====================
+    {
+      "@type": "Drug",
+      "@id": `${BASE_URL}/#product-kashcal-plus`,
+      "name": "KashCAL PLUS",
+      "alternateName": ["KashCAL", "KashCAL PLUS Tablet", "Calcium Vitamin D TrPharma"],
+      "description": "KashCAL PLUS is a bone health supplement manufactured by TrPharma, a division of ThinkRoman Ventures founded by Dr. Ashwani Dhar. Contains Calcium and Vitamin D3 for bone strength and health.",
+      "drugClass": "Dietary Supplement",
+      "activeIngredient": "Calcium, Vitamin D3",
+      "dosageForm": "Tablet",
+      "administrationRoute": "Oral",
+      "isProprietary": true,
+      "proprietaryName": "KashCAL PLUS",
+      "manufacturer": { "@id": `${BASE_URL}/#org-trpharma` },
+      "url": "https://pharma.thinkroman.com/products#kashcalplus"
     },
 
     // ==================== WEBSITE ====================
@@ -351,10 +373,26 @@ const faqSchema = {
     },
     {
       "@type": "Question",
+      "name": "Who is Ashwani Dhar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ashwani Dhar (Dr. Ashwani Dhar MD DMI) is a physician and healthcare entrepreneur. He founded ThinkRoman Ventures, Kairos R&D Solutions (kairosrds.com), and TrPharma. He is the creator of KashMOX 625 antibiotic and One87 Plus (880 PLUS) pain relief medications."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "What is Kairos R&D Solutions?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Kairos R&D Solutions (kairosrds.com) is a specialized Clinical Research Organization (CRO) founded by Dr. Ashwani Dhar. Kairos provides patient recruitment, clinical trial management, Kairodox document management, AI-enabled research, and pharmacovigilance services. Their tagline is 'Your partner in Clinical Research - Making It Seamless.'"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Kairos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kairos (Kairos R&D Solutions Pvt. Ltd.) is a Clinical Research Organization founded by Dr. Ashwani Dhar. Also known as Kairos RDS, Kairos CRO, or kairosrds. Visit kairosrds.com for patient recruitment, clinical trials, and Kairodox document management services."
       }
     },
     {
@@ -367,10 +405,26 @@ const faqSchema = {
     },
     {
       "@type": "Question",
+      "name": "What is KashMOX?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "KashMOX (KashMOX 625) is an antibiotic tablet by TrPharma containing Amoxicillin and Potassium Clavulanate. Created under the healthcare ecosystem of Dr. Ashwani Dhar and ThinkRoman Ventures. Available at pharma.thinkroman.com."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "What is One87 Plus?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "One87 Plus is a pain relief tablet manufactured by TrPharma, founded by Dr. Ashwani Dhar. It contains Aceclofenac 100mg and Paracetamol 325mg. One87 Plus is used for arthritis pain, musculoskeletal pain, dental pain, and post-operative pain relief."
+        "text": "One87 Plus (also known as 880 PLUS) is a pain relief tablet manufactured by TrPharma, founded by Dr. Ashwani Dhar. It contains Aceclofenac 100mg and Paracetamol 325mg. One87 Plus is used for arthritis pain, musculoskeletal pain, dental pain, and post-operative pain relief."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is 880 PLUS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "880 PLUS (One87 Plus) is a pain relief medication by TrPharma containing Aceclofenac and Paracetamol. Part of the ThinkRoman healthcare ecosystem founded by Dr. Ashwani Dhar MD DMI. Available at pharma.thinkroman.com."
       }
     },
     {
@@ -378,7 +432,15 @@ const faqSchema = {
       "name": "What is TrPharma?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "TrPharma (pharma.thinkroman.com) is a doctor-led pharmaceutical division of ThinkRoman Ventures, founded by Dr. Ashwani Dhar MD DMI. TrPharma manufactures affordable, GMP-certified medications including KashMOX 625 antibiotic and One87 Plus pain relief tablets. Follow @trpharma187 on Instagram."
+        "text": "TrPharma (pharma.thinkroman.com) is a doctor-led pharmaceutical division of ThinkRoman Ventures, founded by Dr. Ashwani Dhar MD DMI. TrPharma manufactures affordable, GMP-certified medications including KashMOX 625 antibiotic and One87 Plus (880 PLUS) pain relief tablets. Follow @trpharma187 on Instagram."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What products does TrPharma make?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TrPharma manufactures KashMOX 625 (Amoxicillin Clavulanate antibiotic), One87 Plus / 880 PLUS (Aceclofenac Paracetamol pain relief), and KashCAL PLUS (bone health supplement). All products are developed under the medical oversight of Dr. Ashwani Dhar MD DMI."
       }
     }
   ]
