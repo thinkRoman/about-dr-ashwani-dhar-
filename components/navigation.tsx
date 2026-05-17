@@ -15,6 +15,9 @@ const navLinks = [
   { href: "#contact", label: "Contact" },
 ]
 
+// Link to dedicated Kairos page for SEO
+const kairosPageLink = "/kairos"
+
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -76,7 +79,7 @@ export function Navigation() {
               </a>
             ))}
             <Button asChild size="sm">
-              <Link href="https://kairosrds.com" target="_blank" rel="noopener noreferrer">
+              <Link href={kairosPageLink} title="Learn more about Kairos R&D Solutions - Clinical Research Organization founded by Dr. Ashwani Dhar">
                 Kairos R&D
               </Link>
             </Button>
@@ -111,7 +114,7 @@ export function Navigation() {
                 </a>
               ))}
               <Button asChild size="sm" className="mt-2">
-                <Link href="https://kairosrds.com" target="_blank" rel="noopener noreferrer">
+                <Link href={kairosPageLink} title="Learn more about Kairos R&D Solutions">
                   Kairos R&D
                 </Link>
               </Button>
