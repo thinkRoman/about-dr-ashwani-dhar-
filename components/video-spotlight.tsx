@@ -114,10 +114,10 @@ export function VideoSpotlight() {
               </div>
             ))}
 
-            {/* More Videos CTA */}
-            <Button asChild variant="outline" className="w-full border-white/20 text-white hover:bg-white/10 mt-4">
+            {/* More Videos CTA - Large visible button */}
+            <Button asChild className="w-full bg-[#f9a825] hover:bg-[#f9a825]/90 text-gray-900 font-bold py-6 text-lg mt-4">
               <Link href="https://www.youtube.com/@ThinkRomanTV" target="_blank" rel="noopener noreferrer">
-                <Play className="h-4 w-4 mr-2" /> View All Videos
+                <Play className="h-5 w-5 mr-2" /> View All Videos
               </Link>
             </Button>
           </div>
@@ -140,11 +140,14 @@ export function InstagramFeed() {
             </h2>
           </div>
           <div className="h-px flex-1 bg-white/10" />
-          <Button asChild variant="outline" size="sm" className="border-[#E1306C] text-[#E1306C] hover:bg-[#E1306C]/10">
-            <Link href="https://www.instagram.com/trpharma187/" target="_blank" rel="noopener noreferrer">
-              Follow <ExternalLink className="h-3 w-3 ml-1" />
-            </Link>
-          </Button>
+          <Link 
+            href="https://www.instagram.com/trpharma187/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 bg-[#E1306C] hover:bg-[#c9296b] text-white font-bold px-8 py-4 rounded-lg text-lg transition-colors shadow-lg"
+          >
+            Visit Instagram <ExternalLink className="h-5 w-5" />
+          </Link>
         </div>
 
         {/* Instagram Embed */}
