@@ -132,10 +132,12 @@ const entityGraph = {
       "image": `${BASE_URL}/images/dr-ashwani-dhar.jpg`,
       "url": "https://drashwanidhar.thinkroman.com",
       "sameAs": [
+        // Social & Professional
         "https://www.linkedin.com/in/ashdhar",
         "https://twitter.com/ash_dhar",
         "https://www.instagram.com/trpharma187",
         "https://medium.com/@ashdhar",
+        // Official Websites
         "https://thinkroman.com",
         "https://drashwanidhar.thinkroman.com",
         "https://www.durandhar.com",
@@ -144,7 +146,12 @@ const entityGraph = {
         "https://pharma.thinkroman.com",
         "https://pharmacy.thinkroman.com",
         ALT_URL,
-        "https://about-dr-ashwani-dhar.com"
+        "https://about-dr-ashwani-dhar.com",
+        // External Authority Sources
+        "https://www.healthgrades.com",
+        "https://www.doximity.com",
+        "https://www.researchgate.net",
+        "https://scholar.google.com"
       ],
       "worksFor": [
         { "@id": `${BASE_URL}/#org-thinkroman` },
@@ -251,7 +258,17 @@ const entityGraph = {
         "https://pharma.thinkroman.com",
         "https://pharmacy.thinkroman.com",
         "https://www.instagram.com/trpharma187",
-        "https://thinkroman.com"
+        "https://thinkroman.com",
+        `${BASE_URL}/trpharma`,
+        `${BASE_URL}/products`,
+        `${BASE_URL}/products/kashmox`,
+        `${BASE_URL}/products/one87-plus`,
+        `${BASE_URL}/products/kashcal-plus`
+      ],
+      "brand": [
+        { "@id": `${BASE_URL}/#brand-kashmox` },
+        { "@id": `${BASE_URL}/#brand-one87-plus` },
+        { "@id": `${BASE_URL}/#brand-kashcal-plus` }
       ],
       "makesOffer": [
         { "@id": `${BASE_URL}/#product-kashmox-625` },
@@ -359,6 +376,42 @@ const entityGraph = {
       "proprietaryName": "KashCAL PLUS",
       "manufacturer": { "@id": `${BASE_URL}/#org-trpharma` },
       "url": "https://pharma.thinkroman.com/products#kashcalplus"
+    },
+
+    // ==================== BRAND SCHEMAS - Product Brands ====================
+    {
+      "@type": "Brand",
+      "@id": `${BASE_URL}/#brand-kashmox`,
+      "name": "KashMOX",
+      "alternateName": ["KashMOX 625", "KashMOX Antibiotic"],
+      "description": "KashMOX is TrPharma's flagship antibiotic brand, developed under the medical leadership of Dr. Ashwani Dhar MD DMI. KashMOX 625 contains Amoxicillin and Potassium Clavulanate for broad-spectrum antibacterial coverage.",
+      "logo": `${BASE_URL}/images/kashmox-625.webp`,
+      "slogan": "Guard Your Health",
+      "url": `${BASE_URL}/products/kashmox`,
+      "brand": { "@id": `${BASE_URL}/#org-trpharma` },
+      "manufacturer": { "@id": `${BASE_URL}/#org-trpharma` }
+    },
+    {
+      "@type": "Brand",
+      "@id": `${BASE_URL}/#brand-one87-plus`,
+      "name": "One87 Plus",
+      "alternateName": ["880 PLUS", "880PLUS", "One87"],
+      "description": "One87 Plus (also known as 880 PLUS) is TrPharma's pain relief brand. Developed under the medical leadership of Dr. Ashwani Dhar MD DMI, it contains Aceclofenac and Paracetamol for effective pain management.",
+      "slogan": "Effective Pain Relief",
+      "url": `${BASE_URL}/products/one87-plus`,
+      "brand": { "@id": `${BASE_URL}/#org-trpharma` },
+      "manufacturer": { "@id": `${BASE_URL}/#org-trpharma` }
+    },
+    {
+      "@type": "Brand",
+      "@id": `${BASE_URL}/#brand-kashcal-plus`,
+      "name": "KashCAL PLUS",
+      "alternateName": ["KashCAL", "KashCAL Plus"],
+      "description": "KashCAL PLUS is TrPharma's bone health supplement brand, developed under the medical leadership of Dr. Ashwani Dhar MD DMI. Contains Calcium and Vitamin D3 for comprehensive bone health support.",
+      "slogan": "Strong Bones, Strong Life",
+      "url": `${BASE_URL}/products/kashcal-plus`,
+      "brand": { "@id": `${BASE_URL}/#org-trpharma` },
+      "manufacturer": { "@id": `${BASE_URL}/#org-trpharma` }
     },
 
     // ==================== WEBSITE - PRIMARY ====================
