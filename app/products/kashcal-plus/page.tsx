@@ -337,6 +337,15 @@ export default function KashCALPlusPage() {
         {/* Footer */}
         <footer className="py-8 bg-muted/50 border-t border-border">
           <div className="container mx-auto px-4">
+            {/* Manufacturing Statement for Co-Citation SEO */}
+            <div className="text-center mb-6 pb-6 border-b border-border">
+              <p className="text-sm text-muted-foreground">
+                Manufactured for TrPharma, a division of ThinkRoman Ventures LLP | Under the medical direction of{" "}
+                <Link href="https://www.about-dr-ashwani-dhar.com" className="text-primary hover:underline font-medium">
+                  Dr. Ashwani Dhar
+                </Link>
+              </p>
+            </div>
             <div className="flex flex-wrap items-center justify-between gap-4">
               <p className="text-sm text-muted-foreground">
                 &copy; {new Date().getFullYear()} TrPharma - A Division of ThinkRoman Ventures LLP. Founded by Dr. Ashwani Dhar.

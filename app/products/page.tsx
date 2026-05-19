@@ -39,39 +39,63 @@ export const metadata: Metadata = {
 
 const productsSchema = {
   "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "TrPharma Product Catalog",
-  "description": "Complete catalog of TrPharma pharmaceutical products developed under Dr. Ashwani Dhar's medical leadership",
-  "itemListElement": [
+  "@graph": [
     {
-      "@type": "ListItem",
-      "position": 1,
-      "item": {
-        "@type": "Drug",
-        "@id": `${BASE_URL}/#product-kashmox-625`,
-        "name": "KashMOX 625",
-        "url": `${BASE_URL}/products/kashmox`
+      "@type": "MedicalBusiness",
+      "@id": "https://pharma.thinkroman.com/#organization",
+      "name": "TrPharma",
+      "url": "https://pharma.thinkroman.com",
+      "description": "Doctor-led pharmaceutical division of ThinkRoman Ventures, manufacturing WHO-GMP certified medications",
+      "founder": {
+        "@type": "Person",
+        "name": "Dr. Ashwani Dhar",
+        "url": "https://www.about-dr-ashwani-dhar.com/",
+        "jobTitle": "Founder & CEO",
+        "sameAs": [
+          "https://www.linkedin.com/in/ashdhar",
+          "https://www.about-dr-ashwani-dhar.com"
+        ]
       }
     },
     {
-      "@type": "ListItem",
-      "position": 2,
-      "item": {
-        "@type": "Drug",
-        "@id": `${BASE_URL}/#product-one87-plus`,
-        "name": "One87 Plus",
-        "url": `${BASE_URL}/products/one87-plus`
-      }
+      "@type": "Product",
+      "name": "KashMOX 625",
+      "description": "Amoxicillin and Potassium Clavulanate Tablets IP by TrPharma. Broad-spectrum antibiotic developed under the medical direction of Dr. Ashwani Dhar.",
+      "brand": {
+        "@type": "Brand",
+        "name": "TrPharma"
+      },
+      "manufacturer": {
+        "@id": "https://pharma.thinkroman.com/#organization"
+      },
+      "url": `${BASE_URL}/products/kashmox`
     },
     {
-      "@type": "ListItem",
-      "position": 3,
-      "item": {
-        "@type": "Drug",
-        "@id": `${BASE_URL}/#product-kashcal-plus`,
-        "name": "KashCAL PLUS",
-        "url": `${BASE_URL}/products/kashcal-plus`
-      }
+      "@type": "Product",
+      "name": "One87 Plus",
+      "alternateName": "880 PLUS",
+      "description": "Aceclofenac and Paracetamol pain relief tablets by TrPharma. Developed under the medical direction of Dr. Ashwani Dhar.",
+      "brand": {
+        "@type": "Brand",
+        "name": "TrPharma"
+      },
+      "manufacturer": {
+        "@id": "https://pharma.thinkroman.com/#organization"
+      },
+      "url": `${BASE_URL}/products/one87-plus`
+    },
+    {
+      "@type": "Product",
+      "name": "KashCAL PLUS",
+      "description": "Calcium and Vitamin D3 bone health supplement by TrPharma. Developed under the medical direction of Dr. Ashwani Dhar.",
+      "brand": {
+        "@type": "Brand",
+        "name": "TrPharma"
+      },
+      "manufacturer": {
+        "@id": "https://pharma.thinkroman.com/#organization"
+      },
+      "url": `${BASE_URL}/products/kashcal-plus`
     }
   ]
 }
@@ -335,18 +359,27 @@ export default function ProductsPage() {
           </div>
         </section>
 
-        {/* Footer */}
-        <footer className="py-8 bg-muted/50 border-t border-border">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-wrap items-center justify-between gap-4">
-              <p className="text-sm text-muted-foreground">
-                &copy; {new Date().getFullYear()} TrPharma - A Division of ThinkRoman Ventures LLP. Founded by Dr. Ashwani Dhar.
-              </p>
-              <div className="flex items-center gap-6 text-sm">
-                <Link href="/" className="text-muted-foreground hover:text-foreground">Dr. Ashwani Dhar</Link>
-                <Link href="/trpharma" className="text-muted-foreground hover:text-foreground">TrPharma</Link>
-                <Link href="/kairos" className="text-muted-foreground hover:text-foreground">Kairos R&D</Link>
-              </div>
+{/* Footer */}
+<footer className="py-8 bg-muted/50 border-t border-border">
+  <div className="container mx-auto px-4">
+  {/* Manufacturing Statement for Co-Citation SEO */}
+  <div className="text-center mb-6 pb-6 border-b border-border">
+    <p className="text-sm text-muted-foreground">
+      Manufactured for TrPharma, a division of ThinkRoman Ventures LLP | Under the medical direction of{" "}
+      <Link href="https://www.about-dr-ashwani-dhar.com" className="text-primary hover:underline font-medium">
+        Dr. Ashwani Dhar
+      </Link>
+    </p>
+  </div>
+  <div className="flex flex-wrap items-center justify-between gap-4">
+  <p className="text-sm text-muted-foreground">
+  &copy; {new Date().getFullYear()} TrPharma - A Division of ThinkRoman Ventures LLP. Founded by Dr. Ashwani Dhar.
+  </p>
+  <div className="flex items-center gap-6 text-sm">
+  <Link href="/" className="text-muted-foreground hover:text-foreground">Dr. Ashwani Dhar</Link>
+  <Link href="/trpharma" className="text-muted-foreground hover:text-foreground">TrPharma</Link>
+  <Link href="/kairos" className="text-muted-foreground hover:text-foreground">Kairos R&D</Link>
+  </div>
             </div>
           </div>
         </footer>
