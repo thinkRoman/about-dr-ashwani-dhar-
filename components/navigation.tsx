@@ -7,15 +7,17 @@ import { Button } from "@/components/ui/button"
 
 const navLinks = [
   { href: "#about", label: "About" },
+  { href: "/story", label: "My Story", isPage: true },
   { href: "#kairos", label: "Kairos" },
   { href: "#trpharma", label: "TrPharma" },
-  { href: "#featured-video", label: "Videos" },
+  { href: "/products", label: "Products", isPage: true },
   { href: "#contact", label: "Contact" },
 ]
 
-// Link to dedicated Kairos page for SEO
+// Link to dedicated pages for SEO
 const kairosPageLink = "/kairos"
 const trpharmaPageLink = "/trpharma"
+const productsPageLink = "/products"
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -68,14 +70,24 @@ export function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={(e) => handleSmoothScroll(e, link.href)}
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors cursor-pointer"
-              >
-                {link.label}
-              </a>
+              link.isPage ? (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={(e) => handleSmoothScroll(e, link.href)}
+                  className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors cursor-pointer"
+                >
+                  {link.label}
+                </a>
+              )
             ))}
             <Button asChild size="sm">
               <Link href={kairosPageLink} title="Learn more about Kairos R&D Solutions - Clinical Research Organization founded by Dr. Ashwani Dhar">
@@ -108,14 +120,25 @@ export function Navigation() {
           <div className="lg:hidden py-4 border-t border-border bg-background">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={(e) => handleSmoothScroll(e, link.href)}
-                  className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors px-2 py-1 cursor-pointer"
-                >
-                  {link.label}
-                </a>
+                link.isPage ? (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors px-2 py-1"
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    onClick={(e) => handleSmoothScroll(e, link.href)}
+                    className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors px-2 py-1 cursor-pointer"
+                  >
+                    {link.label}
+                  </a>
+                )
               ))}
               <Button asChild size="sm" className="mt-2">
                 <Link href={kairosPageLink} title="Learn more about Kairos R&D Solutions">

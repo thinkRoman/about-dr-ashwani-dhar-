@@ -576,17 +576,37 @@ export default function KairosPage() {
         {/* Back to Profile CTA */}
         <section className="py-12 border-t border-border bg-card/50">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-              <div>
-                <p className="text-foreground font-medium">Learn more about Dr. Ashwani Dhar</p>
-                <p className="text-sm text-muted-foreground">Explore his full profile, ThinkRoman Ventures, and more</p>
+            <div className="max-w-4xl mx-auto">
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6">
+                <div>
+                  <p className="text-foreground font-medium">Learn more about Dr. Ashwani Dhar</p>
+                  <p className="text-sm text-muted-foreground">Explore his full profile, other ventures, and products</p>
+                </div>
+                <Button asChild variant="outline">
+                  <Link href="/" className="gap-2">
+                    <ArrowLeft className="h-4 w-4" />
+                    Back to Full Profile
+                  </Link>
+                </Button>
               </div>
-              <Button asChild variant="outline">
-                <Link href="/" className="gap-2">
-                  <ArrowLeft className="h-4 w-4" />
-                  Back to Full Profile
+              {/* Internal Link Architecture */}
+              <div className="flex flex-wrap justify-center gap-6 pt-6 border-t border-border text-sm">
+                <Link href="/story" className="text-muted-foreground hover:text-primary transition-colors">
+                  Dr. Dhar&apos;s Story
                 </Link>
-              </Button>
+                <Link href="/trpharma" className="text-muted-foreground hover:text-primary transition-colors">
+                  TrPharma
+                </Link>
+                <Link href="/products" className="text-muted-foreground hover:text-primary transition-colors">
+                  Products
+                </Link>
+                <Link href="/products/kashmox" className="text-muted-foreground hover:text-primary transition-colors">
+                  KashMOX 625
+                </Link>
+                <Link href="/products/one87-plus" className="text-muted-foreground hover:text-primary transition-colors">
+                  One87 Plus
+                </Link>
+              </div>
             </div>
           </div>
         </section>

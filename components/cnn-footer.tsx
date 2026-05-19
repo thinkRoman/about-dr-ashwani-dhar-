@@ -40,6 +40,20 @@ export function CNNFooter() {
 
       {/* Main Footer */}
       <div className="container mx-auto px-4 py-12">
+        {/* CEO & Medical Director's Guarantee */}
+        <div className="bg-[#1a2a3d] border border-white/10 rounded-xl p-6 mb-12">
+          <p className="text-gray-300 text-center leading-relaxed">
+            The TrPharma therapeutic portfolio is developed under the strategic vision and medical leadership of our Founder and CEO,{" "}
+            <Link 
+              href="https://www.about-dr-ashwani-dhar.com" 
+              className="text-[#f9a825] hover:underline font-semibold"
+            >
+              Dr. Ashwani Dhar
+            </Link>
+            . Every formulation reflects our commitment to clinical excellence and robust quality standards.
+          </p>
+        </div>
+
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
@@ -66,13 +80,23 @@ export function CNNFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="https://thinkroman.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors inline-flex items-center gap-1">
-                  ThinkRoman Ventures <ArrowRight className="h-3 w-3" />
+                <Link href="/products" className="text-gray-400 hover:text-white transition-colors inline-flex items-center gap-1">
+                  TrPharma Products <ArrowRight className="h-3 w-3" />
                 </Link>
               </li>
               <li>
-                <Link href="https://pharma.thinkroman.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors inline-flex items-center gap-1">
-                  TrPharma Products <ArrowRight className="h-3 w-3" />
+                <Link href="/products/kashmox" className="text-gray-400 hover:text-white transition-colors inline-flex items-center gap-1">
+                  KashMOX 625 <ArrowRight className="h-3 w-3" />
+                </Link>
+              </li>
+              <li>
+                <Link href="/products/one87-plus" className="text-gray-400 hover:text-white transition-colors inline-flex items-center gap-1">
+                  One87 Plus (880 PLUS) <ArrowRight className="h-3 w-3" />
+                </Link>
+              </li>
+              <li>
+                <Link href="https://thinkroman.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors inline-flex items-center gap-1">
+                  ThinkRoman Ventures <ArrowRight className="h-3 w-3" />
                 </Link>
               </li>
             </ul>

@@ -472,8 +472,8 @@ export default function TrPharmaPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button asChild size="lg" className="gap-2">
-                <Link href="https://pharma.thinkroman.com" target="_blank" rel="noopener noreferrer">
-                  View All Products at pharma.thinkroman.com <ExternalLink className="h-4 w-4" />
+                <Link href="/products">
+                  View All Products <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="gap-2">
@@ -513,6 +513,16 @@ export default function TrPharmaPage() {
             <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
               <p>&copy; {new Date().getFullYear()} TrPharma - A Division of ThinkRoman Ventures LLP. Founded by Dr. Ashwani Dhar, MD, DMI.</p>
               <p className="mt-2">KashMOX 625 and all TrPharma products are manufactured in WHO-GMP certified facilities.</p>
+              {/* Internal Link Architecture */}
+              <div className="flex flex-wrap justify-center gap-6 mt-6 pt-6 border-t border-border">
+                <Link href="/" className="hover:text-foreground transition-colors">Dr. Ashwani Dhar</Link>
+                <Link href="/story" className="hover:text-foreground transition-colors">Dr. Dhar&apos;s Story</Link>
+                <Link href="/kairos" className="hover:text-foreground transition-colors">Kairos R&D</Link>
+                <Link href="/products" className="hover:text-foreground transition-colors">All Products</Link>
+                <Link href="/products/kashmox" className="hover:text-foreground transition-colors">KashMOX 625</Link>
+                <Link href="/products/one87-plus" className="hover:text-foreground transition-colors">One87 Plus</Link>
+                <Link href="/products/kashcal-plus" className="hover:text-foreground transition-colors">KashCAL PLUS</Link>
+              </div>
             </div>
           </div>
         </footer>
