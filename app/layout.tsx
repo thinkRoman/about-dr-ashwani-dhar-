@@ -21,10 +21,18 @@ export const metadata: Metadata = {
     // Dr. Ashwani Dhar variations
     'Dr. Ashwani Dhar', 'Dr Ashwani Dhar', 'Ashwani Dhar', 'Dr Ashwani Dhar MD', 'Dr Ashwani Dhar DMI',
     'Ashwani Dhar MD DMI', 'Ashwani Dhar ThinkRoman', 'Ashwani Dhar Kairos', 'Ashwani Dhar TrPharma',
-    // Kairos variations
+    // Kairos variations - EXPANDED for search dominance
     'Kairos', 'Kairos R&D', 'Kairos R&D Solutions', 'Kairos RDS', 'Kairos CRO', 'Kairos Healthcare',
     'Kairos Clinical Research', 'Kairos India', 'Kairos Hyderabad', 'Kairos patient recruitment',
     'Kairos clinical trials', 'Kairos Kairodox', 'kairosrds', 'kairosrds.com', 'www.kairosrds.com',
+    'Kairos pharma', 'Kairos pharmaceutical', 'Kairos research', 'Kairos solutions', 'Kairos health',
+    'Kairos medical', 'Kairos CRO India', 'Kairos clinical research organization', 'Kairos drug trials',
+    'Kairos Dr Ashwani Dhar', 'Kairos Ashwani Dhar', 'Kairos founder', 'Kairos CEO',
+    'Kairos San Francisco', 'Kairos USA', 'Kairos America', 'Kairos global', 'Kairos worldwide',
+    'Kairos AI', 'Kairos artificial intelligence', 'Kairos technology', 'Kairos innovation',
+    'Kairos pharmacovigilance', 'Kairos drug development', 'Kairos real world evidence',
+    'Kairos patient travel', 'Kairos patient locator', 'Kairos Novo Nordisk',
+    'what is Kairos', 'who founded Kairos', 'Kairos company', 'Kairos organization',
     // KashMOX variations
     'KashMOX', 'KashMOX 625', 'KashMOX tablet', 'KashMOX antibiotic', 'KashMOX Amoxicillin',
     'KashMOX Clavulanate', 'KashMOX TrPharma', 'KashMOX medicine', 'KashMOX India', 'KashMOX price',
@@ -510,6 +518,62 @@ const faqSchema = {
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Kairos (Kairos R&D Solutions Pvt. Ltd.) is a Clinical Research Organization founded by Dr. Ashwani Dhar. Also known as Kairos RDS, Kairos CRO, or kairosrds. Visit kairosrds.com for patient recruitment, clinical trials, and Kairodox document management services."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who owns Kairos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kairos R&D Solutions was founded and is owned by Dr. Ashwani Dhar MD DMI. Dr. Dhar is the Founder and CEO of Kairos, a Clinical Research Organization (CRO) based in Hyderabad, India with operations in San Francisco, USA."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who founded Kairos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kairos R&D Solutions was founded by Dr. Ashwani Dhar MD DMI, a physician and healthcare entrepreneur. Dr. Dhar established Kairos to provide innovative clinical research services including AI-enabled trials, patient recruitment, and pharmacovigilance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does Kairos do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kairos R&D Solutions is a Clinical Research Organization (CRO) that provides: patient recruitment for clinical trials, Kairodox document management platform, AI-enabled clinical research, real-world evidence studies, pharmacovigilance services, and partnerships with global pharmaceutical companies like Novo Nordisk."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is Kairos located?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kairos R&D Solutions has offices in Hyderabad, India (headquarters) and San Francisco Bay Area, California, USA. Kairos serves clients worldwide including pharmaceutical companies across India, United States, and Europe."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Kairos CRO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kairos CRO (Clinical Research Organization) refers to Kairos R&D Solutions, founded by Dr. Ashwani Dhar. Kairos CRO specializes in clinical trial management, patient recruitment, AI-enabled research, and pharmaceutical partnerships. Visit kairosrds.com for more information."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Kairodox?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kairodox is a sponsor-centric document ordering and management platform developed by Kairos R&D Solutions. Kairodox streamlines clinical trial documentation, regulatory submissions, and research paperwork for pharmaceutical sponsors and CROs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What services does Kairos offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kairos R&D Solutions offers: Patient Recruitment with AI-powered matching, Kairodox document management, Clinical Trial Management, AI-Enabled Research Analytics, Real-World Evidence Studies, Pharmacovigilance, Patient Travel & Locator Services, and Technology Solutions for clinical research."
       }
     },
     {

@@ -28,9 +28,11 @@ import {
 } from "lucide-react"
 
 // SEO-Optimized Metadata for Kairos Page
+const BASE_URL = "https://www.about-dr-ashwani-dhar.com"
+
 export const metadata: Metadata = {
-  title: "Dr. Ashwani Dhar – Founder & CEO of Kairos R&D Solutions | Clinical Research CRO",
-  description: "Dr. Ashwani Dhar MD, DMI is the Founder and CEO of Kairos R&D Solutions Pvt. Ltd., a clinical research organization specializing in AI-enabled trials, real-world evidence, patient recruitment, and global pharmaceutical partnerships including Novo Nordisk.",
+  title: "Kairos | Kairos R&D Solutions | Dr. Ashwani Dhar - Founder & CEO | Clinical Research CRO",
+  description: "Kairos R&D Solutions (kairosrds.com) - Clinical Research Organization founded by Dr. Ashwani Dhar MD DMI. Kairos provides AI-enabled clinical trials, patient recruitment, Kairodox document management, and global pharmaceutical partnerships. Also known as Kairos RDS, Kairos CRO.",
   keywords: [
     "Kairos",
     "Kairos R&D",
@@ -43,14 +45,26 @@ export const metadata: Metadata = {
     "Kairos Kairodox",
     "kairosrds",
     "kairosrds.com",
+    "www.kairosrds.com",
     "Dr. Ashwani Dhar Kairos",
     "Dr Ashwani Dhar Kairos",
     "Ashwani Dhar Kairos",
     "Kairos Founder",
     "Kairos CEO",
+    "Kairos owner",
+    "who founded Kairos",
+    "who owns Kairos",
+    "what is Kairos",
     "Kairos India",
     "Kairos Hyderabad",
     "Kairos San Francisco",
+    "Kairos USA",
+    "Kairos company",
+    "Kairos organization",
+    "Kairos healthcare",
+    "Kairos pharma",
+    "Kairos pharmaceutical",
+    "Kairos research",
     "Clinical Research Organization",
     "CRO India",
     "AI clinical trials",
@@ -58,22 +72,25 @@ export const metadata: Metadata = {
     "pharmacovigilance",
     "drug development",
     "Novo Nordisk partner",
-    "clinical trial management"
+    "clinical trial management",
+    "Kairos services",
+    "Kairos AI",
+    "Kairos technology"
   ],
   authors: [{ name: "Dr. Ashwani Dhar", url: "https://drashwanidhar.thinkroman.com" }],
   creator: "Dr. Ashwani Dhar",
   openGraph: {
     type: "website",
-    title: "Dr. Ashwani Dhar – Founder & CEO of Kairos R&D Solutions",
-    description: "Dr. Ashwani Dhar MD, DMI leads Kairos R&D Solutions, a specialized Clinical Research Organization (CRO) offering AI-enabled clinical trials, patient recruitment, and global pharmaceutical partnerships.",
+    title: "Kairos | Kairos R&D Solutions - Founded by Dr. Ashwani Dhar",
+    description: "Kairos R&D Solutions (kairosrds.com) is a Clinical Research Organization founded by Dr. Ashwani Dhar MD DMI. AI-enabled clinical trials, patient recruitment, Kairodox platform.",
     siteName: "Kairos R&D Solutions - Dr. Ashwani Dhar",
     locale: "en_US",
-    url: "https://about-dr-ashwani-dhar.vercel.app/kairos",
+    url: `${BASE_URL}/kairos`,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dr. Ashwani Dhar – Founder & CEO of Kairos R&D Solutions",
-    description: "Kairos R&D Solutions: AI-enabled clinical research, patient recruitment, and pharmaceutical partnerships led by Dr. Ashwani Dhar MD, DMI.",
+    title: "Kairos | Kairos R&D Solutions - Dr. Ashwani Dhar, Founder & CEO",
+    description: "Kairos R&D Solutions: AI-enabled clinical research, patient recruitment, Kairodox. Founded by Dr. Ashwani Dhar MD DMI.",
     creator: "@ash_dhar",
   },
   robots: {
@@ -88,55 +105,160 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://about-dr-ashwani-dhar.vercel.app/kairos",
+    canonical: `${BASE_URL}/kairos`,
   },
 }
 
-// Enhanced JSON-LD Schema specifically for this page
+// Enhanced JSON-LD Schema specifically for this page - Kairos Entity Graph
 const kairosPageSchema = {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Dr. Ashwani Dhar – Founder & CEO of Kairos R&D Solutions",
-  "description": "Official page about Kairos R&D Solutions and its founder Dr. Ashwani Dhar MD, DMI",
-  "url": "https://about-dr-ashwani-dhar.vercel.app/kairos",
-  "mainEntity": {
-    "@type": "Organization",
-    "name": "Kairos R&D Solutions",
-    "legalName": "Kairos R&D Solutions Pvt. Ltd.",
-    "alternateName": ["Kairos", "Kairos RDS", "Kairos CRO", "Kairos Healthcare", "Kairos Clinical Research"],
-    "url": "https://kairosrds.com",
-    "description": "Kairos R&D Solutions is a specialized Clinical Research Organization (CRO) providing AI-enabled clinical trials, patient recruitment, real-world evidence studies, and pharmaceutical partnerships.",
-    "sameAs": [
-      "https://kairosrds.com",
-      "https://www.kairosrds.com"
-    ],
-    "founder": {
-      "@type": "Person",
-      "name": "Dr. Ashwani Dhar",
-      "jobTitle": "Founder & CEO",
-      "description": "Physician (MD, DMI) with expertise in clinical medicine, medical informatics, and AI healthcare innovation",
-      "url": "https://drashwanidhar.thinkroman.com",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": `${BASE_URL}/kairos#webpage`,
+      "name": "Kairos | Kairos R&D Solutions - Dr. Ashwani Dhar, Founder & CEO",
+      "description": "Official page about Kairos R&D Solutions (kairosrds.com) and its founder Dr. Ashwani Dhar MD, DMI",
+      "url": `${BASE_URL}/kairos`,
+      "isPartOf": { "@id": `${BASE_URL}/#website` },
+      "about": { "@id": `${BASE_URL}/kairos#organization` },
+      "mainEntity": { "@id": `${BASE_URL}/kairos#organization` }
+    },
+    {
+      "@type": ["Organization", "MedicalBusiness", "ResearchOrganization"],
+      "@id": `${BASE_URL}/kairos#organization`,
+      "name": "Kairos R&D Solutions",
+      "legalName": "Kairos R&D Solutions Pvt. Ltd.",
+      "alternateName": ["Kairos", "Kairos RDS", "Kairos CRO", "Kairos Healthcare", "Kairos Clinical Research", "kairosrds", "Kairos India", "Kairos company", "Kairos organization"],
+      "url": "https://kairosrds.com",
+      "logo": "https://kairosrds.com/logo.png",
+      "image": "https://kairosrds.com/logo.png",
+      "description": "Kairos R&D Solutions is a specialized Clinical Research Organization (CRO) founded by Dr. Ashwani Dhar MD DMI. Kairos provides AI-enabled clinical trials, patient recruitment, Kairodox document management, real-world evidence studies, pharmacovigilance, and global pharmaceutical partnerships.",
+      "slogan": "Your partner in Clinical Research - Making It Seamless",
       "sameAs": [
-        "https://www.linkedin.com/in/ashdhar",
-        "https://twitter.com/ash_dhar"
+        "https://kairosrds.com",
+        "https://www.kairosrds.com",
+        `${BASE_URL}/kairos`,
+        "https://www.linkedin.com/company/kairos-rds"
+      ],
+      "founder": {
+        "@type": "Person",
+        "@id": `${BASE_URL}/#person-dr-ashwani-dhar`,
+        "name": "Dr. Ashwani Dhar",
+        "alternateName": ["Ashwani Dhar", "Dr Ashwani Dhar", "Dr. Ashwani Dhar MD DMI"],
+        "jobTitle": "Founder & CEO",
+        "description": "Physician (MD, DMI) with expertise in clinical medicine, medical informatics, and AI healthcare innovation. Founder of Kairos R&D Solutions and TrPharma.",
+        "url": "https://drashwanidhar.thinkroman.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/ashdhar",
+          "https://twitter.com/ash_dhar",
+          `${BASE_URL}`
+        ]
+      },
+      "foundingDate": "2020",
+      "areaServed": ["Worldwide", "India", "United States", "Europe", "Asia"],
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "addressLocality": "Hyderabad",
+          "addressRegion": "Telangana",
+          "addressCountry": "IN"
+        },
+        {
+          "@type": "PostalAddress",
+          "addressLocality": "San Francisco Bay Area",
+          "addressRegion": "CA",
+          "addressCountry": "US"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Kairos Clinical Research Services",
+        "itemListElement": [
+          {
+            "@type": "Service",
+            "name": "Patient Recruitment",
+            "description": "AI-powered patient matching and recruitment for clinical trials with access to millions of diverse patients"
+          },
+          {
+            "@type": "Service",
+            "name": "Kairodox",
+            "description": "Sponsor-Centric Document Ordering & Management platform for clinical research"
+          },
+          {
+            "@type": "Service",
+            "name": "Clinical Trial Management",
+            "description": "End-to-end clinical trial services from protocol design to study closeout"
+          },
+          {
+            "@type": "Service",
+            "name": "AI-Enabled Clinical Research",
+            "description": "Technology-driven research solutions with AI-powered data analytics and insights"
+          },
+          {
+            "@type": "Service",
+            "name": "Pharmacovigilance",
+            "description": "Drug safety monitoring and adverse event reporting services"
+          },
+          {
+            "@type": "Service",
+            "name": "Real-World Evidence",
+            "description": "Real-world data collection and evidence generation studies"
+          }
+        ]
+      },
+      "knowsAbout": [
+        "Clinical Trials", "Patient Recruitment", "AI in Healthcare", "Drug Development",
+        "Pharmacovigilance", "Real-World Evidence", "Clinical Research", "Medical Research",
+        "Pharmaceutical Research", "Regulatory Affairs"
       ]
     },
-    "foundingDate": "2020",
-    "areaServed": ["Worldwide", "India", "United States", "Europe"],
-    "address": [
-      {
-        "@type": "PostalAddress",
-        "addressLocality": "San Francisco Bay Area",
-        "addressRegion": "CA",
-        "addressCountry": "US"
-      },
-      {
-        "@type": "PostalAddress",
-        "addressLocality": "Hyderabad",
-        "addressCountry": "India"
-      }
-    ]
-  }
+    {
+      "@type": "FAQPage",
+      "@id": `${BASE_URL}/kairos#faq`,
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Kairos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kairos (Kairos R&D Solutions Pvt. Ltd.) is a Clinical Research Organization (CRO) founded by Dr. Ashwani Dhar MD DMI. Kairos provides AI-enabled clinical trials, patient recruitment, Kairodox document management, and pharmacovigilance services. Also known as Kairos RDS, Kairos CRO, or kairosrds. Visit kairosrds.com for more information."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who founded Kairos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kairos R&D Solutions was founded by Dr. Ashwani Dhar MD DMI, a physician and healthcare entrepreneur based in Fremont, California. Dr. Dhar is the Founder and CEO of Kairos and also founded TrPharma and ThinkRoman Ventures."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who owns Kairos R&D Solutions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kairos R&D Solutions is owned and led by Dr. Ashwani Dhar MD DMI as Founder and CEO. The company is headquartered in Hyderabad, India with operations in San Francisco, USA."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What services does Kairos offer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kairos R&D Solutions offers: Patient Recruitment with AI-powered matching, Kairodox document management platform, Clinical Trial Management, AI-Enabled Research Analytics, Real-World Evidence Studies, Pharmacovigilance, Patient Travel & Locator Services, and Technology Solutions for clinical research."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is Kairos located?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kairos R&D Solutions has offices in Hyderabad, India (headquarters) and San Francisco Bay Area, California, USA. Kairos serves pharmaceutical clients worldwide across India, United States, and Europe."
+          }
+        }
+      ]
+    }
+  ]
 }
 
 export default function KairosPage() {
