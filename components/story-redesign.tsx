@@ -10,16 +10,15 @@ import { ArrowLeft, ArrowUpRight, Linkedin } from "lucide-react";
  */
 
 const CSS = `
-@import url('https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=satoshi@400,500,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap');
 :root{
   --paper:#ECEBE5; --plate:#F6F5F1; --white:#FFFFFF;
   --ink:#191512; --ink-soft:#575049; --ink-faint:#8C857C;
   --line:#D9D6CD; --line-strong:#C6C2B7;
   --teal:#0E8577; --teal-deep:#0A6459; --teal-bright:#19AD9C;
-  --display:'Clash Display','Satoshi',system-ui,sans-serif;
-  --sans:'Satoshi',system-ui,-apple-system,sans-serif;
-  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --display:'Geist',system-ui,-apple-system,sans-serif;
+  --sans:'Geist',system-ui,-apple-system,sans-serif;
+  --mono:'Geist Mono',ui-monospace,'SFMono-Regular',monospace;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 .adx{background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;line-height:1.6;font-size:16px;min-height:100vh;overflow-x:hidden}
