@@ -129,6 +129,7 @@ const entityGraph = {
         "https://www.linkedin.com/in/ashdhar",
         "https://twitter.com/ash_dhar",
         "https://www.instagram.com/trpharma187",
+        "https://www.instagram.com/tr.thinkroman",
         "https://medium.com/@ashdhar",
         // Official Websites
         "https://thinkroman.com",
@@ -159,6 +160,24 @@ const entityGraph = {
         "@type": "EducationalOrganization",
         "name": "Harvard T.H. Chan School of Public Health"
       },
+      "credential": {
+        "@id": `${BASE_URL}/#credential-dmi`
+      },
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "@id": `${BASE_URL}/#credential-md`,
+          "name": "MD",
+          "credentialCategory": "Doctor of Medicine"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "@id": `${BASE_URL}/#credential-dmi`,
+          "name": "DMI",
+          "credentialCategory":
+            "Postgraduate Diploma in Medical Informatics - Royal College of Surgeons of Edinburgh"
+        }
+      ],
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Fremont",

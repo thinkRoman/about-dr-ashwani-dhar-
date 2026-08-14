@@ -6,7 +6,8 @@ const columns = [
   {
     heading: "Profile",
     links: [
-      { label: "About", href: "/" },
+      { label: "Who is Ashwani Dhar?", href: "/ashwani-dhar" },
+      { label: "Home", href: "/" },
       { label: "My Story", href: "/story" },
       { label: "Media & Videos", href: "/#videos" },
       { label: "Contact", href: "/#contact" },

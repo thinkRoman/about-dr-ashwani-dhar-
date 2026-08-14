@@ -7,16 +7,18 @@ export const SITE = {
   givenName: "Ashwani",
   familyName: "Dhar",
   credentials: "MD, DMI",
-  title: "CEO & Chairman, ThinkRoman Ventures · CEO, Kairos R&D Solutions",
+  title: "CEO & Chairman, ThinkRoman Ventures · CEO, Kairos R&D Solutions · Founder, TrPharma",
   roles: [
     "CEO & Chairman, ThinkRoman Ventures",
     "CEO, Kairos R&D Solutions",
-    "Founder, TrPharma",
+    "Founder, TrPharma (KashMOX 625, One87 Plus, KashCAL PLUS)",
+    "Portfolio: OpenAccess Navigator, Plenty",
     "Director & Senior Physician Executive, Cerner",
     "CMIO, ITWorks (Cerner) / Oracle Health",
+    "Postgraduate, Medical Informatics (DMI) - Royal College of Surgeons of Edinburgh",
   ],
-  bio: "Dr. Ashwani Dhar, MD DMI is a physician, healthcare executive, and entrepreneur. He is CEO & Chairman of ThinkRoman Ventures and CEO of Kairos R&D Solutions, a clinical research organization specializing in AI-enabled trials, patient recruitment, and real-world evidence. Earlier he served as Director & Senior Physician Executive at Cerner and Chief Medical Informatics Officer (CMIO) at ITWorks (Cerner) / Oracle Health. He founded TrPharma, a doctor-led pharmaceutical division behind KashMOX 625, One87 Plus, and KashCAL PLUS.",
-  location: "Fremont, California, USA",
+  bio: "Ashwani Dhar (Dr. Ashwani Dhar MD, DMI) is a physician-entrepreneur and the founder & CEO of ThinkRoman Ventures, a health-tech venture studio. He is CEO of Kairos R&D Solutions, a clinical research organization (CRO) based in Hyderabad, and founder of TrPharma, a doctor-led pharmaceutical company behind KashMOX 625, One87 Plus (880 PLUS), and KashCAL PLUS. His portfolio also includes OpenAccess Navigator and Plenty. He holds an MD and a postgraduate degree in Medical Informatics (DMI) from the Royal College of Surgeons of Edinburgh, with executive training at the Harvard T.H. Chan School of Public Health. Before founding ThinkRoman, he spent over a decade at Cerner in senior physician executive roles, including Chief Medical Informatics Officer (CMIO). He is based in Fremont, California.",
+  location: "Fremont, California, USA (San Francisco Bay Area)",
   overseas: "Hyderabad, India",
   email: "contact@thinkroman.com",
   shortDescription:
@@ -28,7 +30,13 @@ export const SOCIAL = {
   twitter: "https://twitter.com/ash_dhar",
   youtube: "https://www.youtube.com/@drashwanidhar",
   instagram: "https://www.instagram.com/trpharma187",
+  thinkRomanInstagram: "https://www.instagram.com/tr.thinkroman",
   medium: "https://medium.com/@ashdhar",
+}
+
+export const HUB = {
+  path: "/ashwani-dhar",
+  url: `${BASE_URL}/ashwani-dhar`,
 }
 
 export const LINKS = {
