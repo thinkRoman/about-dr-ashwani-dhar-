@@ -1,14 +1,12 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Space_Grotesk, Inter, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { BASE_URL, ALT_URL, IMAGES } from '@/lib/seo'
 import './globals.css'
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
-
-// Base URL for canonical references - Primary domain
-const BASE_URL = "https://www.about-dr-ashwani-dhar.com"
-const ALT_URL = "https://about-dr-ashwani-dhar.thinkroman.com"
+const display = Space_Grotesk({ subsets: ["latin"], variable: "--font-display" });
+const sans = Inter({ subsets: ["latin"], variable: "--font-sans" });
+const mono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -60,10 +58,10 @@ export const metadata: Metadata = {
     locale: 'en_US',
     images: [
       {
-        url: '/images/kashmox-625.webp',
+        url: IMAGES.portraitOg,
         width: 1200,
-        height: 1015,
-        alt: 'KashMOX 625 - TrPharma Antibiotic by Dr. Ashwani Dhar'
+        height: 1200,
+        alt: 'Dr. Ashwani Dhar MD DMI - CEO & Chairman, ThinkRoman Ventures | CEO, Kairos R&D Solutions'
       }
     ]
   },
@@ -72,7 +70,7 @@ export const metadata: Metadata = {
     title: 'Dr. Ashwani Dhar | Kairos R&D | KashMOX 625 | TrPharma',
     description: 'Founder of Kairos R&D Solutions & TrPharma. Creator of KashMOX 625 antibiotic.',
     creator: '@ash_dhar',
-    images: ['/images/kashmox-625.webp']
+    images: [IMAGES.portraitOg]
   },
   robots: {
     index: true,
@@ -97,7 +95,7 @@ export const metadata: Metadata = {
     'alternate-domain': ALT_URL,
   },
   verification: {
-    google: 'verification-code-here',
+    google: 'googlebeedec23dc5838e2',
   },
   icons: {
     icon: [
@@ -663,7 +661,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="bg-background">
+    <html lang="en" className={`bg-background ${display.variable} ${sans.variable} ${mono.variable}`}>
       <head>
         {/* AI-Enhanced Entity Graph - Primary SEO */}
         <script

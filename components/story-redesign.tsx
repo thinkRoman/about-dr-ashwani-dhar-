@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Link from "next/link";
 import { ArrowLeft, ArrowUpRight, Linkedin } from "lucide-react";
 
 /**
@@ -10,16 +11,15 @@ import { ArrowLeft, ArrowUpRight, Linkedin } from "lucide-react";
  */
 
 const CSS = `
-@import url('https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=satoshi@400,500,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap');
 :root{
   --paper:#ECEBE5; --plate:#F6F5F1; --white:#FFFFFF;
   --ink:#191512; --ink-soft:#575049; --ink-faint:#8C857C;
   --line:#D9D6CD; --line-strong:#C6C2B7;
   --teal:#0E8577; --teal-deep:#0A6459; --teal-bright:#19AD9C;
-  --display:'Clash Display','Satoshi',system-ui,sans-serif;
-  --sans:'Satoshi',system-ui,-apple-system,sans-serif;
-  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --display:'Geist',system-ui,-apple-system,sans-serif;
+  --sans:'Geist',system-ui,-apple-system,sans-serif;
+  --mono:'Geist Mono',ui-monospace,'SFMono-Regular',monospace;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 .adx{background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;line-height:1.6;font-size:16px;min-height:100vh;overflow-x:hidden}
@@ -139,8 +139,8 @@ export default function Story() {
 
       <nav className="nav">
         <div className="wrap">
-          <a href="/" className="brand"><b>Ashwani Dhar</b><span className="data">MD · DMI</span></a>
-          <a href="/" className="back"><ArrowLeft size={15} /> Profile</a>
+          <Link href="/" className="brand"><b>Ashwani Dhar</b><span className="data">MD · DMI</span></Link>
+          <Link href="/" className="back"><ArrowLeft size={15} /> Profile</Link>
         </div>
       </nav>
 
@@ -151,7 +151,7 @@ export default function Story() {
           <div className="byline rev">Dr. Ashwani Dhar · MD, DMI · In his own words</div>
 
           <blockquote className="epi rev">
-            <p>"I became a physician to help patients. I became an entrepreneur to help millions more."</p>
+            <p>&ldquo;I became a physician to help patients. I became an entrepreneur to help millions more.&rdquo;</p>
             <cite>Dr. Ashwani Dhar</cite>
           </blockquote>
         </div>
@@ -164,7 +164,7 @@ export default function Story() {
             <h2>The gaps were impossible to unsee</h2>
             <p>As a practicing physician, I saw firsthand the gaps in our healthcare system. Patients struggled to access quality medications at affordable prices. Clinical trials were slow and inefficient. The disconnect between clinical care and healthcare innovation was striking.</p>
             <p>My time at <strong>Cerner / Oracle Health</strong> as Chief Medical Informatics Officer taught me how technology could transform healthcare delivery. But I wanted to do more than advise from the sidelines — I wanted to build solutions that would directly impact patient lives.</p>
-            <p>That's why I founded <strong>ThinkRoman Ventures</strong>: a platform where my clinical experience could fuel healthcare innovation. It was never about starting one company. It was about building an ecosystem where many healthcare solutions could flourish.</p>
+            <p>That&apos;s why I founded <strong>ThinkRoman Ventures</strong>: a platform where my clinical experience could fuel healthcare innovation. It was never about starting one company. It was about building an ecosystem where many healthcare solutions could flourish.</p>
           </section>
 
           <section className="block rev">
@@ -172,7 +172,7 @@ export default function Story() {
             <h2>The opportune moment</h2>
             <p>Clinical research is the backbone of medical progress, yet the process was plagued by inefficiencies. Patient recruitment took forever. Documentation was a nightmare. Smaller sponsors struggled to compete.</p>
             <p><a className="inl" href="/kairos">Kairos R&amp;D Solutions</a> was my answer — a CRO that leverages AI for patient matching, streamlines documents through <strong>Kairodox</strong>, and makes research accessible to sponsors of every size.</p>
-            <p>The name "Kairos" is Greek for the opportune moment — the perfect time to act. In clinical research, timing is everything. We help our partners seize it.</p>
+            <p>The name &ldquo;Kairos&rdquo; is Greek for the opportune moment — the perfect time to act. In clinical research, timing is everything. We help our partners seize it.</p>
           </section>
 
           <section className="block rev">
@@ -190,7 +190,7 @@ export default function Story() {
           </section>
 
           <div className="pull rev">
-            <p>Every decision runs through one question: <span className="q">"Would I prescribe this to my own family?"</span></p>
+            <p>Every decision runs through one question: <span className="q">&ldquo;Would I prescribe this to my own family?&rdquo;</span></p>
           </div>
         </div>
       </main>
@@ -216,11 +216,11 @@ export default function Story() {
       <section className="connect">
         <div className="wrap">
           <div className="rev">
-            <h2>Let's connect</h2>
-            <p>Clinical research, pharmaceutical distribution, or healthcare innovation — I'd like to hear about it.</p>
+            <h2>Let&apos;s connect</h2>
+            <p>Clinical research, pharmaceutical distribution, or healthcare innovation — I&apos;d like to hear about it.</p>
             <div className="cbtns">
               <a className="btn btn-p" href="https://www.linkedin.com/in/ashdhar" target="_blank" rel="noreferrer"><Linkedin size={16} /> Connect on LinkedIn</a>
-              <a className="btn btn-g" href="/">View full profile <ArrowUpRight size={15} /></a>
+              <Link className="btn btn-g" href="/">View full profile <ArrowUpRight size={15} /></Link>
             </div>
           </div>
         </div>
