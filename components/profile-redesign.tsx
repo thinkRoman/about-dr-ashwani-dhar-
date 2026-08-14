@@ -16,6 +16,7 @@ import {
 } from "lucide-react"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
+import { ReelsSection } from "@/components/reels-section"
 import { useReveal } from "@/hooks/use-reveal"
 import { IMAGES, SITE, SOCIAL } from "@/lib/seo"
 import { HERO, WRITING, VENTURES, VIDEOS, STATS, CONTACT } from "@/lib/home"
@@ -345,6 +346,9 @@ export default function ProfileRedesign() {
             ))}
           </div>
         </section>
+
+        {/* ================= REELS ================= */}
+        <ReelsSection />
 
         {/* ================= CONTACT (dark CTA) ================= */}
         <section id="contact" className="bg-eave text-white">
