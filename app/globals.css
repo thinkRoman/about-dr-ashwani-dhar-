@@ -4,19 +4,19 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --ink: #17160f;
-  --ink-soft: #4e4c45;
-  --ink-faint: #8d8a80;
-  --paper: #f6f5f1;
-  --porcelain: #f6f5f1;
+  --ink: #0c1511;
+  --ink-soft: #41504a;
+  --ink-faint: #77847d;
+  --paper: #f7f8f6;
+  --porcelain: #f7f8f6;
   --porcelain-strong: #ffffff;
-  --hairline: #e3e1d9;
-  --hairline-strong: #cdc9bf;
-  --signal: #0e7c6b;
-  --signal-deep: #0a5f52;
-  --signal-bright: #14a38e;
-  --amber: #a8781f;
-  --amber-soft: #c99a3f;
+  --hairline: #e6eae6;
+  --hairline-strong: #cfd7d1;
+  --signal: #0fa478;
+  --signal-deep: #0b7a58;
+  --signal-bright: #2bd9a8;
+  --eave: #04241d;
+  --eave-soft: #073830;
 
   --background: var(--porcelain);
   --foreground: var(--ink);
@@ -26,9 +26,9 @@
   --popover-foreground: var(--ink);
   --primary: var(--signal);
   --primary-foreground: #ffffff;
-  --secondary: #efece5;
+  --secondary: #eef2ee;
   --secondary-foreground: var(--ink);
-  --muted: #efede7;
+  --muted: #eef2ee;
   --muted-foreground: var(--ink-soft);
   --accent: var(--signal);
   --accent-foreground: #ffffff;
@@ -39,15 +39,15 @@
   --ring: var(--signal);
   --chart-1: var(--signal);
   --chart-2: var(--signal-bright);
-  --chart-3: var(--amber);
+  --chart-3: #0b7a58;
   --chart-4: var(--ink);
-  --chart-5: #e8d9b8;
-  --radius: 0.75rem;
+  --chart-5: #0c1511;
+  --radius: 1rem;
   --sidebar: var(--porcelain-strong);
   --sidebar-foreground: var(--ink);
   --sidebar-primary: var(--signal);
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #efede7;
+  --sidebar-accent: #eef2ee;
   --sidebar-accent-foreground: var(--ink);
   --sidebar-border: var(--hairline);
   --sidebar-ring: var(--signal);
@@ -60,10 +60,13 @@
 }
 
 @theme inline {
-  --font-display: var(--font-display);
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-mono);
-  --font-serif: var(--font-serif);
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+    "Segoe UI", Roboto, "Helvetica Neue", "Inter", "Arial", sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+    "Segoe UI", Roboto, "Helvetica Neue", "Inter", "Arial", sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "SFMono-Regular", Menlo, Monaco, "Cascadia Mono",
+    Consolas, monospace;
+  --font-serif: "New York", "Instrument Serif", Georgia, "Times New Roman", serif;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -109,8 +112,8 @@
   --color-signal: var(--signal);
   --color-signal-deep: var(--signal-deep);
   --color-signal-bright: var(--signal-bright);
-  --color-amber: var(--amber);
-  --color-amber-soft: var(--amber-soft);
+  --color-eave: var(--eave);
+  --color-eave-soft: var(--eave-soft);
 }
 
 @layer base {
@@ -125,31 +128,31 @@
     @apply bg-background text-foreground;
     font-family: var(--font-sans);
     font-size: 16px;
-    line-height: 1.6;
-    letter-spacing: -0.011em;
+    line-height: 1.65;
+    letter-spacing: 0.01em;
+    font-feature-settings: "cv11", "ss01";
   }
   ::selection {
     background: var(--signal);
     color: #ffffff;
   }
-  /* Editorial headline scale across the whole site */
   h1,
   h2,
   h3,
   h4 {
     font-family: var(--font-display);
-    letter-spacing: -0.028em;
-    font-weight: 600;
+    font-weight: 650;
+    letter-spacing: -0.015em;
     text-wrap: balance;
   }
   h1 {
-    line-height: 1.04;
+    line-height: 1.05;
   }
   h2 {
-    line-height: 1.1;
+    line-height: 1.12;
   }
   h3 {
-    line-height: 1.18;
+    line-height: 1.2;
   }
   p {
     text-wrap: pretty;
@@ -170,30 +173,61 @@
     font-family: var(--font-mono);
     font-size: 11px;
     font-weight: 500;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
   }
   .serif {
     font-family: var(--font-serif);
-    font-style: italic;
-    font-weight: 400;
-    letter-spacing: -0.01em;
   }
   .display-tight {
     font-family: var(--font-display);
     font-weight: 600;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.02em;
+  }
+  .text-gradient {
+    background: linear-gradient(120deg, var(--signal-bright), var(--signal) 55%, #5eead4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .glass {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.14);
   }
   .reveal {
     opacity: 0;
-    transform: translateY(18px);
+    transform: translateY(20px);
     transition:
-      opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1),
-      transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+      opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   }
   .reveal.in {
     opacity: 1;
     transform: none;
+  }
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  .marquee {
+    animation: marquee 32s linear infinite;
+  }
+  .marquee:hover {
+    animation-play-state: paused;
+  }
+  .hero-grid {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: radial-gradient(ellipse 75% 70% at 50% 0%, #000 55%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 75% 70% at 50% 0%, #000 55%, transparent 100%);
   }
 }
 
@@ -203,8 +237,11 @@
     transform: none;
     transition: none;
   }
+  .marquee {
+    animation: none;
+  }
 }
 
 section[id] {
-  scroll-margin-top: 88px;
+  scroll-margin-top: 92px;
 }

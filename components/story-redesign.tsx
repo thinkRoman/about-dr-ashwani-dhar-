@@ -12,13 +12,13 @@ import { ArrowLeft, ArrowUpRight, Linkedin } from "lucide-react";
 
 const CSS = `
 :root{
-  --paper:#F6F5F1; --plate:#FFFFFF; --white:#FFFFFF;
-  --ink:#17160F; --ink-soft:#4E4C45; --ink-faint:#8D8A80;
-  --line:#E3E1D9; --line-strong:#CDC9BF;
-  --teal:#0E7C6B; --teal-deep:#0A5F52; --teal-bright:#14A38E;
-  --display:var(--font-display),'Inter Tight',system-ui,-apple-system,sans-serif;
-  --sans:var(--font-sans),'Inter',system-ui,-apple-system,sans-serif;
-  --mono:var(--font-mono),'IBM Plex Mono',ui-monospace,'SFMono-Regular',monospace;
+  --paper:#F7F8F6; --plate:#FFFFFF; --white:#FFFFFF;
+  --ink:#0C1511; --ink-soft:#41504A; --ink-faint:#77847D;
+  --line:#E6EAE6; --line-strong:#CFD7D1;
+  --teal:#0FA478; --teal-deep:#0B7A58; --teal-bright:#2BD9A8;
+  --display:var(--font-display),'SF Pro Display',system-ui,-apple-system,sans-serif;
+  --sans:var(--font-sans),'SF Pro Text',system-ui,-apple-system,sans-serif;
+  --mono:var(--font-mono),ui-monospace,'SF Mono',Menlo,monospace;
   --serif:var(--font-serif),'Instrument Serif',Georgia,serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}

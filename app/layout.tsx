@@ -1,13 +1,7 @@
 import type { Metadata } from 'next'
-import { Inter, Inter_Tight, IBM_Plex_Mono, Instrument_Serif } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { BASE_URL, ALT_URL, IMAGES } from '@/lib/seo'
 import './globals.css'
-
-const display = Inter_Tight({ subsets: ["latin"], variable: "--font-display", display: "swap" });
-const sans = Inter({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
-const mono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-mono", display: "swap" });
-const serif = Instrument_Serif({ subsets: ["latin"], weight: "400", style: ["normal", "italic"], variable: "--font-serif", display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -662,7 +656,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`bg-background ${display.variable} ${sans.variable} ${mono.variable} ${serif.variable}`}>
+    <html lang="en" className="bg-background">
       <head>
         {/* AI-Enhanced Entity Graph - Primary SEO */}
         <script

@@ -2,12 +2,38 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowUpRight, ArrowRight, Linkedin, Youtube, Mail } from "lucide-react"
+import {
+  ArrowUpRight,
+  ArrowRight,
+  Linkedin,
+  Youtube,
+  Mail,
+  Stethoscope,
+  Microscope,
+  Pill,
+  Activity,
+  Sparkles,
+} from "lucide-react"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { useReveal } from "@/hooks/use-reveal"
 import { IMAGES, SITE, SOCIAL } from "@/lib/seo"
 import { HERO, WRITING, VENTURES, VIDEOS, STATS, CONTACT } from "@/lib/home"
+
+const TICKER = [
+  "Clinical Research",
+  "AI-Enabled Trials",
+  "Real-World Evidence",
+  "Patient Recruitment",
+  "Medical Informatics",
+  "KashMOX 625",
+  "Pharmacovigilance",
+  "Digital Health",
+  "Kairodox",
+  "Doctor-Led Pharma",
+]
+
+const VENTURE_ICONS = [Microscope, Pill, Sparkles]
 
 export default function ProfileRedesign() {
   const ref = useReveal()
@@ -17,133 +43,185 @@ export default function ProfileRedesign() {
       <SiteHeader />
 
       <main id="top">
-        {/* ================= HERO ================= */}
-        <section className="mx-auto grid max-w-6xl gap-14 px-5 pb-16 pt-14 lg:grid-cols-[1.12fr_0.88fr] lg:items-center lg:gap-20 lg:px-8 lg:pb-24 lg:pt-20">
-          <div>
-            <div className="eyebrow flex items-center gap-3 text-signal reveal">
-              <span className="h-px w-10 bg-signal/70" />
-              {HERO.eyebrow}
-            </div>
-
-            <h1 className="font-display mt-8 text-5xl font-semibold leading-[0.98] tracking-tight text-ink reveal sm:text-6xl lg:text-[76px]">
-              Medicine is a{" "}
-              <span className="font-serif text-signal">systems</span> problem.
-              <br />
-              I build the{" "}
-              <span className="font-serif text-signal">systems</span>.
-            </h1>
-
-            <p className="reveal mt-8 max-w-xl text-lg leading-relaxed text-ink-soft">
-              {HERO.stand}
-            </p>
-
-            <div className="reveal mt-10 flex flex-wrap gap-3">
-              <Link
-                href="/story"
-                className="group inline-flex items-center gap-2 rounded-full bg-signal px-7 py-4 text-sm font-semibold text-white transition-colors hover:bg-signal-deep"
-              >
-                Read the work{" "}
-                <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
-              </Link>
-              <Link
-                href="#ventures"
-                className="inline-flex items-center gap-2 rounded-full border border-hairline-strong px-7 py-4 text-sm font-semibold text-ink transition-colors hover:border-signal hover:text-signal"
-              >
-                See the ventures
-              </Link>
-            </div>
-          </div>
-
-          <div className="reveal lg:pl-2">
-            <figure className="relative overflow-hidden rounded-3xl border border-hairline bg-white shadow-[0_40px_80px_-40px_rgba(23,22,15,0.4)]">
-              <div className="relative aspect-[470/1024] max-h-[660px] w-full overflow-hidden">
-                <Image
-                  src={IMAGES.portrait}
-                  alt={`${SITE.name} MD, DMI — CEO & Chairman, ThinkRoman Ventures · CEO, Kairos R&D Solutions`}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 45vw"
-                  priority
-                  className="object-cover object-top"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent" />
-                <figcaption className="absolute inset-x-0 bottom-0 p-7">
-                  <p className="display-tight text-3xl text-white">Dr. Ashwani Dhar</p>
-                  <p className="mt-1.5 eyebrow text-white/70">
-                    MD, DMI · Medical Informatics
-                  </p>
-                </figcaption>
+        {/* ================= HERO (dark) ================= */}
+        <section
+          className="relative overflow-hidden bg-eave text-white"
+          style={{
+            background:
+              "radial-gradient(58% 48% at 12% 0%, rgba(16,185,129,0.22), transparent 62%), radial-gradient(50% 44% at 92% 18%, rgba(45,212,191,0.16), transparent 56%), linear-gradient(165deg, #063128, #03211b)",
+          }}
+        >
+          <div className="hero-grid absolute inset-0" aria-hidden="true" />
+          <div className="relative mx-auto grid max-w-6xl gap-14 px-5 pb-20 pt-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-16 lg:px-8 lg:pb-28 lg:pt-20">
+            <div>
+              <div className="reveal inline-flex items-center gap-2.5 rounded-full border border-white/15 bg-white/5 px-4 py-2 backdrop-blur-sm">
+                <span className="h-1.5 w-1.5 rounded-full bg-signal-bright" />
+                <span className="eyebrow text-white/80">{HERO.eyebrow}</span>
               </div>
-              <div className="grid grid-cols-2 divide-x divide-hairline border-t border-hairline">
-                <div className="px-6 py-4">
-                  <p className="eyebrow text-ink-faint">Role</p>
-                  <p className="mt-1 text-sm font-medium text-ink">
-                    CEO &amp; Chairman · ThinkRoman Ventures
-                  </p>
+
+              <h1 className="mt-8 text-[44px] font-semibold leading-[1.02] tracking-tight text-white sm:text-6xl lg:text-[78px]">
+                Medicine is a
+                <br />
+                <span className="text-gradient">systems problem.</span>
+                <br />
+                I build the systems.
+              </h1>
+
+              <p className="reveal mt-7 max-w-xl text-[17px] leading-relaxed text-white/70">
+                {HERO.stand}
+              </p>
+
+              <div className="reveal mt-9 flex flex-wrap items-center gap-3">
+                <Link
+                  href="/story"
+                  className="group inline-flex items-center gap-2 rounded-full bg-signal-bright px-7 py-4 text-[15px] font-semibold text-eave transition-all hover:bg-white"
+                >
+                  Read the work{" "}
+                  <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
+                </Link>
+                <Link
+                  href="#ventures"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-7 py-4 text-[15px] font-semibold text-white transition-colors hover:border-signal-bright/60 hover:text-signal-bright"
+                >
+                  See the ventures
+                </Link>
+              </div>
+
+              <div className="reveal mt-10 flex items-center gap-6 border-t border-white/10 pt-6">
+                <div>
+                  <p className="display-tight text-2xl text-white">15+</p>
+                  <p className="eyebrow text-white/50">Years leading</p>
                 </div>
-                <div className="px-6 py-4">
-                  <p className="eyebrow text-ink-faint">Active now</p>
-                  <p className="mt-1 flex items-center gap-2 text-sm font-medium text-signal">
-                    <span className="h-2 w-2 animate-pulse rounded-full bg-signal" />
-                    17 clinical trials live
-                  </p>
+                <div>
+                  <p className="display-tight text-2xl text-white">20+</p>
+                  <p className="eyebrow text-white/50">Initiatives built</p>
+                </div>
+                <div>
+                  <p className="display-tight text-2xl text-white">17</p>
+                  <p className="eyebrow text-white/50">Trials live</p>
                 </div>
               </div>
-            </figure>
+            </div>
+
+            {/* Portrait lockup */}
+            <div className="reveal relative mx-auto w-full max-w-sm lg:max-w-none">
+              <div className="relative overflow-hidden rounded-[28px] border border-white/15 shadow-[0_50px_100px_-40px_rgba(0,0,0,0.7)]">
+                <div className="relative aspect-[470/1024] max-h-[600px] w-full">
+                  <Image
+                    src={IMAGES.portrait}
+                    alt={`${SITE.name} MD, DMI — CEO & Chairman, ThinkRoman Ventures · CEO, Kairos R&D Solutions`}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                    priority
+                    className="object-cover object-top"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#03211b] via-transparent to-transparent" />
+                  <figcaption className="absolute inset-x-0 bottom-0 p-7">
+                    <p className="text-3xl font-semibold tracking-tight text-white">
+                      Dr. Ashwani Dhar
+                    </p>
+                    <p className="eyebrow mt-2 text-white/60">MD, DMI · Medical Informatics</p>
+                  </figcaption>
+                </div>
+              </div>
+
+              <div className="glass absolute -left-4 top-8 flex items-center gap-3 rounded-2xl px-4 py-3 shadow-lg lg:-left-9">
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-signal-bright/20 text-signal-bright">
+                  <Activity size={16} />
+                </span>
+                <div>
+                  <p className="text-sm font-semibold text-white">17 trials live</p>
+                  <p className="text-[11px] text-white/60">Under Kairos R&D</p>
+                </div>
+              </div>
+
+              <div className="glass absolute -right-3 bottom-24 flex items-center gap-3 rounded-2xl px-4 py-3 shadow-lg lg:-right-7">
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/15 text-white">
+                  <Stethoscope size={16} />
+                </span>
+                <div>
+                  <p className="text-sm font-semibold text-white">Physician-led</p>
+                  <p className="text-[11px] text-white/60">CEO &amp; Chairman</p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* ================= AUTHORITY STRIP ================= */}
-        <section className="border-y border-hairline bg-white">
-          <div className="mx-auto grid max-w-6xl grid-cols-2 lg:grid-cols-4">
+        {/* ================= TICKER ================= */}
+        <div className="border-y border-white/10 bg-eave py-5">
+          <div className="relative overflow-hidden [mask-image:linear-gradient(90deg,transparent,black_8%,black_92%,transparent)]">
+            <div className="marquee flex w-max items-center gap-10 whitespace-nowrap pr-10">
+              {[...TICKER, ...TICKER].map((item, i) => (
+                <span
+                  key={i}
+                  className="flex items-center gap-10 text-sm font-medium uppercase tracking-[0.18em] text-white/55"
+                >
+                  {item}
+                  <span className="text-signal-bright">✦</span>
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* ================= STATS (light) ================= */}
+        <section className="bg-white">
+          <div className="mx-auto grid max-w-6xl grid-cols-2 px-5 lg:grid-cols-4 lg:px-8">
             {STATS.map((s) => (
               <div
                 key={s.label}
-                className="border-hairline px-5 py-9 lg:border-l lg:px-8 lg:py-12 lg:first:border-l-0"
+                className="border-b border-hairline py-10 lg:border-b-0 lg:border-l lg:px-10 lg:py-16 lg:first:pl-0 lg:first:border-l-0"
               >
-                <p className="display-tight text-4xl text-signal lg:text-5xl">{s.value}</p>
-                <p className="mt-2 text-sm leading-snug text-ink-soft">{s.label}</p>
+                <p className="text-5xl font-semibold tracking-tight text-ink [background:linear-gradient(120deg,var(--ink),#3a5649);-webkit-background-clip:text;background-clip:text;color:transparent] lg:text-6xl">
+                  {s.value}
+                </p>
+                <p className="mt-3 max-w-[24ch] text-[15px] leading-snug text-ink-soft">
+                  {s.label}
+                </p>
               </div>
             ))}
           </div>
         </section>
 
         {/* ================= STORY ================= */}
-        <section id="story" className="mx-auto max-w-6xl px-5 py-20 lg:px-8 lg:py-28">
-          <header className="reveal flex flex-wrap items-end justify-between gap-4 border-b border-hairline pb-6">
+        <section id="story" className="mx-auto max-w-6xl px-5 py-24 lg:px-8 lg:py-32">
+          <header className="reveal flex flex-wrap items-end justify-between gap-4">
             <div>
               <p className="eyebrow text-signal">01 · In his own words</p>
-              <h2 className="mt-4 text-3xl font-semibold text-ink lg:text-[44px]">
+              <h2 className="mt-4 text-4xl font-semibold tracking-tight lg:text-5xl">
                 The story so far
               </h2>
             </div>
             <Link
               href="/story"
-              className="group inline-flex items-center gap-1.5 text-sm font-medium text-signal hover:text-signal-deep"
+              className="group inline-flex items-center gap-1.5 rounded-full border border-hairline-strong px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-signal hover:text-signal"
             >
               Read the full story{" "}
               <ArrowUpRight size={15} className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
             </Link>
           </header>
-          <div className="mt-2">
+
+          <div className="mt-4">
             {WRITING.map((p) => (
               <Link
                 href="/story"
                 key={p.n}
-                className="group grid grid-cols-[3.5rem_1fr] items-baseline gap-6 border-b border-hairline py-8 transition-colors hover:bg-white lg:grid-cols-[3.5rem_0.7fr_1.3fr_auto]"
+                className="group grid grid-cols-[3rem_1fr] items-start gap-6 border-t border-hairline py-9 last:border-b transition-colors hover:bg-white lg:grid-cols-[4rem_0.8fr_1.2fr_auto] lg:gap-10"
               >
-                <span className="display-tight pt-1 text-xl text-ink-faint group-hover:text-signal">
+                <span className="text-gradient pt-1 text-2xl font-semibold tracking-tight">
                   {p.n}
                 </span>
                 <div>
                   <span className="eyebrow text-signal">{p.tag}</span>
-                  <h3 className="mt-2 text-2xl font-semibold text-ink lg:text-[28px]">
+                  <h3 className="mt-2 text-2xl font-semibold tracking-tight lg:text-3xl">
                     {p.title}
                   </h3>
                 </div>
-                <p className="mt-1 max-w-2xl leading-relaxed text-ink-soft lg:mt-0">{p.dek}</p>
+                <p className="max-w-2xl text-[16px] leading-relaxed text-ink-soft">{p.dek}</p>
                 <span className="hidden justify-self-end self-center text-ink-faint lg:block">
                   <ArrowUpRight
-                    size={22}
+                    size={24}
                     className="text-signal opacity-0 transition-opacity group-hover:opacity-100"
                   />
                 </span>
@@ -152,86 +230,88 @@ export default function ProfileRedesign() {
           </div>
         </section>
 
-        {/* ================= VENTURES ================= */}
-        <section id="ventures" className="bg-ink text-porcelain">
-          <div className="mx-auto max-w-6xl px-5 py-20 lg:px-8 lg:py-28">
-            <header className="reveal border-b border-white/15 pb-6">
-              <p className="eyebrow text-signal-bright">02 · Ventures</p>
-              <div className="mt-4 flex flex-wrap items-end justify-between gap-6">
-                <h2 className="text-3xl font-semibold lg:text-[44px]">What I&apos;m building</h2>
-                <p className="max-w-sm text-[15px] leading-relaxed text-porcelain/60">
-                  Three companies, one thesis. Each lives on its own — follow the link to go deeper.
-                </p>
+        {/* ================= VENTURES (cards) ================= */}
+        <section id="ventures" className="bg-white">
+          <div className="mx-auto max-w-6xl px-5 py-24 lg:px-8 lg:py-32">
+            <header className="reveal flex flex-wrap items-end justify-between gap-6">
+              <div>
+                <p className="eyebrow text-signal">02 · Ventures</p>
+                <h2 className="mt-4 text-4xl font-semibold tracking-tight lg:text-5xl">
+                  What I&apos;m building
+                </h2>
               </div>
+              <p className="max-w-sm text-[15px] leading-relaxed text-ink-soft">
+                Three companies, one thesis. Each lives on its own — follow the link to go deeper.
+              </p>
             </header>
-            <div className="mt-6 divide-y divide-white/10">
-              {VENTURES.map((v, i) => (
-                <Link
-                  key={v.name}
-                  href={v.href}
-                  {...(v.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                  className="reveal group grid items-center gap-3 py-9 transition-colors lg:grid-cols-[3.5rem_1fr_auto_auto] lg:gap-8"
-                >
-                  <span className="display-tight text-xl text-porcelain/40 transition-colors group-hover:text-signal-bright">
-                    0{i + 1}
-                  </span>
-                  <div>
-                    <div className="flex flex-wrap items-center gap-3">
-                      <h3 className="text-2xl font-semibold transition-colors group-hover:text-signal-bright lg:text-[30px]">
-                        {v.name}
-                      </h3>
+
+            <div className="mt-10 grid gap-5 lg:grid-cols-3">
+              {VENTURES.map((v, i) => {
+                const Icon = VENTURE_ICONS[i] ?? Sparkles
+                return (
+                  <Link
+                    key={v.name}
+                    href={v.href}
+                    {...(v.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                    className="reveal group flex flex-col rounded-3xl border border-hairline bg-porcelain p-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-signal/40 hover:shadow-[0_35px_70px_-40px_rgba(15,164,120,0.45)]"
+                  >
+                    <div className="flex items-start justify-between">
+                      <span className="flex h-13 w-13 items-center justify-center rounded-2xl bg-signal/10 p-3 text-signal transition-colors group-hover:bg-signal group-hover:text-white">
+                        <Icon size={24} strokeWidth={1.75} />
+                      </span>
                       <span
-                        className={`eyebrow rounded-full border px-3 py-1 ${
+                        className={`eyebrow rounded-full border px-3 py-1.5 ${
                           v.open
-                            ? "border-signal-bright/40 bg-signal/20 text-signal-bright"
-                            : "border-white/20 text-porcelain/50"
+                            ? "border-signal/30 bg-signal/10 text-signal"
+                            : "border-hairline-strong text-ink-faint"
                         }`}
                       >
                         {v.stat}
                       </span>
                     </div>
-                    <p className="mt-1 eyebrow text-porcelain/40">{v.role}</p>
-                    <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-porcelain/65">
+                    <h3 className="mt-7 text-2xl font-semibold tracking-tight">{v.name}</h3>
+                    <p className="eyebrow mt-1.5 text-ink-faint">{v.role}</p>
+                    <p className="mt-4 flex-1 text-[15px] leading-relaxed text-ink-soft">
                       {v.body}
                     </p>
-                  </div>
-                  <span className="hidden text-[13px] font-medium text-porcelain/50 lg:block">
-                    {v.link.replace("https://", "")}
-                  </span>
-                  <ArrowUpRight
-                    size={26}
-                    className="text-porcelain/30 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-signal-bright"
-                  />
-                </Link>
-              ))}
+                    <span className="mt-7 inline-flex items-center gap-1.5 text-[13px] font-semibold text-signal">
+                      {v.link.replace("https://", "")}{" "}
+                      <ArrowUpRight
+                        size={14}
+                        className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                      />
+                    </span>
+                  </Link>
+                )
+              })}
             </div>
           </div>
         </section>
 
         {/* ================= VIDEOS ================= */}
-        <section id="videos" className="mx-auto max-w-6xl px-5 py-20 lg:px-8 lg:py-28">
+        <section id="videos" className="mx-auto max-w-6xl px-5 py-24 lg:px-8 lg:py-32">
           <header className="reveal flex flex-wrap items-end justify-between gap-4 border-b border-hairline pb-6">
             <div>
               <p className="eyebrow text-signal">03 · On camera</p>
-              <h2 className="mt-4 text-3xl font-semibold lg:text-[44px]">
+              <h2 className="mt-4 text-4xl font-semibold tracking-tight lg:text-5xl">
                 Conversations &amp; talks
               </h2>
             </div>
             <p className="max-w-sm text-[15px] leading-relaxed text-ink-soft">
-              Interviews, public-health talks, and statements — the longer conversations, gathered in
-              one place.
+              Interviews, public-health talks, and statements — gathered in one place.
             </p>
           </header>
-          <div className="mt-8 grid gap-5 md:grid-cols-2">
+
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
             {VIDEOS.map((v) => (
               <a
                 key={v.id}
                 href={`https://www.youtube.com/watch?v=${v.id}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="reveal group overflow-hidden rounded-2xl border border-hairline bg-white transition-all hover:-translate-y-1 hover:shadow-[0_30px_60px_-40px_rgba(23,22,15,0.35)]"
+                className="reveal group grid overflow-hidden rounded-3xl border border-hairline bg-white transition-all duration-300 hover:-translate-y-1 hover:border-signal/40 hover:shadow-[0_30px_70px_-45px_rgba(15,164,120,0.5)] md:grid-cols-[1.15fr_1fr]"
               >
-                <div className="relative aspect-video overflow-hidden bg-ink/5">
+                <div className="relative aspect-video overflow-hidden bg-ink/5 md:aspect-auto md:min-h-[200px]">
                   <img
                     src={`https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`}
                     alt={v.title}
@@ -239,60 +319,92 @@ export default function ProfileRedesign() {
                     onError={(e) => {
                       e.currentTarget.style.opacity = "0"
                     }}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <span className="absolute inset-0 bg-gradient-to-t from-ink/35 to-transparent" />
-                  <span className="eyebrow absolute left-4 top-4 rounded-md bg-ink/55 px-2.5 py-1.5 text-white backdrop-blur-sm">
+                  <span className="eyebrow absolute left-4 top-4 rounded-full bg-ink/60 px-3 py-1.5 text-white backdrop-blur-sm">
                     {v.tag}
                   </span>
-                  <span className="absolute left-1/2 top-1/2 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/60 bg-ink/40 backdrop-blur-sm transition-colors group-hover:bg-signal">
+                  <span className="absolute left-1/2 top-1/2 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/50 bg-ink/50 backdrop-blur-sm transition-all group-hover:scale-110 group-hover:bg-signal">
                     <span className="ml-0.5 border-y-8 border-l-[14px] border-y-transparent border-l-white" />
                   </span>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold transition-colors group-hover:text-signal">
+                <div className="flex flex-col justify-center p-7">
+                  <h3 className="text-xl font-semibold tracking-tight transition-colors group-hover:text-signal">
                     {v.title}
                   </h3>
-                  <p className="eyebrow mt-2 text-ink-faint">{v.meta}</p>
+                  <p className="eyebrow mt-3 text-ink-faint">{v.meta}</p>
+                  <span className="mt-5 inline-flex items-center gap-1.5 text-[13px] font-semibold text-signal">
+                    Watch on YouTube{" "}
+                    <ArrowUpRight
+                      size={14}
+                      className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                    />
+                  </span>
                 </div>
               </a>
             ))}
           </div>
         </section>
 
-        {/* ================= CONTACT ================= */}
-        <section id="contact" className="border-t border-hairline bg-white">
-          <div className="mx-auto grid max-w-6xl gap-10 px-5 py-20 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:px-8 lg:py-28">
-            <div className="reveal">
-              <h2 className="text-3xl font-semibold leading-[1.1] lg:text-[48px]">
-                Working on something{" "}
-                <span className="font-serif text-signal">at this seam?</span>
-              </h2>
-              <p className="mt-5 max-w-lg leading-relaxed text-ink-soft">{CONTACT.body}</p>
-            </div>
-            <div className="reveal flex flex-wrap gap-3 lg:justify-end">
-              <a
-                href={SOCIAL.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-hairline-strong px-6 py-3.5 text-sm font-medium text-ink transition-colors hover:border-signal hover:text-signal"
-              >
-                <Linkedin size={16} /> LinkedIn
-              </a>
-              <a
-                href={SOCIAL.youtube}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-hairline-strong px-6 py-3.5 text-sm font-medium text-ink transition-colors hover:border-signal hover:text-signal"
-              >
-                <Youtube size={16} /> YouTube
-              </a>
-              <a
-                href={`mailto:${SITE.email}`}
-                className="inline-flex items-center gap-2 rounded-full bg-signal px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-signal-deep"
-              >
-                <Mail size={16} /> {SITE.email}
-              </a>
+        {/* ================= CONTACT (dark CTA) ================= */}
+        <section id="contact" className="bg-eave text-white">
+          <div
+            className="relative overflow-hidden py-24 lg:py-32"
+            style={{
+              background:
+                "radial-gradient(55% 60% at 50% 0%, rgba(16,185,129,0.18), transparent 60%), #03211b",
+            }}
+          >
+            <div className="hero-grid absolute inset-0" aria-hidden="true" />
+            <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 lg:grid-cols-[1.15fr_0.85fr] lg:px-8">
+              <div className="reveal">
+                <p className="eyebrow text-signal-bright">04 · Contact</p>
+                <h2 className="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
+                  Working on something{" "}
+                  <span className="text-gradient">at this seam?</span>
+                </h2>
+                <p className="mt-6 max-w-xl text-[17px] leading-relaxed text-white/65">
+                  {CONTACT.body}
+                </p>
+              </div>
+              <div className="reveal flex flex-col items-start gap-4 lg:items-end">
+                <a
+                  href={`mailto:${SITE.email}`}
+                  className="group inline-flex items-center gap-2.5 rounded-full bg-signal-bright px-8 py-4 text-[15px] font-semibold text-eave transition-all hover:bg-white"
+                >
+                  <Mail size={17} /> {SITE.email}
+                  <ArrowUpRight size={16} className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                </a>
+                <div className="mt-3 flex gap-3">
+                  <a
+                    href={SOCIAL.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                    className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white transition-colors hover:border-signal-bright hover:text-signal-bright"
+                  >
+                    <Linkedin size={18} />
+                  </a>
+                  <a
+                    href={SOCIAL.youtube}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="YouTube"
+                    className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white transition-colors hover:border-signal-bright hover:text-signal-bright"
+                  >
+                    <Youtube size={18} />
+                  </a>
+                  <a
+                    href={SOCIAL.twitter}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Twitter / X"
+                    className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white transition-colors hover:border-signal-bright hover:text-signal-bright"
+                  >
+                    <span className="text-sm font-semibold">𝕏</span>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
