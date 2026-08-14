@@ -11,27 +11,27 @@ const REELS: Reel[] = [
   {
     id: "DZNhad3v2Yn",
     tag: "From @ash.dhar",
-    title: "Reel from Dr. Ashwani Dhar",
+    title: "Why we build — a leader's note on ThinkRoman's mission",
   },
   {
     id: "DGib384Jf3v",
     tag: "From @ash.dhar",
-    title: "Reel from Dr. Ashwani Dhar",
+    title: "Bridging clinical care and technology at ThinkRoman",
   },
   {
     id: "DGD2t8Oy-ET",
     tag: "From @ash.dhar",
-    title: "Reel from Dr. Ashwani Dhar",
+    title: "Venture building in health-tech — the ThinkRoman way",
   },
   {
     id: "C19iIq3rq3v",
     tag: "Speaking engagement",
-    title: "Speaking engagement",
+    title: "Speaking on healthcare innovation",
   },
   {
     id: "DEe6k_DSc41",
     tag: "Interview",
-    title: "Interview snippet",
+    title: "An interview on the work behind ThinkRoman",
   },
 ]
 
