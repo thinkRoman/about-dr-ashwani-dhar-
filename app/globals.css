@@ -229,6 +229,15 @@
     mask-image: radial-gradient(ellipse 75% 70% at 50% 0%, #000 55%, transparent 100%);
     -webkit-mask-image: radial-gradient(ellipse 75% 70% at 50% 0%, #000 55%, transparent 100%);
   }
+  .dark-hero {
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(58% 48% at 12% 0%, rgba(16, 185, 129, 0.2), transparent 62%),
+      radial-gradient(50% 44% at 92% 18%, rgba(45, 212, 191, 0.15), transparent 56%),
+      linear-gradient(165deg, #063128, #03211b);
+    color: #fff;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

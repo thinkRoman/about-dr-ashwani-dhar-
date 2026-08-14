@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { SiteFooter } from "@/components/site-footer"
 import { 
   ArrowRight, 
   ArrowLeft,
@@ -205,10 +206,10 @@ export default function KairosPage() {
 
       <main className="min-h-screen bg-background">
         {/* Navigation Bar */}
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-[#04231c]/85 backdrop-blur-md border-b border-white/10 text-white">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between h-16">
-              <Link href="/" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+              <Link href="/" className="flex items-center gap-2 text-white/65 hover:text-signal-bright transition-colors">
                 <ArrowLeft className="h-4 w-4" />
                 <span className="text-sm font-medium">Back to Profile</span>
               </Link>
@@ -222,15 +223,16 @@ export default function KairosPage() {
         </nav>
 
         {/* Hero Section */}
-        <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-b from-accent/10 to-background">
-          <div className="container mx-auto px-4">
+        <section className="dark-hero pt-24 pb-16 md:pt-32 md:pb-24">
+          <div className="hero-grid absolute inset-0" aria-hidden="true" />
+          <div className="relative container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               {/* Breadcrumb */}
               <nav className="mb-8 text-sm" aria-label="Breadcrumb">
-                <ol className="flex items-center gap-2 text-muted-foreground">
-                  <li><Link href="/" className="hover:text-foreground transition-colors">Dr. Ashwani Dhar</Link></li>
+                <ol className="flex items-center gap-2 text-white/60">
+                  <li><Link href="/" className="hover:text-signal-bright transition-colors">Dr. Ashwani Dhar</Link></li>
                   <li>/</li>
-                  <li className="text-foreground font-medium">Kairos R&D Solutions</li>
+                  <li className="text-white font-medium">Kairos R&D Solutions</li>
                 </ol>
               </nav>
 
@@ -245,12 +247,12 @@ export default function KairosPage() {
 
                   <div className="space-y-4 text-center lg:text-left">
                     <div className="flex items-center justify-center lg:justify-start gap-2">
-                      <MapPin className="h-4 w-4 text-accent" />
-                      <span className="text-sm text-muted-foreground">San Francisco Bay Area & Hyderabad, India</span>
+                      <MapPin className="h-4 w-4 text-signal-bright" />
+                      <span className="text-sm text-white/65">San Francisco Bay Area & Hyderabad, India</span>
                     </div>
                     <div className="flex items-center justify-center lg:justify-start gap-2">
-                      <Globe className="h-4 w-4 text-accent" />
-                      <Link href="https://kairosrds.com" target="_blank" rel="noopener noreferrer" className="text-sm text-accent hover:underline">
+                      <Globe className="h-4 w-4 text-signal-bright" />
+                      <Link href="https://kairosrds.com" target="_blank" rel="noopener noreferrer" className="text-sm text-signal-bright hover:underline">
                         www.kairosrds.com
                       </Link>
                     </div>
@@ -260,20 +262,20 @@ export default function KairosPage() {
                 {/* Right: Main Content */}
                 <div className="lg:w-2/3">
                   {/* SEO-Optimized H1 */}
-                  <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight text-balance">
-                    Dr. Ashwani Dhar – Founder & CEO of <span className="text-accent">Kairos R&D Solutions</span>
+                  <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight text-balance">
+                    Dr. Ashwani Dhar – Founder & CEO of <span className="text-signal-bright">Kairos R&D Solutions</span>
                   </h1>
 
-                  <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
-                    <strong className="text-foreground">Dr. Ashwani Dhar, MD, DMI</strong>, is the Founder and CEO of{" "}
-                    <Link href="https://kairosrds.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-accent hover:underline">
+                  <p className="text-xl text-white/70 mb-6 leading-relaxed">
+                    <strong className="text-white">Dr. Ashwani Dhar, MD, DMI</strong>, is the Founder and CEO of{" "}
+                    <Link href="https://kairosrds.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-signal-bright hover:underline">
                       Kairos R&D Solutions Pvt. Ltd.
                     </Link>
-                    , a specialized <strong className="text-foreground">Clinical Research Organization (CRO)</strong> with operations in the San Francisco Bay Area and Hyderabad, India.
+                    , a specialized <strong className="text-white">Clinical Research Organization (CRO)</strong> with operations in the San Francisco Bay Area and Hyderabad, India.
                   </p>
 
-                  <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                    Under Dr. Dhar&apos;s leadership, <strong className="text-foreground">Kairos</strong> has established itself as a leader in AI-enabled clinical trials, patient recruitment, real-world evidence studies, and strategic pharmaceutical partnerships including collaborations with <strong className="text-foreground">Novo Nordisk</strong>.
+                  <p className="text-lg text-white/65 mb-8 leading-relaxed">
+                    Under Dr. Dhar&apos;s leadership, <strong className="text-white">Kairos</strong> has established itself as a leader in AI-enabled clinical trials, patient recruitment, real-world evidence studies, and strategic pharmaceutical partnerships including collaborations with <strong className="text-white">Novo Nordisk</strong>.
                   </p>
 
                   <div className="flex flex-wrap gap-4">
@@ -282,7 +284,7 @@ export default function KairosPage() {
                         Visit Kairos R&D Solutions <ArrowRight className="h-4 w-4" />
                       </Link>
                     </Button>
-                    <Button asChild variant="outline" size="lg">
+                    <Button asChild variant="outline" size="lg" className="border-white/20 bg-white/5 text-white hover:bg-white/10 hover:text-white">
                       <Link href="https://kairosrds.com/contact" target="_blank" rel="noopener noreferrer">
                         Partner with Kairos
                       </Link>
@@ -610,6 +612,8 @@ export default function KairosPage() {
             </div>
           </div>
         </section>
+
+        <SiteFooter />
       </main>
     </>
   )

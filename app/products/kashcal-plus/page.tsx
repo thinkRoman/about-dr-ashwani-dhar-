@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { SiteFooter } from "@/components/site-footer"
 import { 
   ArrowRight, 
   ArrowLeft,
@@ -116,7 +117,7 @@ export default function KashCALPlusPage() {
 
       <main className="min-h-screen bg-background">
         {/* Navigation */}
-        <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+        <nav className="sticky top-0 z-50 bg-[#03211b]/85 text-white backdrop-blur-md border-b border-white/10">
           <div className="container mx-auto px-4 py-4 flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2">
               <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
@@ -125,8 +126,8 @@ export default function KashCALPlusPage() {
               <span className="font-semibold hidden sm:inline">Dr. Ashwani Dhar</span>
             </Link>
             <div className="flex items-center gap-4">
-              <Link href="/trpharma" className="text-sm text-muted-foreground hover:text-foreground">TrPharma</Link>
-              <Link href="/products" className="text-sm text-muted-foreground hover:text-foreground">All Products</Link>
+              <Link href="/trpharma" className="text-sm text-white/60 hover:text-signal-bright">TrPharma</Link>
+              <Link href="/products" className="text-sm text-white/60 hover:text-signal-bright">All Products</Link>
               <Button asChild size="sm" className="gap-2">
                 <Link href="https://pharma.thinkroman.com" target="_blank" rel="noopener noreferrer">
                   Buy Now <ExternalLink className="h-3 w-3" />
@@ -137,23 +138,24 @@ export default function KashCALPlusPage() {
         </nav>
 
         {/* Breadcrumb */}
-        <div className="bg-muted/50 border-b border-border">
+        <div className="bg-[#03211b] text-white/60 border-b border-white/10">
           <div className="container mx-auto px-4 py-3">
-            <nav className="flex items-center gap-2 text-sm text-muted-foreground">
-              <Link href="/" className="hover:text-foreground">Dr. Ashwani Dhar</Link>
+            <nav className="flex items-center gap-2 text-sm">
+              <Link href="/" className="hover:text-signal-bright">Dr. Ashwani Dhar</Link>
               <span>/</span>
-              <Link href="/trpharma" className="hover:text-foreground">TrPharma</Link>
+              <Link href="/trpharma" className="hover:text-signal-bright">TrPharma</Link>
               <span>/</span>
-              <Link href="/products" className="hover:text-foreground">Products</Link>
+              <Link href="/products" className="hover:text-signal-bright">Products</Link>
               <span>/</span>
-              <span className="text-foreground font-medium">KashCAL PLUS</span>
+              <span className="text-white font-medium">KashCAL PLUS</span>
             </nav>
           </div>
         </div>
 
         {/* Hero Section */}
-        <section className="py-12 md:py-20 bg-gradient-to-b from-green-500/5 to-background">
-          <div className="container mx-auto px-4">
+        <section className="dark-hero py-12 md:py-20">
+          <div className="hero-grid absolute inset-0" aria-hidden="true" />
+          <div className="relative container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Product Visual */}
               <div className="flex justify-center order-2 lg:order-1">
@@ -175,25 +177,25 @@ export default function KashCALPlusPage() {
 
               {/* Product Info */}
               <div className="order-1 lg:order-2">
-                <Link href="/trpharma" className="inline-flex items-center gap-2 text-primary hover:underline text-sm mb-4">
+                <Link href="/trpharma" className="inline-flex items-center gap-2 text-signal-bright hover:underline text-sm mb-4">
                   <ArrowLeft className="h-4 w-4" /> Back to TrPharma
                 </Link>
                 
-                <div className="inline-flex items-center gap-2 bg-green-500/10 text-green-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                <div className="inline-flex items-center gap-2 bg-white/10 text-green-300 border border-white/15 px-4 py-2 rounded-full text-sm font-semibold mb-4">
                   <Bone className="h-4 w-4" />
                   Bone Health Specialist
                 </div>
                 
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-                  <span className="text-green-500">KashCAL</span> PLUS
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
+                  <span className="text-green-400">KashCAL</span> PLUS
                 </h1>
                 
-                <p className="text-xl text-muted-foreground mb-2">
+                <p className="text-xl text-white/75 mb-2">
                   Calcium &amp; Vitamin D3 Supplement
                 </p>
                 
-                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  <strong>KashCAL PLUS</strong> is TrPharma&apos;s comprehensive bone health solution, developed under the medical leadership of <Link href="/" className="text-primary hover:underline font-semibold">Dr. Ashwani Dhar MD DMI</Link>. Essential nutrients for strong bones and overall health.
+                <p className="text-lg text-white/65 mb-6 leading-relaxed">
+                  <strong className="text-white">KashCAL PLUS</strong> is TrPharma&apos;s comprehensive bone health solution, developed under the medical leadership of <Link href="/" className="text-signal-bright hover:underline font-semibold">Dr. Ashwani Dhar MD DMI</Link>. Essential nutrients for strong bones and overall health.
                 </p>
 
                 <Card className="bg-card border-green-500/20 mb-6">
@@ -227,7 +229,7 @@ export default function KashCALPlusPage() {
                       Order KashCAL PLUS <ArrowRight className="h-4 w-4" />
                     </Link>
                   </Button>
-                  <Button asChild variant="outline" size="lg" className="gap-2">
+                  <Button asChild variant="outline" size="lg" className="gap-2 border-white/30 text-white hover:bg-white/10 hover:text-white">
                     <Link href="/products">View All Products</Link>
                   </Button>
                 </div>
@@ -335,29 +337,7 @@ export default function KashCALPlusPage() {
         </section>
 
         {/* Footer */}
-        <footer className="py-8 bg-muted/50 border-t border-border">
-          <div className="container mx-auto px-4">
-            {/* Manufacturing Statement for Co-Citation SEO */}
-            <div className="text-center mb-6 pb-6 border-b border-border">
-              <p className="text-sm text-muted-foreground">
-                Manufactured for TrPharma, a division of ThinkRoman Ventures LLP | Under the medical direction of{" "}
-                <Link href="https://www.about-dr-ashwani-dhar.com" className="text-primary hover:underline font-medium">
-                  Dr. Ashwani Dhar
-                </Link>
-              </p>
-            </div>
-            <div className="flex flex-wrap items-center justify-between gap-4">
-              <p className="text-sm text-muted-foreground">
-                &copy; {new Date().getFullYear()} TrPharma - A Division of ThinkRoman Ventures LLP. Founded by Dr. Ashwani Dhar.
-              </p>
-              <div className="flex items-center gap-6 text-sm">
-                <Link href="/" className="text-muted-foreground hover:text-foreground">Dr. Ashwani Dhar</Link>
-                <Link href="/trpharma" className="text-muted-foreground hover:text-foreground">TrPharma</Link>
-                <Link href="/products" className="text-muted-foreground hover:text-foreground">All Products</Link>
-              </div>
-            </div>
-          </div>
-        </footer>
+        <SiteFooter />
       </main>
     </>
   )

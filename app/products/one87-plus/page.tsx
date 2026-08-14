@@ -3,6 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { SiteFooter } from "@/components/site-footer"
 import { 
   ArrowRight, 
   ArrowLeft,
@@ -240,7 +241,7 @@ export default function One87PlusProductPage() {
 
       <main className="min-h-screen bg-background">
         {/* Navigation */}
-        <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+        <nav className="sticky top-0 z-50 bg-[#04231c]/85 text-white backdrop-blur-md border-b border-white/10">
           <div className="container mx-auto px-4 py-4 flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2">
               <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
@@ -249,10 +250,10 @@ export default function One87PlusProductPage() {
               <span className="font-semibold hidden sm:inline">Dr. Ashwani Dhar</span>
             </Link>
             <div className="flex items-center gap-4">
-              <Link href="/trpharma" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <Link href="/trpharma" className="text-sm text-white/60 hover:text-signal-bright transition-colors">
                 TrPharma
               </Link>
-              <Link href="/products" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <Link href="/products" className="text-sm text-white/60 hover:text-signal-bright transition-colors">
                 All Products
               </Link>
               <Button asChild size="sm" className="gap-2">
@@ -265,23 +266,24 @@ export default function One87PlusProductPage() {
         </nav>
 
         {/* Breadcrumb */}
-        <div className="bg-muted/50 border-b border-border">
+        <div className="bg-[#03211b] text-white/60 border-b border-white/10">
           <div className="container mx-auto px-4 py-3">
-            <nav className="flex items-center gap-2 text-sm text-muted-foreground">
-              <Link href="/" className="hover:text-foreground transition-colors">Dr. Ashwani Dhar</Link>
+            <nav className="flex items-center gap-2 text-sm">
+              <Link href="/" className="hover:text-signal-bright transition-colors">Dr. Ashwani Dhar</Link>
               <span>/</span>
-              <Link href="/trpharma" className="hover:text-foreground transition-colors">TrPharma</Link>
+              <Link href="/trpharma" className="hover:text-signal-bright transition-colors">TrPharma</Link>
               <span>/</span>
-              <Link href="/products" className="hover:text-foreground transition-colors">Products</Link>
+              <Link href="/products" className="hover:text-signal-bright transition-colors">Products</Link>
               <span>/</span>
-              <span className="text-foreground font-medium">One87 Plus</span>
+              <span className="text-white font-medium">One87 Plus</span>
             </nav>
           </div>
         </div>
 
         {/* Hero Section */}
-        <section className="py-12 md:py-20 bg-gradient-to-b from-orange-500/5 to-background">
-          <div className="container mx-auto px-4">
+        <section className="dark-hero py-12 md:py-20">
+          <div className="hero-grid absolute inset-0" aria-hidden="true" />
+          <div className="relative container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Product Visual */}
               <div className="flex justify-center order-2 lg:order-1">
@@ -308,26 +310,26 @@ export default function One87PlusProductPage() {
               <div className="order-1 lg:order-2">
                 <Link 
                   href="/trpharma" 
-                  className="inline-flex items-center gap-2 text-primary hover:underline text-sm mb-4"
+                  className="inline-flex items-center gap-2 text-signal-bright hover:underline text-sm mb-4"
                 >
                   <ArrowLeft className="h-4 w-4" /> Back to TrPharma
                 </Link>
                 
-                <div className="inline-flex items-center gap-2 bg-orange-500/10 text-orange-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                <div className="inline-flex items-center gap-2 bg-white/10 text-orange-300 border border-white/15 px-4 py-2 rounded-full text-sm font-semibold mb-4">
                   <Zap className="h-4 w-4" />
                   Pain Relief Specialist
                 </div>
                 
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-                  <span className="text-orange-500">One87</span> Plus
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
+                  <span className="text-orange-400">One87</span> Plus
                 </h1>
                 
-                <p className="text-xl text-muted-foreground mb-2">
-                  Also known as <strong className="text-orange-500">880 PLUS</strong>
+                <p className="text-xl text-white/75 mb-2">
+                  Also known as <strong className="text-orange-400">880 PLUS</strong>
                 </p>
                 
-                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  <strong>One87 Plus</strong> is TrPharma&apos;s powerful pain relief solution, developed under the medical leadership of <Link href="/" className="text-primary hover:underline font-semibold">Dr. Ashwani Dhar MD DMI</Link>. Combining Aceclofenac with Paracetamol for effective dual-action pain management.
+                <p className="text-lg text-white/65 mb-6 leading-relaxed">
+                  <strong className="text-white">One87 Plus</strong> is TrPharma&apos;s powerful pain relief solution, developed under the medical leadership of <Link href="/" className="text-signal-bright hover:underline font-semibold">Dr. Ashwani Dhar MD DMI</Link>. Combining Aceclofenac with Paracetamol for effective dual-action pain management.
                 </p>
 
                 {/* Composition Card */}
@@ -366,7 +368,7 @@ export default function One87PlusProductPage() {
                       Order One87 Plus <ArrowRight className="h-4 w-4" />
                     </Link>
                   </Button>
-                  <Button asChild variant="outline" size="lg" className="gap-2">
+                  <Button asChild variant="outline" size="lg" className="gap-2 border-white/30 text-white hover:bg-white/10 hover:text-white">
                     <Link href="/products">
                       View All Products
                     </Link>
@@ -572,35 +574,7 @@ export default function One87PlusProductPage() {
         </section>
 
 {/* Footer */}
-<footer className="py-8 bg-muted/50 border-t border-border">
-  <div className="container mx-auto px-4">
-  {/* Manufacturing Statement for Co-Citation SEO */}
-  <div className="text-center mb-6 pb-6 border-b border-border">
-    <p className="text-sm text-muted-foreground">
-      Manufactured for TrPharma, a division of ThinkRoman Ventures LLP | Under the medical direction of{" "}
-      <Link href="https://www.about-dr-ashwani-dhar.com" className="text-primary hover:underline font-medium">
-        Dr. Ashwani Dhar
-      </Link>
-    </p>
-  </div>
-  <div className="flex flex-wrap items-center justify-between gap-4">
-  <p className="text-sm text-muted-foreground">
-  &copy; {new Date().getFullYear()} TrPharma - A Division of ThinkRoman Ventures LLP. Founded by Dr. Ashwani Dhar.
-  </p>
-              <div className="flex items-center gap-6 text-sm">
-                <Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Dr. Ashwani Dhar
-                </Link>
-                <Link href="/trpharma" className="text-muted-foreground hover:text-foreground transition-colors">
-                  TrPharma
-                </Link>
-                <Link href="/products" className="text-muted-foreground hover:text-foreground transition-colors">
-                  All Products
-                </Link>
-              </div>
-            </div>
-          </div>
-        </footer>
+        <SiteFooter />
       </main>
     </>
   )

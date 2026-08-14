@@ -3,6 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { SiteFooter } from "@/components/site-footer"
 import { 
   ArrowRight, 
   Pill,
@@ -159,7 +160,7 @@ export default function ProductsPage() {
 
       <main className="min-h-screen bg-background">
         {/* Navigation */}
-        <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+        <nav className="sticky top-0 z-50 bg-[#04231c]/85 text-white backdrop-blur-md border-b border-white/10">
           <div className="container mx-auto px-4 py-4 flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2">
               <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
@@ -168,9 +169,9 @@ export default function ProductsPage() {
               <span className="font-semibold hidden sm:inline">Dr. Ashwani Dhar</span>
             </Link>
             <div className="flex items-center gap-4">
-              <Link href="/" className="text-sm text-muted-foreground hover:text-foreground">Profile</Link>
-              <Link href="/trpharma" className="text-sm text-muted-foreground hover:text-foreground">TrPharma</Link>
-              <Link href="/kairos" className="text-sm text-muted-foreground hover:text-foreground">Kairos R&D</Link>
+              <Link href="/" className="text-sm text-white/60 hover:text-signal-bright">Profile</Link>
+              <Link href="/trpharma" className="text-sm text-white/60 hover:text-signal-bright">TrPharma</Link>
+              <Link href="/kairos" className="text-sm text-white/60 hover:text-signal-bright">Kairos R&D</Link>
               <Button asChild size="sm" className="gap-2">
                 <Link href="https://pharma.thinkroman.com" target="_blank" rel="noopener noreferrer">
                   Shop Now <ExternalLink className="h-3 w-3" />
@@ -181,31 +182,32 @@ export default function ProductsPage() {
         </nav>
 
         {/* Breadcrumb */}
-        <div className="bg-muted/50 border-b border-border">
+        <div className="bg-[#03211b] text-white/60 border-b border-white/10">
           <div className="container mx-auto px-4 py-3">
-            <nav className="flex items-center gap-2 text-sm text-muted-foreground">
-              <Link href="/" className="hover:text-foreground">Dr. Ashwani Dhar</Link>
+            <nav className="flex items-center gap-2 text-sm">
+              <Link href="/" className="hover:text-signal-bright">Dr. Ashwani Dhar</Link>
               <span>/</span>
-              <Link href="/trpharma" className="hover:text-foreground">TrPharma</Link>
+              <Link href="/trpharma" className="hover:text-signal-bright">TrPharma</Link>
               <span>/</span>
-              <span className="text-foreground font-medium">Products</span>
+              <span className="text-white font-medium">Products</span>
             </nav>
           </div>
         </div>
 
         {/* Hero */}
-        <section className="py-16 md:py-24 bg-gradient-to-b from-primary/5 to-background">
-          <div className="container mx-auto px-4 text-center">
-            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-6">
+        <section className="dark-hero py-16 md:py-24">
+          <div className="hero-grid absolute inset-0" aria-hidden="true" />
+          <div className="relative container mx-auto px-4 text-center">
+            <div className="inline-flex items-center gap-2 bg-white/10 text-signal-bright border border-white/15 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               <Stethoscope className="h-4 w-4" />
               Doctor-Developed Medications
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              <span className="text-primary">TrPharma</span> Products
+              <span className="text-signal-bright">TrPharma</span> Products
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-white/70 max-w-3xl mx-auto mb-8">
               Quality pharmaceutical products developed under the medical leadership of{" "}
-              <Link href="/" className="text-primary hover:underline font-semibold">Dr. Ashwani Dhar MD DMI</Link>.
+              <Link href="/" className="text-signal-bright hover:underline font-semibold">Dr. Ashwani Dhar MD DMI</Link>.
               WHO-GMP certified, affordable, and effective.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -214,7 +216,7 @@ export default function ProductsPage() {
                   Visit TrPharma Store <ExternalLink className="h-4 w-4" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="gap-2">
+              <Button asChild variant="outline" size="lg" className="gap-2 border-white/20 bg-white/5 text-white hover:bg-white/10 hover:text-white">
                 <Link href="/trpharma">
                   About TrPharma <ArrowRight className="h-4 w-4" />
                 </Link>
@@ -359,30 +361,7 @@ export default function ProductsPage() {
           </div>
         </section>
 
-{/* Footer */}
-<footer className="py-8 bg-muted/50 border-t border-border">
-  <div className="container mx-auto px-4">
-  {/* Manufacturing Statement for Co-Citation SEO */}
-  <div className="text-center mb-6 pb-6 border-b border-border">
-    <p className="text-sm text-muted-foreground">
-      Manufactured for TrPharma, a division of ThinkRoman Ventures LLP | Under the medical direction of{" "}
-      <Link href="https://www.about-dr-ashwani-dhar.com" className="text-primary hover:underline font-medium">
-        Dr. Ashwani Dhar
-      </Link>
-    </p>
-  </div>
-  <div className="flex flex-wrap items-center justify-between gap-4">
-  <p className="text-sm text-muted-foreground">
-  &copy; {new Date().getFullYear()} TrPharma - A Division of ThinkRoman Ventures LLP. Founded by Dr. Ashwani Dhar.
-  </p>
-  <div className="flex items-center gap-6 text-sm">
-  <Link href="/" className="text-muted-foreground hover:text-foreground">Dr. Ashwani Dhar</Link>
-  <Link href="/trpharma" className="text-muted-foreground hover:text-foreground">TrPharma</Link>
-  <Link href="/kairos" className="text-muted-foreground hover:text-foreground">Kairos R&D</Link>
-  </div>
-            </div>
-          </div>
-        </footer>
+<SiteFooter />
       </main>
     </>
   )

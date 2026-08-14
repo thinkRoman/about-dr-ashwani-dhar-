@@ -3,6 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { SiteFooter } from "@/components/site-footer"
 import { 
   ArrowRight, 
   CheckCircle2, 
@@ -216,7 +217,7 @@ export default function TrPharmaPage() {
 
       <main className="min-h-screen bg-background">
         {/* Navigation Bar */}
-        <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+        <nav className="sticky top-0 z-50 bg-[#04231c]/85 text-white backdrop-blur-md border-b border-white/10">
           <div className="container mx-auto px-4 py-4 flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2">
               <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
@@ -225,13 +226,13 @@ export default function TrPharmaPage() {
               <span className="font-semibold hidden sm:inline">Dr. Ashwani Dhar</span>
             </Link>
             <div className="flex items-center gap-4">
-              <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <Link href="/" className="text-sm text-white/60 hover:text-signal-bright transition-colors">
                 Profile
               </Link>
-              <Link href="/kairos" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <Link href="/kairos" className="text-sm text-white/60 hover:text-signal-bright transition-colors">
                 Kairos R&D
               </Link>
-              <Button asChild size="sm" variant="outline" className="gap-2">
+              <Button asChild size="sm" variant="outline" className="gap-2 border-white/20 bg-white/5 text-white hover:bg-white/10 hover:text-white">
                 <Link href="https://pharma.thinkroman.com" target="_blank" rel="noopener noreferrer">
                   All Products <ExternalLink className="h-3 w-3" />
                 </Link>
@@ -241,23 +242,24 @@ export default function TrPharmaPage() {
         </nav>
 
         {/* Hero Section */}
-        <section className="py-16 md:py-24 bg-gradient-to-b from-primary/5 to-background">
-          <div className="container mx-auto px-4">
+        <section className="dark-hero py-16 md:py-24">
+          <div className="hero-grid absolute inset-0" aria-hidden="true" />
+          <div className="relative container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Left: Content */}
               <div>
-                <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                <div className="inline-flex items-center gap-2 bg-white/10 text-signal-bright border border-white/15 px-4 py-2 rounded-full text-sm font-semibold mb-6">
                   <Pill className="h-4 w-4" />
                   Doctor-Led Pharmaceutical Division
                 </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance">
-                  <span className="text-primary">TrPharma</span> by Dr. Ashwani Dhar
+                  <span className="text-signal-bright">TrPharma</span> by Dr. Ashwani Dhar
                 </h1>
-                <p className="text-xl text-muted-foreground mb-4 leading-relaxed">
-                  <strong>TrPharma</strong> is a doctor-led pharmaceutical division of <strong>ThinkRoman Ventures LLP</strong>, founded by <strong>Dr. Ashwani Dhar, MD, DMI</strong>.
+                <p className="text-xl text-white/70 mb-4 leading-relaxed">
+                  <strong className="text-white">TrPharma</strong> is a doctor-led pharmaceutical division of <strong className="text-white">ThinkRoman Ventures LLP</strong>, founded by <strong className="text-white">Dr. Ashwani Dhar, MD, DMI</strong>.
                 </p>
-                <p className="text-muted-foreground mb-8 leading-relaxed">
-                  Combining clinical expertise with pharmaceutical innovation, TrPharma delivers high-quality, affordable medications. Our flagship product <strong>KashMOX 625</strong> exemplifies our commitment to accessible healthcare.
+                <p className="text-white/65 mb-8 leading-relaxed">
+                  Combining clinical expertise with pharmaceutical innovation, TrPharma delivers high-quality, affordable medications. Our flagship product <strong className="text-white">KashMOX 625</strong> exemplifies our commitment to accessible healthcare.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button asChild size="lg" className="gap-2">
@@ -265,7 +267,7 @@ export default function TrPharmaPage() {
                       Visit pharma.thinkroman.com <ArrowRight className="h-4 w-4" />
                     </Link>
                   </Button>
-                  <Button asChild variant="outline" size="lg" className="gap-2">
+                  <Button asChild variant="outline" size="lg" className="gap-2 border-white/20 bg-white/5 text-white hover:bg-white/10 hover:text-white">
                     <Link href="https://instagram.com/trpharma187" target="_blank" rel="noopener noreferrer">
                       <Instagram className="h-4 w-4" /> @trpharma187
                     </Link>
@@ -485,47 +487,7 @@ export default function TrPharmaPage() {
           </div>
         </section>
 
-        {/* Footer */}
-        <footer className="py-12 bg-card border-t border-border">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
-                  <span className="text-lg font-bold text-primary-foreground">Tr</span>
-                </div>
-                <div>
-                  <p className="font-semibold">TrPharma</p>
-                  <p className="text-sm text-muted-foreground">A Division of ThinkRoman Ventures LLP</p>
-                </div>
-              </div>
-              <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground">
-                <Link href="https://pharma.thinkroman.com" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
-                  pharma.thinkroman.com
-                </Link>
-                <Link href="https://instagram.com/trpharma187" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
-                  @trpharma187
-                </Link>
-                <Link href="https://thinkroman.com" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
-                  ThinkRoman Ventures
-                </Link>
-              </div>
-            </div>
-            <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-              <p>&copy; {new Date().getFullYear()} TrPharma - A Division of ThinkRoman Ventures LLP. Founded by Dr. Ashwani Dhar, MD, DMI.</p>
-              <p className="mt-2">KashMOX 625 and all TrPharma products are manufactured in WHO-GMP certified facilities.</p>
-              {/* Internal Link Architecture */}
-              <div className="flex flex-wrap justify-center gap-6 mt-6 pt-6 border-t border-border">
-                <Link href="/" className="hover:text-foreground transition-colors">Dr. Ashwani Dhar</Link>
-                <Link href="/story" className="hover:text-foreground transition-colors">Dr. Dhar&apos;s Story</Link>
-                <Link href="/kairos" className="hover:text-foreground transition-colors">Kairos R&D</Link>
-                <Link href="/products" className="hover:text-foreground transition-colors">All Products</Link>
-                <Link href="/products/kashmox" className="hover:text-foreground transition-colors">KashMOX 625</Link>
-                <Link href="/products/one87-plus" className="hover:text-foreground transition-colors">One87 Plus</Link>
-                <Link href="/products/kashcal-plus" className="hover:text-foreground transition-colors">KashCAL PLUS</Link>
-              </div>
-            </div>
-          </div>
-        </footer>
+        <SiteFooter />
       </main>
     </>
   )
