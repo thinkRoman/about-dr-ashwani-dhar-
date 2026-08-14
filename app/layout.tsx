@@ -130,6 +130,7 @@ const entityGraph = {
         "https://twitter.com/ash_dhar",
         "https://www.instagram.com/trpharma187",
         "https://www.instagram.com/tr.thinkroman",
+        "https://www.instagram.com/ash.dhar",
         "https://medium.com/@ashdhar",
         "https://www.crunchbase.com/person/ashwani-dhar-fe3e",
         // Online Magazines & Media

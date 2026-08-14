@@ -334,6 +334,9 @@ export default function AshwaniDharHub() {
                 <Link href={SOCIAL.youtube} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-signal-bright hover:text-signal-bright">
                   YouTube <ArrowUpRight size={14} />
                 </Link>
+                <Link href={SOCIAL.personalInstagram} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-signal-bright hover:text-signal-bright">
+                  Video Interviews <ArrowUpRight size={14} />
+                </Link>
                 <Link href={SOCIAL.crunchbase} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-signal-bright hover:text-signal-bright">
                   Crunchbase <ArrowUpRight size={14} />
                 </Link>

@@ -31,6 +31,7 @@ export const SOCIAL = {
   youtube: "https://www.youtube.com/@drashwanidhar",
   instagram: "https://www.instagram.com/trpharma187",
   thinkRomanInstagram: "https://www.instagram.com/tr.thinkroman",
+  personalInstagram: "https://www.instagram.com/ash.dhar",
   medium: "https://medium.com/@ashdhar",
   crunchbase: "https://www.crunchbase.com/person/ashwani-dhar-fe3e",
 }
