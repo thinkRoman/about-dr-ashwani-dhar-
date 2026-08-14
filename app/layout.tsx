@@ -131,6 +131,15 @@ const entityGraph = {
         "https://www.instagram.com/trpharma187",
         "https://www.instagram.com/tr.thinkroman",
         "https://medium.com/@ashdhar",
+        "https://www.crunchbase.com/person/ashwani-dhar-fe3e",
+        // Online Magazines & Media
+        "https://orzuv.thinkroman.com",
+        "https://town.thinkroman.com",
+        "https://usa.thinkroman.com/ecosystem",
+        // Ventures & Tools
+        "https://www.itsplenty.app",
+        "https://navigator.thinkroman.com",
+        "https://openaccess.thinkroman.com",
         // Official Websites
         "https://thinkroman.com",
         "https://drashwanidhar.thinkroman.com",

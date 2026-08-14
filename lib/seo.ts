@@ -32,6 +32,7 @@ export const SOCIAL = {
   instagram: "https://www.instagram.com/trpharma187",
   thinkRomanInstagram: "https://www.instagram.com/tr.thinkroman",
   medium: "https://medium.com/@ashdhar",
+  crunchbase: "https://www.crunchbase.com/person/ashwani-dhar-fe3e",
 }
 
 export const HUB = {
@@ -52,6 +53,12 @@ export const LINKS = {
   doximity: "https://www.doximity.com",
   researchgate: "https://www.researchgate.net",
   scholar: "https://scholar.google.com",
+  ecosystem: "https://usa.thinkroman.com/ecosystem",
+  plenty: "https://www.itsplenty.app",
+  navigator: "https://navigator.thinkroman.com",
+  openaccess: "https://openaccess.thinkroman.com",
+  orzuvMagazine: "https://orzuv.thinkroman.com",
+  townMagazine: "https://town.thinkroman.com",
 }
 
 export const canonical = (path = "/") => `${BASE_URL}${path}`

@@ -49,17 +49,17 @@ const portfolio = [
     icon: Activity,
     name: "OpenAccess Navigator",
     role: "ThinkRoman portfolio",
-    desc: "Free mental wellness screening tool.",
-    href: null,
-    external: false,
+    desc: "Free mental health platform — understand your mental health in 5 minutes at navigator.thinkroman.com.",
+    href: LINKS.openaccess,
+    external: true,
   },
   {
     icon: Sparkles,
     name: "Plenty",
     role: "ThinkRoman portfolio",
-    desc: "A GLP-1 companion app supporting patients on weight-management journeys.",
-    href: null,
-    external: false,
+    desc: "Peptide buddy & GLP-1 companion app supporting patients on weight-management journeys.",
+    href: LINKS.plenty,
+    external: true,
   },
   {
     icon: BrainCircuit,
@@ -334,6 +334,21 @@ export default function AshwaniDharHub() {
                 <Link href={SOCIAL.youtube} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-signal-bright hover:text-signal-bright">
                   YouTube <ArrowUpRight size={14} />
                 </Link>
+                <Link href={SOCIAL.crunchbase} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-signal-bright hover:text-signal-bright">
+                  Crunchbase <ArrowUpRight size={14} />
+                </Link>
+              </div>
+              <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-white/50">
+                <span className="eyebrow text-white/40">ThinkRoman ecosystem &amp; media</span>
+                <Link href={LINKS.ecosystem} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-signal-bright">Ecosystem</Link>
+                <span className="text-white/25">·</span>
+                <Link href={LINKS.orzuvMagazine} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-signal-bright">Orzuv Magazine</Link>
+                <span className="text-white/25">·</span>
+                <Link href={LINKS.townMagazine} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-signal-bright">Town Magazine</Link>
+                <span className="text-white/25">·</span>
+                <Link href={LINKS.plenty} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-signal-bright">Plenty</Link>
+                <span className="text-white/25">·</span>
+                <Link href={LINKS.navigator} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-signal-bright">Navigator</Link>
               </div>
             </div>
           </div>
