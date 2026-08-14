@@ -11,15 +11,15 @@ import { ArrowLeft, ArrowUpRight, Linkedin } from "lucide-react";
  */
 
 const CSS = `
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap');
 :root{
-  --paper:#ECEBE5; --plate:#F6F5F1; --white:#FFFFFF;
-  --ink:#191512; --ink-soft:#575049; --ink-faint:#8C857C;
-  --line:#D9D6CD; --line-strong:#C6C2B7;
-  --teal:#0E8577; --teal-deep:#0A6459; --teal-bright:#19AD9C;
-  --display:'Geist',system-ui,-apple-system,sans-serif;
-  --sans:'Geist',system-ui,-apple-system,sans-serif;
-  --mono:'Geist Mono',ui-monospace,'SFMono-Regular',monospace;
+  --paper:#F6F5F1; --plate:#FFFFFF; --white:#FFFFFF;
+  --ink:#17160F; --ink-soft:#4E4C45; --ink-faint:#8D8A80;
+  --line:#E3E1D9; --line-strong:#CDC9BF;
+  --teal:#0E7C6B; --teal-deep:#0A5F52; --teal-bright:#14A38E;
+  --display:var(--font-display),'Inter Tight',system-ui,-apple-system,sans-serif;
+  --sans:var(--font-sans),'Inter',system-ui,-apple-system,sans-serif;
+  --mono:var(--font-mono),'IBM Plex Mono',ui-monospace,'SFMono-Regular',monospace;
+  --serif:var(--font-serif),'Instrument Serif',Georgia,serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 .adx{background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;line-height:1.6;font-size:16px;min-height:100vh;overflow-x:hidden}
@@ -66,7 +66,7 @@ const CSS = `
 
 /* quote */
 .pull{margin:8px 0;padding:34px 0}
-.pull p{font-family:var(--display);font-weight:500;font-size:27px;line-height:1.24;letter-spacing:-.025em;color:var(--ink)}
+.pull p{font-family:var(--serif);font-style:italic;font-weight:400;font-size:30px;line-height:1.3;letter-spacing:-.01em;color:var(--ink)}
 .pull p .q{color:var(--teal)}
 
 /* timeline */
