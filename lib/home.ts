@@ -42,7 +42,7 @@ export const WRITING = [
   {
     n: "01",
     tag: "Origin",
-    title: "The opportunity beyond the bedside",
+    title: "The opportunity",
     dek: "A decade-plus in clinical care made the gaps impossible to unsee — so I set out to close them with systems, building the solutions one product at a time.",
   },
   {
