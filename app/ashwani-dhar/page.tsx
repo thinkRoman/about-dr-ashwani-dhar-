@@ -15,8 +15,30 @@ export const metadata: Metadata = {
     type: "profile",
     firstName: "Ashwani",
     lastName: "Dhar",
+    url: `${BASE_URL}/ashwani-dhar`,
     title: "Ashwani Dhar | Physician-Entrepreneur",
     description: "Founder & CEO of ThinkRoman Ventures, Kairos R&D Solutions, and TrPharma. Also known as Dr. Ashwani Dhar MD, DMI.",
+    images: [
+      {
+        url: IMAGES.card,
+        width: 1200,
+        height: 630,
+        alt: "Ashwani Dhar — Physician-Entrepreneur, ThinkRoman Ventures",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ashwani Dhar | Physician-Entrepreneur",
+    description: "Founder & CEO of ThinkRoman Ventures, Kairos R&D Solutions, and TrPharma. Also known as Dr. Ashwani Dhar MD, DMI.",
+    images: [
+      {
+        url: IMAGES.card,
+        width: 1200,
+        height: 630,
+        alt: "Ashwani Dhar — Physician-Entrepreneur, ThinkRoman Ventures",
+      },
+    ],
   },
 }
 

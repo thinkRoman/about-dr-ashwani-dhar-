@@ -47,25 +47,33 @@ export const metadata: Metadata = {
     type: 'profile',
     firstName: 'Ashwani',
     lastName: 'Dhar',
+    url: BASE_URL,
     title: 'Dr. Ashwani Dhar MD DMI | Kairos R&D Solutions | KashMOX | TrPharma',
-    description: 'Founder & CEO of Kairos R&D Solutions (CRO) and TrPharma (KashMOX 625). Healthcare innovator and ThinkRoman Ventures CEO.',
+    description: 'Founder & CEO of Kairos R&D Solutions (CRO) and TrPharma (KashMOX 625). Physician-entrepreneur and CEO of ThinkRoman Ventures. MD, DMI · Former CMIO, Cerner / Oracle Health.',
     siteName: 'Dr. Ashwani Dhar - Official Profile',
     locale: 'en_US',
     images: [
       {
-        url: IMAGES.portraitOg,
+        url: IMAGES.card,
         width: 1200,
-        height: 1200,
-        alt: 'Dr. Ashwani Dhar MD DMI - CEO & Chairman, ThinkRoman Ventures | CEO, Kairos R&D Solutions'
+        height: 630,
+        alt: 'Dr. Ashwani Dhar MD DMI — Physician-Entrepreneur · Founder & CEO, ThinkRoman Ventures · CEO, Kairos R&D Solutions'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Dr. Ashwani Dhar | Kairos R&D | KashMOX 625 | TrPharma',
-    description: 'Founder of Kairos R&D Solutions & TrPharma. Creator of KashMOX 625 antibiotic.',
+    description: 'Physician-entrepreneur · Founder & CEO, ThinkRoman Ventures · CEO, Kairos R&D Solutions · TrPharma. MD, DMI, former CMIO at Cerner / Oracle Health.',
     creator: '@ash_dhar',
-    images: [IMAGES.portraitOg]
+    images: [
+      {
+        url: IMAGES.card,
+        width: 1200,
+        height: 630,
+        alt: 'Dr. Ashwani Dhar MD DMI — Physician-Entrepreneur, ThinkRoman Ventures'
+      }
+    ],
   },
   robots: {
     index: true,

@@ -78,5 +78,6 @@ export const ENTITY = {
 export const IMAGES = {
   portrait: "/images/dr-ashwani-dhar.webp",
   portraitOg: "/images/dr-ashwani-dhar-og.webp",
+  card: "/images/og-card.png",
   kashmox: "/images/kashmox-625.webp",
 }
