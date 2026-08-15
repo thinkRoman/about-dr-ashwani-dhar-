@@ -219,7 +219,7 @@ export default function ProfileRedesign() {
                     {p.title}
                   </h3>
                 </div>
-                <p className="max-w-2xl text-[16px] leading-relaxed text-ink-soft">{p.dek}</p>
+                <p className="col-start-2 lg:col-start-auto max-w-2xl text-[16px] leading-relaxed text-ink-soft">{p.dek}</p>
                 <span className="hidden justify-self-end self-center text-ink-faint lg:block">
                   <ArrowUpRight
                     size={24}

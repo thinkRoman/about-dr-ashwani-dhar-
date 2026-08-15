@@ -42,8 +42,8 @@ export const WRITING = [
   {
     n: "01",
     tag: "Origin",
-    title: "Why I left the bedside",
-    dek: "The gaps in care were impossible to unsee. I wanted to build the solutions, not advise from the sidelines.",
+    title: "The opportunity beyond the bedside",
+    dek: "A decade-plus in clinical care made the gaps impossible to unsee — so I set out to close them with systems, building the solutions one product at a time.",
   },
   {
     n: "02",
