@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: "Founder & CEO of ThinkRoman Ventures, Kairos R&D Solutions, and TrPharma. Also known as Dr. Ashwani Dhar MD, DMI.",
     images: [
       {
-        url: IMAGES.card,
+        url: `${IMAGES.card}?v=2`,
         width: 1200,
         height: 630,
         alt: "Ashwani Dhar — Physician-Entrepreneur, ThinkRoman Ventures",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     description: "Founder & CEO of ThinkRoman Ventures, Kairos R&D Solutions, and TrPharma. Also known as Dr. Ashwani Dhar MD, DMI.",
     images: [
       {
-        url: IMAGES.card,
+        url: `${IMAGES.card}?v=2`,
         width: 1200,
         height: 630,
         alt: "Ashwani Dhar — Physician-Entrepreneur, ThinkRoman Ventures",

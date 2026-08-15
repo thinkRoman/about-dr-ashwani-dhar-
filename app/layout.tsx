@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     images: [
       {
-        url: IMAGES.card,
+        url: `${IMAGES.card}?v=2`,
         width: 1200,
         height: 630,
         alt: 'Dr. Ashwani Dhar MD DMI — Physician-Entrepreneur · Founder & CEO, ThinkRoman Ventures · CEO, Kairos R&D Solutions'
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     creator: '@ash_dhar',
     images: [
       {
-        url: IMAGES.card,
+        url: `${IMAGES.card}?v=2`,
         width: 1200,
         height: 630,
         alt: 'Dr. Ashwani Dhar MD DMI — Physician-Entrepreneur, ThinkRoman Ventures'
