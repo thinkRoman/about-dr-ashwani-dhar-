@@ -367,6 +367,10 @@ export default function AshwaniDharHub() {
                 <span className="eyebrow text-white/40">ThinkRoman ecosystem &amp; media</span>
                 <Link href={LINKS.ecosystem} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-signal-bright">Ecosystem</Link>
                 <span className="text-white/25">·</span>
+                <Link href={LINKS.thinkRomanNews} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-signal-bright">ThinkRoman News</Link>
+                <span className="text-white/25">·</span>
+                <Link href={LINKS.trpharma880PlusRelease} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-signal-bright">TrPharma 880 PLUS launch</Link>
+                <span className="text-white/25">·</span>
                 <Link href={LINKS.orzuvMagazine} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-signal-bright">Orzuv Magazine</Link>
                 <span className="text-white/25">·</span>
                 <Link href={LINKS.townMagazine} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-signal-bright">Town Magazine</Link>

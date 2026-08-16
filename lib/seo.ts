@@ -60,6 +60,9 @@ export const LINKS = {
   openaccess: "https://openaccess.thinkroman.com",
   orzuvMagazine: "https://orzuv.thinkroman.com",
   townMagazine: "https://town.thinkroman.com",
+  thinkRomanNews: "https://news.thinkroman.com",
+  trpharma880PlusRelease:
+    "https://news.thinkroman.com/press/trpharma-880-plus",
 }
 
 export const canonical = (path = "/") => `${BASE_URL}${path}`
