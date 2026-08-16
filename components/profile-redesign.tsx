@@ -185,115 +185,11 @@ export default function ProfileRedesign() {
           </div>
         </section>
 
-        {/* ================= STORY ================= */}
-        <section id="story" className="mx-auto max-w-6xl px-5 py-24 lg:px-8 lg:py-32">
-          <header className="reveal flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <p className="eyebrow text-signal">01 · In his own words</p>
-              <h2 className="mt-4 text-4xl font-semibold tracking-tight lg:text-5xl">
-                The story so far
-              </h2>
-            </div>
-            <Link
-              href="/story"
-              className="group inline-flex items-center gap-1.5 rounded-full border border-hairline-strong px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-signal hover:text-signal"
-            >
-              Read the full story{" "}
-              <ArrowUpRight size={15} className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-            </Link>
-          </header>
-
-          <div className="mt-4">
-            {WRITING.map((p) => (
-              <Link
-                href="/story"
-                key={p.n}
-                className="group grid grid-cols-[3rem_1fr] items-start gap-6 border-t border-hairline py-9 last:border-b transition-colors hover:bg-white lg:grid-cols-[4rem_0.8fr_1.2fr_auto] lg:gap-10"
-              >
-                <span className="text-gradient pt-1 text-2xl font-semibold tracking-tight">
-                  {p.n}
-                </span>
-                <div>
-                  <span className="eyebrow text-signal">{p.tag}</span>
-                  <h3 className="mt-2 text-2xl font-semibold tracking-tight lg:text-3xl">
-                    {p.title}
-                  </h3>
-                </div>
-                <p className="col-start-2 lg:col-start-auto max-w-2xl text-[16px] leading-relaxed text-ink-soft">{p.dek}</p>
-                <span className="hidden justify-self-end self-center text-ink-faint lg:block">
-                  <ArrowUpRight
-                    size={24}
-                    className="text-signal opacity-0 transition-opacity group-hover:opacity-100"
-                  />
-                </span>
-              </Link>
-            ))}
-          </div>
-        </section>
-
-        {/* ================= VENTURES (cards) ================= */}
-        <section id="ventures" className="bg-white">
-          <div className="mx-auto max-w-6xl px-5 py-24 lg:px-8 lg:py-32">
-            <header className="reveal flex flex-wrap items-end justify-between gap-6">
-              <div>
-                <p className="eyebrow text-signal">02 · Ventures</p>
-                <h2 className="mt-4 text-4xl font-semibold tracking-tight lg:text-5xl">
-                  What I&apos;m building
-                </h2>
-              </div>
-              <p className="max-w-sm text-[15px] leading-relaxed text-ink-soft">
-                Three companies, one thesis. Each lives on its own — follow the link to go deeper.
-              </p>
-            </header>
-
-            <div className="mt-10 grid gap-5 lg:grid-cols-3">
-              {VENTURES.map((v, i) => {
-                const Icon = VENTURE_ICONS[i] ?? Sparkles
-                return (
-                  <Link
-                    key={v.name}
-                    href={v.href}
-                    {...(v.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                    className="reveal group flex flex-col rounded-3xl border border-hairline bg-porcelain p-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-signal/40 hover:shadow-[0_35px_70px_-40px_rgba(15,164,120,0.45)]"
-                  >
-                    <div className="flex items-start justify-between">
-                      <span className="flex h-13 w-13 items-center justify-center rounded-2xl bg-signal/10 p-3 text-signal transition-colors group-hover:bg-signal group-hover:text-white">
-                        <Icon size={24} strokeWidth={1.75} />
-                      </span>
-                      <span
-                        className={`eyebrow rounded-full border px-3 py-1.5 ${
-                          v.open
-                            ? "border-signal/30 bg-signal/10 text-signal"
-                            : "border-hairline-strong text-ink-faint"
-                        }`}
-                      >
-                        {v.stat}
-                      </span>
-                    </div>
-                    <h3 className="mt-7 text-2xl font-semibold tracking-tight">{v.name}</h3>
-                    <p className="eyebrow mt-1.5 text-ink-faint">{v.role}</p>
-                    <p className="mt-4 flex-1 text-[15px] leading-relaxed text-ink-soft">
-                      {v.body}
-                    </p>
-                    <span className="mt-7 inline-flex items-center gap-1.5 text-[13px] font-semibold text-signal">
-                      {v.link.replace("https://", "")}{" "}
-                      <ArrowUpRight
-                        size={14}
-                        className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                      />
-                    </span>
-                  </Link>
-                )
-              })}
-            </div>
-          </div>
-        </section>
-
         {/* ================= VIDEOS ================= */}
         <section id="videos" className="mx-auto max-w-6xl px-5 py-24 lg:px-8 lg:py-32">
           <header className="reveal flex flex-wrap items-end justify-between gap-4 border-b border-hairline pb-6">
             <div>
-              <p className="eyebrow text-signal">03 · On camera</p>
+              <p className="eyebrow text-signal">01 · On camera</p>
               <h2 className="mt-4 text-4xl font-semibold tracking-tight lg:text-5xl">
                 Conversations &amp; talks
               </h2>
@@ -344,6 +240,110 @@ export default function ProfileRedesign() {
                 </div>
               </a>
             ))}
+          </div>
+        </section>
+
+        {/* ================= STORY ================= */}
+        <section id="story" className="mx-auto max-w-6xl px-5 py-24 lg:px-8 lg:py-32">
+          <header className="reveal flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p className="eyebrow text-signal">02 · In his own words</p>
+              <h2 className="mt-4 text-4xl font-semibold tracking-tight lg:text-5xl">
+                The story so far
+              </h2>
+            </div>
+            <Link
+              href="/story"
+              className="group inline-flex items-center gap-1.5 rounded-full border border-hairline-strong px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-signal hover:text-signal"
+            >
+              Read the full story{" "}
+              <ArrowUpRight size={15} className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+            </Link>
+          </header>
+
+          <div className="mt-4">
+            {WRITING.map((p) => (
+              <Link
+                href="/story"
+                key={p.n}
+                className="group grid grid-cols-[3rem_1fr] items-start gap-6 border-t border-hairline py-9 last:border-b transition-colors hover:bg-white lg:grid-cols-[4rem_0.8fr_1.2fr_auto] lg:gap-10"
+              >
+                <span className="text-gradient pt-1 text-2xl font-semibold tracking-tight">
+                  {p.n}
+                </span>
+                <div>
+                  <span className="eyebrow text-signal">{p.tag}</span>
+                  <h3 className="mt-2 text-2xl font-semibold tracking-tight lg:text-3xl">
+                    {p.title}
+                  </h3>
+                </div>
+                <p className="col-start-2 lg:col-start-auto max-w-2xl text-[16px] leading-relaxed text-ink-soft">{p.dek}</p>
+                <span className="hidden justify-self-end self-center text-ink-faint lg:block">
+                  <ArrowUpRight
+                    size={24}
+                    className="text-signal opacity-0 transition-opacity group-hover:opacity-100"
+                  />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* ================= VENTURES (cards) ================= */}
+        <section id="ventures" className="bg-white">
+          <div className="mx-auto max-w-6xl px-5 py-24 lg:px-8 lg:py-32">
+            <header className="reveal flex flex-wrap items-end justify-between gap-6">
+              <div>
+                <p className="eyebrow text-signal">03 · Ventures</p>
+                <h2 className="mt-4 text-4xl font-semibold tracking-tight lg:text-5xl">
+                  What I&apos;m building
+                </h2>
+              </div>
+              <p className="max-w-sm text-[15px] leading-relaxed text-ink-soft">
+                Three companies, one thesis. Each lives on its own — follow the link to go deeper.
+              </p>
+            </header>
+
+            <div className="mt-10 grid gap-5 lg:grid-cols-3">
+              {VENTURES.map((v, i) => {
+                const Icon = VENTURE_ICONS[i] ?? Sparkles
+                return (
+                  <Link
+                    key={v.name}
+                    href={v.href}
+                    {...(v.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                    className="reveal group flex flex-col rounded-3xl border border-hairline bg-porcelain p-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-signal/40 hover:shadow-[0_35px_70px_-40px_rgba(15,164,120,0.45)]"
+                  >
+                    <div className="flex items-start justify-between">
+                      <span className="flex h-13 w-13 items-center justify-center rounded-2xl bg-signal/10 p-3 text-signal transition-colors group-hover:bg-signal group-hover:text-white">
+                        <Icon size={24} strokeWidth={1.75} />
+                      </span>
+                      <span
+                        className={`eyebrow rounded-full border px-3 py-1.5 ${
+                          v.open
+                            ? "border-signal/30 bg-signal/10 text-signal"
+                            : "border-hairline-strong text-ink-faint"
+                        }`}
+                      >
+                        {v.stat}
+                      </span>
+                    </div>
+                    <h3 className="mt-7 text-2xl font-semibold tracking-tight">{v.name}</h3>
+                    <p className="eyebrow mt-1.5 text-ink-faint">{v.role}</p>
+                    <p className="mt-4 flex-1 text-[15px] leading-relaxed text-ink-soft">
+                      {v.body}
+                    </p>
+                    <span className="mt-7 inline-flex items-center gap-1.5 text-[13px] font-semibold text-signal">
+                      {v.link.replace("https://", "")}{" "}
+                      <ArrowUpRight
+                        size={14}
+                        className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                      />
+                    </span>
+                  </Link>
+                )
+              })}
+            </div>
           </div>
         </section>
 
