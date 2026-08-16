@@ -42,7 +42,7 @@ ThinkRoman Ventures is a healthcare innovation and technology venture studio fou
 
 **Media Contact**
 
-[Name] · [Title], TrPharma / ThinkRoman Ventures
-[Email] · [Phone]
+TrPharma / ThinkRoman Ventures
+Email: trpharma@thinkroman.com · Phone: +91 81691 97853
 Website: www.880plus.com · Pharma: pharma.thinkroman.com
 Press assets available at [link]

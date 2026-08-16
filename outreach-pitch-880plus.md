@@ -8,7 +8,7 @@ Formulated by Dr. Ashwani Dhar, MD, DMI.
 - Press release (published): https://news.thinkroman.com/press/trpharma-880-plus
 - Product site: https://www.880plus.com
 - Buy: https://pharma247.thinkroman.com · https://www.1mg.com/otc/880plus-multivitamins-tablet-otc1121557
-- Contact: contact@thinkroman.com
+- Contact: trpharma@thinkroman.com · +91 81691 97853
 
 ---
 
@@ -66,7 +66,7 @@ Dr. Dhar on the India supplement-market opportunity.
 Best,
 [Your name]
 [Title] · TrPharma / ThinkRoman Ventures
-[email] · [phone]
+trpharma@thinkroman.com · +91 81691 97853
 
 ---
 
