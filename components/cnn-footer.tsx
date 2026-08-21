@@ -3,7 +3,7 @@ import { Linkedin, Instagram, Youtube, Mail, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const socialLinks = [
-  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/ashdhar", color: "bg-[#0077b5]" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/ashwanidhar", color: "bg-[#0077b5]" },
   { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/trpharma187/", color: "bg-gradient-to-br from-[#833AB4] via-[#E1306C] to-[#F77737]" },
   { icon: Youtube, label: "YouTube", href: "https://www.youtube.com/@drashwanidhar", color: "bg-red-600" },
   { icon: Mail, label: "Email", href: "mailto:contact@thinkroman.com", color: "bg-gray-700" },
@@ -107,7 +107,7 @@ export function CNNFooter() {
             <h4 className="font-bold text-[#f9a825] mb-4">Connect</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="https://www.linkedin.com/in/ashdhar" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="https://www.linkedin.com/in/ashwanidhar" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                   LinkedIn
                 </Link>
               </li>

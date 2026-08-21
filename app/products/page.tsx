@@ -53,7 +53,7 @@ const productsSchema = {
         "url": "https://www.about-dr-ashwani-dhar.com/",
         "jobTitle": "Founder & CEO",
         "sameAs": [
-          "https://www.linkedin.com/in/ashdhar",
+          "https://www.linkedin.com/in/ashwanidhar",
           "https://www.about-dr-ashwani-dhar.com"
         ]
       }

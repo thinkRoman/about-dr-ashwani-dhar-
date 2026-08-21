@@ -118,7 +118,7 @@ const kairosPageSchema = {
       "description": "Physician (MD, DMI) with expertise in clinical medicine, medical informatics, and AI healthcare innovation",
       "url": "https://drashwanidhar.thinkroman.com",
       "sameAs": [
-        "https://www.linkedin.com/in/ashdhar",
+        "https://www.linkedin.com/in/ashwanidhar",
         "https://twitter.com/ash_dhar"
       ]
     },
@@ -401,7 +401,7 @@ export default function KairosPage() {
                       </div>
                       <div className="mt-6 flex gap-2">
                         <Button asChild variant="outline" size="sm" className="flex-1">
-                          <Link href="https://www.linkedin.com/in/ashdhar" target="_blank" rel="noopener noreferrer">
+                          <Link href="https://www.linkedin.com/in/ashwanidhar" target="_blank" rel="noopener noreferrer">
                             <Linkedin className="h-4 w-4" />
                           </Link>
                         </Button>

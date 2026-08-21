@@ -134,7 +134,7 @@ const entityGraph = {
       "url": "https://drashwanidhar.thinkroman.com",
       "sameAs": [
         // Social & Professional
-        "https://www.linkedin.com/in/ashdhar",
+        "https://www.linkedin.com/in/ashwanidhar",
         "https://twitter.com/ash_dhar",
         "https://www.instagram.com/trpharma187",
         "https://www.instagram.com/tr.thinkroman",

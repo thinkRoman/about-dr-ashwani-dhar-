@@ -9,7 +9,7 @@ export function MediaSection() {
       icon: Linkedin,
       name: "LinkedIn",
       handle: "@ashdhar",
-      url: "https://www.linkedin.com/in/ashdhar",
+      url: "https://www.linkedin.com/in/ashwanidhar",
       description: "Professional updates, healthcare insights, and industry thought leadership.",
       color: "bg-[#0077B5]"
     },

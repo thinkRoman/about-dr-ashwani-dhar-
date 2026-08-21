@@ -22,7 +22,7 @@ export function Footer() {
   ]
 
   const socialLinks = [
-    { icon: Linkedin, url: "https://www.linkedin.com/in/ashdhar", label: "LinkedIn" },
+    { icon: Linkedin, url: "https://www.linkedin.com/in/ashwanidhar", label: "LinkedIn" },
     { icon: Instagram, url: "https://www.instagram.com/trpharma187", label: "Instagram" },
     { icon: Youtube, url: "https://www.youtube.com/@drashwanidhar", label: "YouTube" }
   ]

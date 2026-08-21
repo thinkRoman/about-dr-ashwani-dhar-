@@ -119,7 +119,7 @@ export function HeroSection() {
                 <div className="mt-6 pt-6 border-t border-border">
                   <div className="flex gap-3">
                     <Link
-                      href="https://www.linkedin.com/in/ashdhar"
+                      href="https://www.linkedin.com/in/ashwanidhar"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex-1 py-2 px-4 bg-[#0077B5] text-white text-sm font-medium rounded-lg text-center hover:bg-[#006097] transition-colors"

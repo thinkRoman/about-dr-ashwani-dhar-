@@ -138,7 +138,7 @@ export function QuickBio() {
 
             <div className="flex gap-4 mt-8">
               <Button asChild className="bg-[#0c1829] hover:bg-[#1e3a5f] text-white">
-                <Link href="https://www.linkedin.com/in/ashdhar" target="_blank" rel="noopener noreferrer">
+                <Link href="https://www.linkedin.com/in/ashwanidhar" target="_blank" rel="noopener noreferrer">
                   LinkedIn Profile
                 </Link>
               </Button>

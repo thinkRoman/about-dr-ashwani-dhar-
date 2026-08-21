@@ -26,7 +26,7 @@ export const SITE = {
 }
 
 export const SOCIAL = {
-  linkedin: "https://www.linkedin.com/in/ashdhar",
+  linkedin: "https://www.linkedin.com/in/ashwanidhar",
   twitter: "https://twitter.com/ash_dhar",
   youtube: "https://www.youtube.com/@drashwanidhar",
   instagram: "https://www.instagram.com/trpharma187",

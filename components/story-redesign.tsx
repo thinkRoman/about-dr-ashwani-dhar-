@@ -219,7 +219,7 @@ export default function Story() {
             <h2>Let&apos;s connect</h2>
             <p>Clinical research, pharmaceutical distribution, or healthcare innovation — I&apos;d like to hear about it.</p>
             <div className="cbtns">
-              <a className="btn btn-p" href="https://www.linkedin.com/in/ashdhar" target="_blank" rel="noreferrer"><Linkedin size={16} /> Connect on LinkedIn</a>
+              <a className="btn btn-p" href="https://www.linkedin.com/in/ashwanidhar" target="_blank" rel="noreferrer"><Linkedin size={16} /> Connect on LinkedIn</a>
               <Link className="btn btn-g" href="/">View full profile <ArrowUpRight size={15} /></Link>
             </div>
           </div>

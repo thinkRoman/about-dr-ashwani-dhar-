@@ -8,8 +8,8 @@ export function ContactSection() {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "linkedin.com/in/ashdhar",
-      url: "https://www.linkedin.com/in/ashdhar",
+      value: "linkedin.com/in/ashwanidhar",
+      url: "https://www.linkedin.com/in/ashwanidhar",
       primary: true
     },
     {
@@ -157,7 +157,7 @@ export function ContactSection() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button asChild size="lg">
-                <Link href="https://www.linkedin.com/in/ashdhar" target="_blank" rel="noopener noreferrer">
+                <Link href="https://www.linkedin.com/in/ashwanidhar" target="_blank" rel="noopener noreferrer">
                   Connect on LinkedIn
                 </Link>
               </Button>
